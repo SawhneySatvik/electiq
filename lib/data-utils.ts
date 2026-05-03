@@ -515,6 +515,18 @@ const PARTY_COLORS: Record<string, string> = {
   NPP: "#a78bfa",
   MGP: "#fbbf24",
   IND: "#6b7280",
+  NC: "#0ea5e9",
+  PDP: "#14b8a6",
+  PC: "#ec4899",
+  MNF: "#16a34a",
+  ZPM: "#22c55e",
+  NPF: "#dc2626",
+  NDPP: "#a855f7",
+  VPP: "#7c3aed",
+  UDP: "#0891b2",
+  KHNAM: "#06b6d4",
+  TIPRA: "#ef4444",
+  INPT: "#7c3aed",
 };
 
 export function getPartyColor(party: string): string {

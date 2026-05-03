@@ -795,6 +795,223 @@
       ],
       "poll_violence_notes": [],
       "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "jk-srinagar": {
+      "population_2011": 1300000,
+      "population_estimate_recent": 1500000,
+      "electors_recent": 1740000,
+      "literacy_rate_pct": 70,
+      "urban_rural_split": "Mostly urban (Srinagar district)",
+      "major_communities": [
+        "Kashmiri-speaking Muslim majority",
+        "small Kashmiri Pandit community presence pre-1990",
+        "Sikh and other minorities"
+      ],
+      "key_issues": [
+        "post-Article-370 political reorganisation",
+        "internet shutdowns and connectivity",
+        "tourism-dependent local economy",
+        "youth unemployment"
+      ],
+      "notable_history": [
+        "Held by NC's Farooq Abdullah multiple times since 2009",
+        "PDP's Tariq Karra won in 2014 in a low-turnout election (~26%)",
+        "2024 saw record turnout for the seat after a decade of political dormancy — Aga Syed Ruhullah Mehdi (NC) won decisively"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2017,
+          "note": "By-poll turnout fell to a historic low (~7%) amid widespread boycotts and clashes — a recurring concern in the valley's electoral context."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "jk-baramulla": {
+      "population_2011": 1500000,
+      "population_estimate_recent": 1700000,
+      "electors_recent": 1740000,
+      "literacy_rate_pct": 65,
+      "urban_rural_split": "Mixed — urban Baramulla town + rural Kashmir Valley north",
+      "major_communities": [
+        "Kashmiri Muslim majority",
+        "small Gujjar-Bakerwal nomadic community"
+      ],
+      "key_issues": [
+        "LoC border tensions",
+        "apple-orchard economy",
+        "infrastructure and roads",
+        "Article 370 aftermath"
+      ],
+      "notable_history": [
+        "NC's Sharifuddin Shariq won in 2009; PDP's Muzaffar Baig won 2014",
+        "2024 election saw jailed independent Engineer Rashid defeat NC's Omar Abdullah by over 2 lakh votes — a striking upset"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "jk-jammu": {
+      "population_2011": 1530000,
+      "population_estimate_recent": 1750000,
+      "electors_recent": 2050000,
+      "literacy_rate_pct": 84,
+      "urban_rural_split": "Mostly urban (Jammu city)",
+      "major_communities": [
+        "Hindu Dogra-majority",
+        "Sikh and Punjabi communities",
+        "Muslim minority"
+      ],
+      "key_issues": [
+        "winter capital infrastructure",
+        "Hindu nationalist political consolidation",
+        "refugee/displaced populations from PoK and Kashmir Valley"
+      ],
+      "notable_history": [
+        "BJP stronghold since 2014 — Jugal Kishore has held the seat in 2014, 2019, and 2024 with comfortable margins"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "la-ladakh": {
+      "population_2011": 280000,
+      "population_estimate_recent": 320000,
+      "electors_recent": 184000,
+      "literacy_rate_pct": 80,
+      "urban_rural_split": "Sparsely populated — Leh urban + vast rural high-altitude desert",
+      "major_communities": [
+        "Buddhist (Leh district) and Muslim (Kargil district) populations roughly balanced",
+        "Tibetan-influenced culture in Leh"
+      ],
+      "key_issues": [
+        "statehood / Sixth Schedule demand",
+        "ecological fragility (climate, water)",
+        "border tensions with China (LAC)",
+        "tourism dependency"
+      ],
+      "notable_history": [
+        "UT created in 2019 after Article 370 abrogation; one MP for the entire UT",
+        "2024 was won by an independent (Mohmad Haneefa) representing Kargil-led concerns about Sixth Schedule and statehood"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mn-inner-manipur": {
+      "population_2011": 1500000,
+      "population_estimate_recent": 1700000,
+      "electors_recent": 1100000,
+      "literacy_rate_pct": 80,
+      "urban_rural_split": "Mostly urban Imphal Valley",
+      "major_communities": [
+        "Meitei Hindu majority",
+        "Pangal (Manipuri Muslim) community",
+        "Christians"
+      ],
+      "key_issues": [
+        "Meitei-Kuki ethnic conflict (2023-)",
+        "AFSPA and security politics",
+        "drug-trafficking corridor",
+        "ST-status demand"
+      ],
+      "notable_history": [
+        "BJP's R. K. Ranjan Singh won 2019 narrowly",
+        "INC's Bimol Akoijam won 2024 with a >1 lakh margin in the aftermath of the 2023 Manipur violence"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2023,
+          "note": "Widespread ethnic violence in Manipur from May 2023 between Meitei and Kuki communities — context for the 2024 LS verdict in both seats."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mn-outer-manipur": {
+      "population_2011": 1300000,
+      "population_estimate_recent": 1450000,
+      "electors_recent": 940000,
+      "literacy_rate_pct": 75,
+      "urban_rural_split": "Mostly rural — hill districts",
+      "major_communities": [
+        "Naga and Kuki tribes",
+        "scheduled-tribe (ST) reserved seat"
+      ],
+      "key_issues": [
+        "Naga-Kuki ethnic dynamics",
+        "statehood/territorial council demands",
+        "infrastructure in hill districts",
+        "ethnic conflict aftermath"
+      ],
+      "notable_history": [
+        "INC and NPF have rotated this seat",
+        "INC's Alfred Kanngam Arthur won 2024 amid post-violence anti-incumbency"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "ml-shillong": {
+      "population_2011": 1500000,
+      "population_estimate_recent": 1700000,
+      "electors_recent": 1660000,
+      "literacy_rate_pct": 87,
+      "urban_rural_split": "Urban capital + rural surrounds",
+      "major_communities": [
+        "Khasi tribal majority",
+        "Christian-majority demographic",
+        "small migrant Bengali and Nepali populations"
+      ],
+      "key_issues": [
+        "uranium-mining politics",
+        "ILP (Inner Line Permit) demand",
+        "anti-coal-mining and environmental movements"
+      ],
+      "notable_history": [
+        "INC's Vincent Pala held the seat across 2009, 2014 and 2019",
+        "Voice of the People Party (VPP) won 2024 with a record-breaking 3.7+ lakh margin — first non-INC, non-NPP win in decades"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "tr-tripura-west": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2100000,
+      "electors_recent": 1450000,
+      "literacy_rate_pct": 88,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Bengali-majority (post-Partition)",
+        "Tripuri tribal communities"
+      ],
+      "key_issues": [
+        "tribal-vs-Bengali political balance",
+        "border infrastructure with Bangladesh",
+        "Left-to-BJP political shift"
+      ],
+      "notable_history": [
+        "CPI(M) held the seat for decades; Pratima Bhoumik (BJP) won in 2019 ending the Left's run",
+        "Biplab Kumar Deb (BJP, ex-CM) won 2024 with a >6 lakh margin"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "an-andaman-nicobar": {
+      "population_2011": 380000,
+      "population_estimate_recent": 410000,
+      "electors_recent": 320000,
+      "literacy_rate_pct": 86,
+      "urban_rural_split": "Mostly urban Port Blair + scattered island settlements",
+      "major_communities": [
+        "Bengali, Tamil, Telugu, Malayalam settler communities",
+        "indigenous tribal groups (Sentinelese, Jarawa, Onge — protected, no electoral participation)"
+      ],
+      "key_issues": [
+        "tourism vs ecology",
+        "naval/strategic-island defence",
+        "supply-chain dependence on the mainland"
+      ],
+      "notable_history": [
+        "Single LS seat for the entire UT",
+        "Bishnu Pada Ray (BJP) has dominated the seat across 2009, 2014, and 2024; Kuldeep Rai Sharma (INC) won 2019"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
     }
   }
 }

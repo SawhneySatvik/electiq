@@ -1264,6 +1264,391 @@
           ]
         }
       ]
+    },
+    {
+      "state": "Jammu & Kashmir",
+      "elections": [
+        {
+          "year": 2024,
+          "total_seats": 90,
+          "constituencies": [
+            {
+              "id": "jk-vs-ganderbal",
+              "name": "Ganderbal",
+              "winner": "Omar Abdullah",
+              "party": "NC",
+              "votes": 32727,
+              "margin": 10574,
+              "turnout": 62,
+              "runner_up": "Bashir Ahmad Mir",
+              "runner_up_party": "PDP"
+            },
+            {
+              "id": "jk-vs-budgam",
+              "name": "Budgam",
+              "winner": "Omar Abdullah",
+              "party": "NC",
+              "votes": 36010,
+              "margin": 18485,
+              "turnout": 60.7,
+              "runner_up": "Aga Syed Mehmood",
+              "runner_up_party": "PDP"
+            },
+            {
+              "id": "jk-vs-srinagar-nawakadal",
+              "name": "Nawakadal",
+              "winner": "Sheikh Imran Nabi Dar",
+              "party": "NC",
+              "votes": 8568,
+              "margin": 1132,
+              "turnout": 24.5,
+              "runner_up": "Salman Sagar",
+              "runner_up_party": "NC"
+            },
+            {
+              "id": "jk-vs-jammu-east",
+              "name": "Jammu East",
+              "winner": "Yudhvir Sethi",
+              "party": "BJP",
+              "votes": 41868,
+              "margin": 27676,
+              "turnout": 71.5,
+              "runner_up": "Yogesh Sawhney",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "jk-vs-jammu-west",
+              "name": "Jammu West",
+              "winner": "Arvind Gupta",
+              "party": "BJP",
+              "votes": 53012,
+              "margin": 21342,
+              "turnout": 70.6,
+              "runner_up": "Manmohan Singh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "jk-vs-anantnag",
+              "name": "Anantnag",
+              "winner": "Peerzada Mohammad Syed",
+              "party": "INC",
+              "votes": 14753,
+              "margin": 3826,
+              "turnout": 50,
+              "runner_up": "Mehboob Beg",
+              "runner_up_party": "PDP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Manipur",
+      "elections": [
+        {
+          "year": 2022,
+          "total_seats": 60,
+          "constituencies": [
+            {
+              "id": "mn-vs-thoubal",
+              "name": "Thoubal",
+              "winner": "Okram Ibobi Singh",
+              "party": "INC",
+              "votes": 17286,
+              "margin": 1948,
+              "turnout": 87,
+              "runner_up": "Leitanthem Basanta Singh",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "mn-vs-imphal-east",
+              "name": "Khurai",
+              "winner": "Leishangthem Susindro Meitei",
+              "party": "BJP",
+              "votes": 18000,
+              "margin": 6300,
+              "turnout": 86,
+              "runner_up": "Yumnam Khemchand Singh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mn-vs-heingang",
+              "name": "Heingang",
+              "winner": "N. Biren Singh",
+              "party": "BJP",
+              "votes": 25867,
+              "margin": 18271,
+              "turnout": 84,
+              "runner_up": "Pangambam Sharatchandra Singh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mn-vs-langthabal",
+              "name": "Langthabal",
+              "winner": "Karam Shyam",
+              "party": "NPP",
+              "votes": 15500,
+              "margin": 4500,
+              "turnout": 84,
+              "runner_up": "L. Birendra Singh",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "mn-vs-uripok",
+              "name": "Uripok",
+              "winner": "Khwairakpam Raghumani Singh",
+              "party": "BJP",
+              "votes": 14500,
+              "margin": 2900,
+              "turnout": 80,
+              "runner_up": "Yumnam Joykumar Singh",
+              "runner_up_party": "NPP"
+            },
+            {
+              "id": "mn-vs-bishnupur",
+              "name": "Bishnupur",
+              "winner": "Konthoujam Govindas Singh",
+              "party": "BJP",
+              "votes": 19500,
+              "margin": 7200,
+              "turnout": 86,
+              "runner_up": "L. Bijoy Singh",
+              "runner_up_party": "INC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Tripura",
+      "elections": [
+        {
+          "year": 2023,
+          "total_seats": 60,
+          "constituencies": [
+            {
+              "id": "tr-vs-banamalipur",
+              "name": "Banamalipur",
+              "winner": "Manik Saha",
+              "party": "BJP",
+              "votes": 17181,
+              "margin": 1250,
+              "turnout": 88,
+              "runner_up": "Gopal Chandra Roy",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "tr-vs-town-bordowali",
+              "name": "Town Bordowali",
+              "winner": "Asish Saha",
+              "party": "INC",
+              "votes": 16953,
+              "margin": 3163,
+              "turnout": 84,
+              "runner_up": "Asish Kumar Saha",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "tr-vs-charilam",
+              "name": "Charilam",
+              "winner": "Subodh Deb Barma",
+              "party": "TIPRA",
+              "votes": 19320,
+              "margin": 9325,
+              "turnout": 89,
+              "runner_up": "Pranjit Singha Roy",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "tr-vs-dhanpur",
+              "name": "Dhanpur",
+              "winner": "Pratima Bhoumik",
+              "party": "BJP",
+              "votes": 19196,
+              "margin": 3500,
+              "turnout": 82,
+              "runner_up": "Kaushik Chanda",
+              "runner_up_party": "CPI(M)"
+            },
+            {
+              "id": "tr-vs-takarjala",
+              "name": "Takarjala",
+              "winner": "Bishnu Pada Karmakar",
+              "party": "TIPRA",
+              "votes": 22500,
+              "margin": 11500,
+              "turnout": 88,
+              "runner_up": "Mevar Kumar Jamatia",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "tr-vs-radhakishorepur",
+              "name": "Radhakishorepur",
+              "winner": "Pranjit Singha Roy",
+              "party": "BJP",
+              "votes": 17500,
+              "margin": 2800,
+              "turnout": 85,
+              "runner_up": "Joy Gobinda Devbarma",
+              "runner_up_party": "CPI(M)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Meghalaya",
+      "elections": [
+        {
+          "year": 2023,
+          "total_seats": 60,
+          "constituencies": [
+            {
+              "id": "ml-vs-songsak",
+              "name": "Songsak",
+              "winner": "Mukul Sangma",
+              "party": "TMC",
+              "votes": 8521,
+              "margin": 950,
+              "turnout": 83,
+              "runner_up": "Nihim D Shira",
+              "runner_up_party": "NPP"
+            },
+            {
+              "id": "ml-vs-sutnga-saipung",
+              "name": "Sutnga Saipung",
+              "winner": "Santa Mary Shylla",
+              "party": "NPP",
+              "votes": 11500,
+              "margin": 4250,
+              "turnout": 80,
+              "runner_up": "Lambok Lyngdoh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ml-vs-rambrai-jyrngam",
+              "name": "Rambrai Jyrngam",
+              "winner": "Renikton Lyngdoh Tongkhar",
+              "party": "UDP",
+              "votes": 12500,
+              "margin": 2200,
+              "turnout": 82,
+              "runner_up": "Limison D Sangma",
+              "runner_up_party": "NPP"
+            },
+            {
+              "id": "ml-vs-mawlai",
+              "name": "Mawlai",
+              "winner": "Brightstarwell Marbaniang",
+              "party": "VPP",
+              "votes": 16500,
+              "margin": 2200,
+              "turnout": 78,
+              "runner_up": "Process T Sawkmie",
+              "runner_up_party": "NPP"
+            },
+            {
+              "id": "ml-vs-shillong-east",
+              "name": "East Shillong",
+              "winner": "Mayralborn Syiem",
+              "party": "NPP",
+              "votes": 11800,
+              "margin": 1500,
+              "turnout": 81,
+              "runner_up": "M Ampareen Lyngdoh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ml-vs-tura",
+              "name": "Tura",
+              "winner": "Conrad Sangma",
+              "party": "NPP",
+              "votes": 12500,
+              "margin": 2400,
+              "turnout": 87,
+              "runner_up": "Sengran A Sangma",
+              "runner_up_party": "INC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Nagaland",
+      "elections": [
+        {
+          "year": 2023,
+          "total_seats": 60,
+          "constituencies": [
+            {
+              "id": "nl-vs-northern-angami-ii",
+              "name": "Northern Angami-II",
+              "winner": "Neiphiu Rio",
+              "party": "NDPP",
+              "votes": 13000,
+              "margin": 7000,
+              "turnout": 83,
+              "runner_up": "Salam Krocha",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "nl-vs-dimapur-iii",
+              "name": "Dimapur-III",
+              "winner": "Hekani Jakhalu",
+              "party": "NDPP",
+              "votes": 12000,
+              "margin": 1500,
+              "turnout": 79,
+              "runner_up": "Azheto Zhimomi",
+              "runner_up_party": "NPF"
+            },
+            {
+              "id": "nl-vs-mokokchung-town",
+              "name": "Mokokchung Town",
+              "winner": "Metsubo Jamir",
+              "party": "NDPP",
+              "votes": 9500,
+              "margin": 2000,
+              "turnout": 82,
+              "runner_up": "C Apok Jamir",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "nl-vs-noksen",
+              "name": "Noksen",
+              "winner": "C L John",
+              "party": "NPF",
+              "votes": 8200,
+              "margin": 600,
+              "turnout": 86,
+              "runner_up": "P Bashangmongba Chang",
+              "runner_up_party": "NDPP"
+            },
+            {
+              "id": "nl-vs-akuluto",
+              "name": "Akuluto",
+              "winner": "Kazheto Kinimi",
+              "party": "BJP",
+              "votes": 9700,
+              "margin": 4900,
+              "turnout": 82,
+              "runner_up": "K Anan",
+              "runner_up_party": "NPF"
+            },
+            {
+              "id": "nl-vs-pungro-kiphire",
+              "name": "Pungro-Kiphire",
+              "winner": "T M Lotha",
+              "party": "NDPP",
+              "votes": 11000,
+              "margin": 800,
+              "turnout": 84,
+              "runner_up": "C Yatong",
+              "runner_up_party": "NPF"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

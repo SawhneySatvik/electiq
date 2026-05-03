@@ -671,6 +671,90 @@
           "term_end": 2029
         }
       ]
+    },
+    {
+      "state": "Jammu & Kashmir",
+      "seats": 4,
+      "members": [
+        {
+          "name": "Ghulam Ali Khatana",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        }
+      ]
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "seats": 1,
+      "members": [
+        {
+          "name": "Nabam Rebia",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Manipur",
+      "seats": 1,
+      "members": [
+        {
+          "name": "Maharaja Sanajaoba Leishemba",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Meghalaya",
+      "seats": 1,
+      "members": [
+        {
+          "name": "W R Kharlukhi",
+          "party": "NPP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Mizoram",
+      "seats": 1,
+      "members": [
+        {
+          "name": "K. Vanlalvena",
+          "party": "MNF",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Nagaland",
+      "seats": 1,
+      "members": [
+        {
+          "name": "S. Phangnon Konyak",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        }
+      ]
+    },
+    {
+      "state": "Tripura",
+      "seats": 1,
+      "members": [
+        {
+          "name": "Rajiv Bhattacharjee",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        }
+      ]
     }
   ]
 }

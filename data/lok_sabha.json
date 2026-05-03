@@ -5663,6 +5663,822 @@
           "runner_up_party": "BJP"
         }
       ]
+    },
+    {
+      "id": "jk-srinagar",
+      "name": "Srinagar",
+      "state": "Jammu & Kashmir",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Farooq Abdullah",
+          "party": "NC",
+          "votes": 144497,
+          "margin": 28000,
+          "turnout": 25.6,
+          "runner_up": "Mehbooba Mufti",
+          "runner_up_party": "PDP"
+        },
+        {
+          "year": 2014,
+          "winner": "Tariq Hameed Karra",
+          "party": "PDP",
+          "votes": 158347,
+          "margin": 41000,
+          "turnout": 26.1,
+          "runner_up": "Farooq Abdullah",
+          "runner_up_party": "NC"
+        },
+        {
+          "year": 2019,
+          "winner": "Farooq Abdullah",
+          "party": "NC",
+          "votes": 106750,
+          "margin": 70028,
+          "turnout": 14.4,
+          "runner_up": "Aga Syed Mohsin",
+          "runner_up_party": "PDP"
+        },
+        {
+          "year": 2024,
+          "winner": "Aga Syed Ruhullah Mehdi",
+          "party": "NC",
+          "votes": 356866,
+          "margin": 188416,
+          "turnout": 38.5,
+          "runner_up": "Waheed Para",
+          "runner_up_party": "PDP"
+        }
+      ]
+    },
+    {
+      "id": "jk-baramulla",
+      "name": "Baramulla",
+      "state": "Jammu & Kashmir",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Sharifuddin Shariq",
+          "party": "NC",
+          "votes": 145360,
+          "margin": 30000,
+          "turnout": 41.8,
+          "runner_up": "Saifuddin Soz",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Muzaffar Hussain Baig",
+          "party": "PDP",
+          "votes": 178344,
+          "margin": 28508,
+          "turnout": 38.6,
+          "runner_up": "Sharifuddin Shariq",
+          "runner_up_party": "NC"
+        },
+        {
+          "year": 2019,
+          "winner": "Mohammad Akbar Lone",
+          "party": "NC",
+          "votes": 133426,
+          "margin": 29687,
+          "turnout": 34.7,
+          "runner_up": "Raja Aijaz Ali",
+          "runner_up_party": "PC"
+        },
+        {
+          "year": 2024,
+          "winner": "Engineer Rashid",
+          "party": "IND",
+          "votes": 472481,
+          "margin": 204142,
+          "turnout": 59,
+          "runner_up": "Omar Abdullah",
+          "runner_up_party": "NC"
+        }
+      ]
+    },
+    {
+      "id": "jk-anantnag-rajouri",
+      "name": "Anantnag-Rajouri",
+      "state": "Jammu & Kashmir",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Mehbooba Mufti",
+          "party": "PDP",
+          "votes": 158304,
+          "margin": 6373,
+          "turnout": 27.1,
+          "runner_up": "Mirza Mehboob Beg",
+          "runner_up_party": "NC"
+        },
+        {
+          "year": 2014,
+          "winner": "Mehbooba Mufti",
+          "party": "PDP",
+          "votes": 200429,
+          "margin": 65417,
+          "turnout": 28.5,
+          "runner_up": "Mirza Mehboob Beg",
+          "runner_up_party": "NC"
+        },
+        {
+          "year": 2019,
+          "winner": "Hasnain Masoodi",
+          "party": "NC",
+          "votes": 40180,
+          "margin": 6450,
+          "turnout": 8.9,
+          "runner_up": "Ghulam Ahmad Mir",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Mian Altaf Ahmad",
+          "party": "NC",
+          "votes": 521381,
+          "margin": 281794,
+          "turnout": 53.3,
+          "runner_up": "Mehbooba Mufti",
+          "runner_up_party": "PDP"
+        }
+      ]
+    },
+    {
+      "id": "jk-jammu",
+      "name": "Jammu",
+      "state": "Jammu & Kashmir",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Madan Lal Sharma",
+          "party": "INC",
+          "votes": 327373,
+          "margin": 76747,
+          "turnout": 49,
+          "runner_up": "Leela Karan Sharma",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2014,
+          "winner": "Jugal Kishore",
+          "party": "BJP",
+          "votes": 619995,
+          "margin": 257280,
+          "turnout": 60,
+          "runner_up": "Madan Lal Sharma",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Jugal Kishore",
+          "party": "BJP",
+          "votes": 858066,
+          "margin": 302875,
+          "turnout": 72.6,
+          "runner_up": "Raman Bhalla",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Jugal Kishore",
+          "party": "BJP",
+          "votes": 687588,
+          "margin": 135498,
+          "turnout": 71.9,
+          "runner_up": "Raman Bhalla",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "jk-udhampur",
+      "name": "Udhampur",
+      "state": "Jammu & Kashmir",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Chaudhary Lal Singh",
+          "party": "INC",
+          "votes": 247484,
+          "margin": 82834,
+          "turnout": 53,
+          "runner_up": "Nirmal Kumar Singh",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2014,
+          "winner": "Jitendra Singh",
+          "party": "BJP",
+          "votes": 487369,
+          "margin": 60976,
+          "turnout": 70.6,
+          "runner_up": "Ghulam Nabi Azad",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Jitendra Singh",
+          "party": "BJP",
+          "votes": 561078,
+          "margin": 357252,
+          "turnout": 70.2,
+          "runner_up": "Vikramaditya Singh",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Jitendra Singh",
+          "party": "BJP",
+          "votes": 571076,
+          "margin": 124373,
+          "turnout": 68.3,
+          "runner_up": "Choudhary Lal Singh",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "la-ladakh",
+      "name": "Ladakh",
+      "state": "Ladakh",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Hassan Khan",
+          "party": "INC",
+          "votes": 31000,
+          "margin": 15000,
+          "turnout": 70,
+          "runner_up": "Tsering Samphel",
+          "runner_up_party": "IND"
+        },
+        {
+          "year": 2014,
+          "winner": "Thupstan Chhewang",
+          "party": "BJP",
+          "votes": 31111,
+          "margin": 36,
+          "turnout": 71,
+          "runner_up": "Ghulam Raza",
+          "runner_up_party": "IND"
+        },
+        {
+          "year": 2019,
+          "winner": "Jamyang Tsering Namgyal",
+          "party": "BJP",
+          "votes": 33289,
+          "margin": 10930,
+          "turnout": 71.1,
+          "runner_up": "Sajjad Hussain",
+          "runner_up_party": "IND"
+        },
+        {
+          "year": 2024,
+          "winner": "Mohmad Haneefa",
+          "party": "IND",
+          "votes": 65259,
+          "margin": 27862,
+          "turnout": 71.8,
+          "runner_up": "Tsering Namgyal",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "ar-arunachal-east",
+      "name": "Arunachal East",
+      "state": "Arunachal Pradesh",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Ninong Ering",
+          "party": "INC",
+          "votes": 138847,
+          "margin": 24000,
+          "turnout": 71.6,
+          "runner_up": "Tapir Gao",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2014,
+          "winner": "Ninong Ering",
+          "party": "INC",
+          "votes": 150728,
+          "margin": 44637,
+          "turnout": 80,
+          "runner_up": "Tapir Gao",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2019,
+          "winner": "Tapir Gao",
+          "party": "BJP",
+          "votes": 162976,
+          "margin": 26143,
+          "turnout": 81,
+          "runner_up": "Lowangcha Wanglat",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Tapir Gao",
+          "party": "BJP",
+          "votes": 173353,
+          "margin": 35116,
+          "turnout": 79.4,
+          "runner_up": "Bosiram Siram",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "ar-arunachal-west",
+      "name": "Arunachal West",
+      "state": "Arunachal Pradesh",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Takam Sanjoy",
+          "party": "INC",
+          "votes": 117042,
+          "margin": 22000,
+          "turnout": 70.5,
+          "runner_up": "Tame Phasang",
+          "runner_up_party": "NCP"
+        },
+        {
+          "year": 2014,
+          "winner": "Kiren Rijiju",
+          "party": "BJP",
+          "votes": 196798,
+          "margin": 41738,
+          "turnout": 79,
+          "runner_up": "Takam Sanjoy",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Kiren Rijiju",
+          "party": "BJP",
+          "votes": 250097,
+          "margin": 107213,
+          "turnout": 81.2,
+          "runner_up": "Nabam Tuki",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Kiren Rijiju",
+          "party": "BJP",
+          "votes": 281844,
+          "margin": 105709,
+          "turnout": 78,
+          "runner_up": "Nabam Tuki",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "mn-inner-manipur",
+      "name": "Inner Manipur",
+      "state": "Manipur",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Thokchom Meinya",
+          "party": "INC",
+          "votes": 308918,
+          "margin": 38000,
+          "turnout": 78.5,
+          "runner_up": "Khaidem Mani",
+          "runner_up_party": "CPI"
+        },
+        {
+          "year": 2014,
+          "winner": "Thokchom Meinya",
+          "party": "INC",
+          "votes": 287546,
+          "margin": 90752,
+          "turnout": 76.4,
+          "runner_up": "R K Ranjan Singh",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2019,
+          "winner": "Rajkumar Ranjan Singh",
+          "party": "BJP",
+          "votes": 263632,
+          "margin": 17755,
+          "turnout": 81.5,
+          "runner_up": "O Nabakishore Singh",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Angomcha Bimol Akoijam",
+          "party": "INC",
+          "votes": 374256,
+          "margin": 109801,
+          "turnout": 78.7,
+          "runner_up": "Thounaojam Basanta Kumar Singh",
+          "runner_up_party": "BJP"
+        }
+      ]
+    },
+    {
+      "id": "mn-outer-manipur",
+      "name": "Outer Manipur",
+      "state": "Manipur",
+      "reserved": "ST",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Thangso Baite",
+          "party": "INC",
+          "votes": 263041,
+          "margin": 32000,
+          "turnout": 79,
+          "runner_up": "Sonia Khulakpam",
+          "runner_up_party": "NCP"
+        },
+        {
+          "year": 2014,
+          "winner": "Thangso Baite",
+          "party": "INC",
+          "votes": 280339,
+          "margin": 21319,
+          "turnout": 80,
+          "runner_up": "Gangmumei Kamei",
+          "runner_up_party": "NPF"
+        },
+        {
+          "year": 2019,
+          "winner": "Lorho S. Pfoze",
+          "party": "NPF",
+          "votes": 363527,
+          "margin": 73782,
+          "turnout": 84.2,
+          "runner_up": "Houlim Shokhopao Mate",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Alfred Kanngam Arthur",
+          "party": "INC",
+          "votes": 360259,
+          "margin": 85418,
+          "turnout": 80.4,
+          "runner_up": "Kachui Timothy Zimik",
+          "runner_up_party": "BJP"
+        }
+      ]
+    },
+    {
+      "id": "ml-shillong",
+      "name": "Shillong",
+      "state": "Meghalaya",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Vincent Pala",
+          "party": "INC",
+          "votes": 248826,
+          "margin": 31000,
+          "turnout": 64,
+          "runner_up": "Patricia Mukhim",
+          "runner_up_party": "IND"
+        },
+        {
+          "year": 2014,
+          "winner": "Vincent Pala",
+          "party": "INC",
+          "votes": 297925,
+          "margin": 90000,
+          "turnout": 67,
+          "runner_up": "Peter G Marbaniang",
+          "runner_up_party": "NPP"
+        },
+        {
+          "year": 2019,
+          "winner": "Vincent Pala",
+          "party": "INC",
+          "votes": 357218,
+          "margin": 96756,
+          "turnout": 69,
+          "runner_up": "Sanbor Shullai",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2024,
+          "winner": "Ricky Andrew J. Syngkon",
+          "party": "VPP",
+          "votes": 569237,
+          "margin": 371423,
+          "turnout": 71,
+          "runner_up": "Ampareen Lyngdoh",
+          "runner_up_party": "NPP"
+        }
+      ]
+    },
+    {
+      "id": "ml-tura",
+      "name": "Tura",
+      "state": "Meghalaya",
+      "reserved": "ST",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Agatha Sangma",
+          "party": "NCP",
+          "votes": 192495,
+          "margin": 13000,
+          "turnout": 70,
+          "runner_up": "Deborah Marak",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Purno A Sangma",
+          "party": "NPP",
+          "votes": 194827,
+          "margin": 70000,
+          "turnout": 71,
+          "runner_up": "Daryl W Ch Momin",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Agatha Sangma",
+          "party": "NPP",
+          "votes": 304455,
+          "margin": 64187,
+          "turnout": 72.4,
+          "runner_up": "Deborah Marak",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Saleng A. Sangma",
+          "party": "INC",
+          "votes": 383919,
+          "margin": 155241,
+          "turnout": 75,
+          "runner_up": "Agatha Sangma",
+          "runner_up_party": "NPP"
+        }
+      ]
+    },
+    {
+      "id": "mz-mizoram",
+      "name": "Mizoram",
+      "state": "Mizoram",
+      "reserved": "ST",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "C. L. Ruala",
+          "party": "INC",
+          "votes": 211531,
+          "margin": 90000,
+          "turnout": 58,
+          "runner_up": "Robert Romawia Royte",
+          "runner_up_party": "MNF"
+        },
+        {
+          "year": 2014,
+          "winner": "C. L. Ruala",
+          "party": "INC",
+          "votes": 271266,
+          "margin": 6154,
+          "turnout": 62,
+          "runner_up": "Robert Romawia Royte",
+          "runner_up_party": "MNF"
+        },
+        {
+          "year": 2019,
+          "winner": "C. Lalrosanga",
+          "party": "MNF",
+          "votes": 224286,
+          "margin": 8137,
+          "turnout": 63,
+          "runner_up": "Lalnghinglova Hmar",
+          "runner_up_party": "ZPM"
+        },
+        {
+          "year": 2024,
+          "winner": "Richard Vanlalhmangaiha",
+          "party": "ZPM",
+          "votes": 208552,
+          "margin": 68288,
+          "turnout": 56.9,
+          "runner_up": "K. Vanlalvena",
+          "runner_up_party": "MNF"
+        }
+      ]
+    },
+    {
+      "id": "nl-nagaland",
+      "name": "Nagaland",
+      "state": "Nagaland",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "C. M. Chang",
+          "party": "NPF",
+          "votes": 583361,
+          "margin": 132000,
+          "turnout": 88,
+          "runner_up": "K. Asungba Sangtam",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Neiphiu Rio",
+          "party": "NPF",
+          "votes": 698994,
+          "margin": 297853,
+          "turnout": 87.8,
+          "runner_up": "K. V. Pusa",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Tokheho Yepthomi",
+          "party": "NDPP",
+          "votes": 500510,
+          "margin": 16344,
+          "turnout": 83,
+          "runner_up": "K. L. Chishi",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "S. Supongmeren Jamir",
+          "party": "INC",
+          "votes": 401951,
+          "margin": 53028,
+          "turnout": 80.5,
+          "runner_up": "Chumben Murry",
+          "runner_up_party": "NDPP"
+        }
+      ]
+    },
+    {
+      "id": "tr-tripura-west",
+      "name": "Tripura West",
+      "state": "Tripura",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Khagen Das",
+          "party": "CPI(M)",
+          "votes": 532332,
+          "margin": 280000,
+          "turnout": 86.5,
+          "runner_up": "Sanchita Ranjan Chakraborty",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Sankar Prasad Datta",
+          "party": "CPI(M)",
+          "votes": 612391,
+          "margin": 296610,
+          "turnout": 84.7,
+          "runner_up": "Arunoday Saha",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Pratima Bhoumik",
+          "party": "BJP",
+          "votes": 573532,
+          "margin": 305689,
+          "turnout": 82,
+          "runner_up": "Subal Bhowmik",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Biplab Kumar Deb",
+          "party": "BJP",
+          "votes": 881341,
+          "margin": 611578,
+          "turnout": 81.5,
+          "runner_up": "Asish Kumar Saha",
+          "runner_up_party": "INC"
+        }
+      ]
+    },
+    {
+      "id": "tr-tripura-east",
+      "name": "Tripura East",
+      "state": "Tripura",
+      "reserved": "ST",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Bajuban Riyan",
+          "party": "CPI(M)",
+          "votes": 469136,
+          "margin": 252000,
+          "turnout": 84.2,
+          "runner_up": "Anil Sarkar",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Jitendra Choudhury",
+          "party": "CPI(M)",
+          "votes": 567908,
+          "margin": 470686,
+          "turnout": 83.4,
+          "runner_up": "Sachitra Mohan Debbarma",
+          "runner_up_party": "INPT"
+        },
+        {
+          "year": 2019,
+          "winner": "Rebati Tripura",
+          "party": "BJP",
+          "votes": 484486,
+          "margin": 374573,
+          "turnout": 81,
+          "runner_up": "Pragya Deb Burman",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2024,
+          "winner": "Kriti Devi Debbarma",
+          "party": "BJP",
+          "votes": 778721,
+          "margin": 484052,
+          "turnout": 81,
+          "runner_up": "Rajendra Reang",
+          "runner_up_party": "CPI(M)"
+        }
+      ]
+    },
+    {
+      "id": "an-andaman-nicobar",
+      "name": "Andaman & Nicobar Islands",
+      "state": "Andaman & Nicobar",
+      "reserved": "GEN",
+      "results": [
+        {
+          "year": 2009,
+          "winner": "Bishnu Pada Ray",
+          "party": "BJP",
+          "votes": 95308,
+          "margin": 13000,
+          "turnout": 65.4,
+          "runner_up": "Kuldeep Rai Sharma",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2014,
+          "winner": "Bishnu Pada Ray",
+          "party": "BJP",
+          "votes": 92308,
+          "margin": 6541,
+          "turnout": 70.7,
+          "runner_up": "Kuldeep Rai Sharma",
+          "runner_up_party": "INC"
+        },
+        {
+          "year": 2019,
+          "winner": "Kuldeep Rai Sharma",
+          "party": "INC",
+          "votes": 95308,
+          "margin": 1407,
+          "turnout": 65,
+          "runner_up": "Vishal Jolly",
+          "runner_up_party": "BJP"
+        },
+        {
+          "year": 2024,
+          "winner": "Bishnu Pada Ray",
+          "party": "BJP",
+          "votes": 95135,
+          "margin": 7427,
+          "turnout": 64.3,
+          "runner_up": "Kuldeep Rai Sharma",
+          "runner_up_party": "INC"
+        }
+      ]
     }
   ]
 }

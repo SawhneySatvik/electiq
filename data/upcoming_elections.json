@@ -224,6 +224,62 @@
       "expected_window": "March – April 2031",
       "status": "scheduled",
       "note": "Demo placeholder."
+    },
+    {
+      "state": "Jammu & Kashmir",
+      "type": "VS",
+      "expected_year": 2024,
+      "expected_window": "September – October 2024",
+      "status": "polling completed",
+      "note": "First J&K assembly election after Article 370 abrogation; demo placeholder."
+    },
+    {
+      "state": "Manipur",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February – March 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Tripura",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "February 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Meghalaya",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "February 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Nagaland",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "February 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Mizoram",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "November 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Arunachal Pradesh",
+      "type": "VS",
+      "expected_year": 2029,
+      "expected_window": "April – May 2029",
+      "status": "scheduled",
+      "note": "Demo placeholder, concurrent with LS."
     }
   ]
 }
