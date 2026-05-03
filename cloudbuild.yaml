@@ -1,0 +1,96 @@
+# Cloud Build pipeline for ElectoIQ → Cloud Run.
+#
+# Prerequisite (one-time):
+#   1. Enable APIs: Cloud Build, Cloud Run, Artifact Registry, Secret Manager.
+#   2. Create the Artifact Registry repo:
+#        gcloud artifacts repositories create $_REPO \
+#          --repository-format=docker --location=$_REGION
+#   3. Store GEMINI_API_KEY in Secret Manager:
+#        echo -n "<key>" | gcloud secrets create gemini-api-key --data-file=-
+#      Grant the Cloud Run runtime service account roles/secretmanager.secretAccessor.
+#   4. Grant the Cloud Build service account roles/run.admin and
+#      roles/iam.serviceAccountUser so it can deploy on your behalf.
+#
+# Trigger configuration:
+#   - Set the seven NEXT_PUBLIC_* substitution variables in the trigger UI to
+#     bake them into the client bundle. Empty strings are fine — the app falls
+#     back to localStorage for Voices/Exit Poll if Firebase config is missing.
+
+substitutions:
+  _SERVICE: electoiq
+  _REGION: asia-south1
+  _REPO: electoiq
+  _NEXT_PUBLIC_APP_URL: ""
+  _NEXT_PUBLIC_FIREBASE_API_KEY: ""
+  _NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: ""
+  _NEXT_PUBLIC_FIREBASE_PROJECT_ID: ""
+  _NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ""
+  _NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ""
+  _NEXT_PUBLIC_FIREBASE_APP_ID: ""
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  machineType: E2_HIGHCPU_8
+
+images:
+  - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$COMMIT_SHA"
+  - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:latest"
+
+steps:
+  # 1. Build the container image with NEXT_PUBLIC_* baked in.
+  - id: build
+    name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --build-arg
+      - NEXT_PUBLIC_APP_URL=${_NEXT_PUBLIC_APP_URL}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_API_KEY=${_NEXT_PUBLIC_FIREBASE_API_KEY}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${_NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_PROJECT_ID=${_NEXT_PUBLIC_FIREBASE_PROJECT_ID}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=${_NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=${_NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID}
+      - --build-arg
+      - NEXT_PUBLIC_FIREBASE_APP_ID=${_NEXT_PUBLIC_FIREBASE_APP_ID}
+      - -t
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$COMMIT_SHA"
+      - -t
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:latest"
+      - .
+
+  # 2. Push both tags to Artifact Registry.
+  - id: push
+    name: gcr.io/cloud-builders/docker
+    waitFor: [build]
+    args:
+      - push
+      - --all-tags
+      - "${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}"
+
+  # 3. Deploy the just-pushed image to Cloud Run.
+  #    GEMINI_API_KEY is mounted from Secret Manager at runtime.
+  - id: deploy
+    name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    waitFor: [push]
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO}/${_SERVICE}:$COMMIT_SHA
+      - --region=${_REGION}
+      - --platform=managed
+      - --allow-unauthenticated
+      - --port=8080
+      - --memory=512Mi
+      - --cpu=1
+      - --min-instances=0
+      - --max-instances=5
+      - --timeout=60
+      - --set-secrets=GEMINI_API_KEY=gemini-api-key:latest
+
+timeout: 1800s

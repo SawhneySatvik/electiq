@@ -117,6 +117,12 @@ const en: Dict = {
   "common.back": "Back",
   "common.loading": "Loading…",
 
+  "auth.signIn": "Sign in",
+  "auth.signOut": "Sign out",
+  "auth.signedInAs": "Signed in as",
+  "auth.anonSession": "Anonymous session",
+  "auth.switchAccount": "Switch Google account",
+
   "upcoming.eyebrow": "Upcoming",
   "rajyaSabha.title": "Rajya Sabha",
   "rajyaSabha.seats": "{count} seats",
@@ -155,14 +161,19 @@ const en: Dict = {
 
   "voices.title": "Citizen Voices",
   "voices.subtitle":
-    "Share your view on the campaign. Stored on your device only — multi-user requires a backend that's been deferred for this build.",
+    "Share your view on the campaign. Posts and upvotes are stored in Firestore when configured; otherwise they live on your device only.",
   "voices.composer.placeholder": "What's on your mind about this election?",
   "voices.composer.submit": "Post",
-  "voices.composer.imageHint": "Optional image (max 2 MB, stored as a data URL on your device)",
-  "voices.empty": "No voices yet on this device. Be the first.",
+  "voices.empty": "No voices yet. Be the first.",
   "voices.upvote": "Upvote",
   "voices.upvoted": "Upvoted",
-  "voices.imageTooLarge": "Image too large. Keep it under 2 MB.",
+  "voices.postAnon": "Post anonymously",
+  "voices.anonymous": "Anonymous",
+  "voices.signInPrompt":
+    "You're posting from an anonymous session. Sign in (top-left) to attach your name and photo to posts — or post anonymously regardless.",
+  "voices.banner.firebaseConnected": "Connected to Firestore — posts and upvotes are visible to everyone.",
+  "voices.banner.firebaseMissing":
+    "Firebase is not configured for this build. Posts are stored on your device only — set NEXT_PUBLIC_FIREBASE_* env vars to enable multi-user.",
 
   "exitPoll.title": "Exit poll",
   "exitPoll.subtitle":
@@ -181,6 +192,13 @@ const en: Dict = {
   "exitPoll.statusScheduled": "scheduled",
   "exitPoll.allTalliesTitle": "All elections you've voted in",
   "exitPoll.noVotesAnywhere": "You haven't voted in any election yet on this device.",
+  "exitPoll.banner.firebaseConnected":
+    "Connected to Firestore — tallies are live across everyone using this build.",
+  "exitPoll.banner.firebaseMissing":
+    "Firebase is not configured for this build. Votes are stored on your device only — set NEXT_PUBLIC_FIREBASE_* env vars to enable the live tally.",
+  "exitPoll.identitySwitchWarn":
+    "Your vote is keyed to your current Firebase user ID. Signing in/out (or opening a new browser profile) gives you a new UID, so you could vote again. UI demo only.",
+  "exitPoll.yourUid": "Your Firebase UID",
 };
 
 const hi: Dict = {
@@ -278,6 +296,12 @@ const hi: Dict = {
   "common.back": "वापस",
   "common.loading": "लोड हो रहा है…",
 
+  "auth.signIn": "साइन-इन",
+  "auth.signOut": "साइन आउट",
+  "auth.signedInAs": "साइन-इन हैं",
+  "auth.anonSession": "अनाम सत्र",
+  "auth.switchAccount": "Google खाता बदलें",
+
   "upcoming.eyebrow": "आगामी",
   "rajyaSabha.title": "राज्यसभा",
   "rajyaSabha.seats": "{count} सीटें",
@@ -316,14 +340,19 @@ const hi: Dict = {
 
   "voices.title": "नागरिक आवाज़ें",
   "voices.subtitle":
-    "इस चुनाव अभियान पर अपनी राय रखें। केवल आपके डिवाइस पर सेव होती है — असली बैकएंड इस बिल्ड में स्थगित है।",
+    "इस चुनाव पर अपनी राय रखें। Firestore कॉन्फ़िगर होने पर पोस्ट और अपवोट सबको दिखते हैं; नहीं तो केवल आपके डिवाइस पर।",
   "voices.composer.placeholder": "इस चुनाव पर आपके क्या विचार हैं?",
   "voices.composer.submit": "पोस्ट करें",
-  "voices.composer.imageHint": "वैकल्पिक छवि (अधिकतम 2 MB, आपके डिवाइस पर डेटा-URL के रूप में)",
-  "voices.empty": "अभी इस डिवाइस पर कोई आवाज़ नहीं। पहले बनें।",
+  "voices.empty": "अभी कोई आवाज़ नहीं। पहले बनें।",
   "voices.upvote": "अपवोट",
   "voices.upvoted": "अपवोट किया",
-  "voices.imageTooLarge": "छवि बहुत बड़ी है। 2 MB से कम रखें।",
+  "voices.postAnon": "अनाम पोस्ट करें",
+  "voices.anonymous": "अनाम",
+  "voices.signInPrompt":
+    "आप अनाम सत्र में पोस्ट कर रहे हैं। ऊपर बाएँ से साइन-इन करके अपना नाम/फ़ोटो जोड़ें — या वैसे भी अनाम रहें।",
+  "voices.banner.firebaseConnected": "Firestore से जुड़ा — पोस्ट और अपवोट सबको दिखते हैं।",
+  "voices.banner.firebaseMissing":
+    "इस बिल्ड में Firebase कॉन्फ़िगर नहीं है। पोस्ट केवल आपके डिवाइस पर हैं — multi-user के लिए NEXT_PUBLIC_FIREBASE_* env सेट करें।",
 
   "exitPoll.title": "एग्ज़िट पोल",
   "exitPoll.subtitle":
@@ -342,6 +371,13 @@ const hi: Dict = {
   "exitPoll.statusScheduled": "तय",
   "exitPoll.allTalliesTitle": "आपने वोट किए चुनाव",
   "exitPoll.noVotesAnywhere": "इस डिवाइस पर आपने अभी किसी चुनाव में वोट नहीं डाला।",
+  "exitPoll.banner.firebaseConnected":
+    "Firestore से जुड़ा — गिनती सबके लिए लाइव है।",
+  "exitPoll.banner.firebaseMissing":
+    "इस बिल्ड में Firebase कॉन्फ़िगर नहीं है। वोट केवल आपके डिवाइस पर हैं — लाइव गिनती के लिए NEXT_PUBLIC_FIREBASE_* env सेट करें।",
+  "exitPoll.identitySwitchWarn":
+    "आपका वोट आपके मौजूदा Firebase UID से जुड़ा है। साइन-इन/आउट करने पर UID बदल जाती है — आप दोबारा वोट कर सकते हैं। केवल UI डेमो।",
+  "exitPoll.yourUid": "आपका Firebase UID",
 };
 
 export const dict: Record<Locale, Dict> = {

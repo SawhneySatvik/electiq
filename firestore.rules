@@ -1,0 +1,90 @@
+rules_version = '2';
+
+// ElectoIQ Firestore rules.
+//
+// Voices and Exit Poll are open to anyone with a Firebase user (anonymous or
+// signed-in via Google). Aggregate fields (`upvotes`, `total`, `byParty`) must
+// only change via the documented transactions on the client — never set
+// directly with arbitrary values.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function ownerMatches(uidField) {
+      return isSignedIn() && request.resource.data[uidField] == request.auth.uid;
+    }
+
+    // Voices: text + author metadata. Image fields are not allowed.
+    match /voices/{voiceId} {
+      allow read: if true;
+
+      // Create: must be signed in, authorUid must match. upvotes must start at 0.
+      allow create: if ownerMatches('authorUid')
+                    && request.resource.data.text is string
+                    && request.resource.data.text.size() <= 1500
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.upvotes == 0
+                    && request.resource.data.isAnonymous is bool
+                    // Reject any image-bearing payloads.
+                    && !('image' in request.resource.data)
+                    && !('imageUrl' in request.resource.data);
+
+      // Update: only the upvotes counter, in increments of +1 (driven by the
+      // upvote transaction). All other fields must remain identical.
+      allow update: if isSignedIn()
+                    && request.resource.data.diff(resource.data).changedKeys().hasOnly(['upvotes'])
+                    && request.resource.data.upvotes == resource.data.upvotes + 1;
+
+      // Delete: only the original author can remove their post.
+      allow delete: if isSignedIn() && resource.data.authorUid == request.auth.uid;
+    }
+
+    // Voice upvotes: deduplication records keyed `{uid}_{voiceId}`. One per user
+    // per voice, immutable, only the owner can read/write theirs.
+    //
+    // `get` uses the doc-id prefix so it works whether the doc exists or not
+    // (the upvote transaction's pre-check `tx.get(upvoteRef)` reads a missing
+    // doc the very first time a user upvotes). `list` is owner-only via the
+    // doc's `uid` field; `getMyUpvotes()` adds `where('uid', '==', uid)` so
+    // the query is satisfiable.
+    match /voice_upvotes/{upvoteId} {
+      allow get: if isSignedIn() && upvoteId.split('_')[0] == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.uid == request.auth.uid;
+      allow create: if ownerMatches('uid')
+                    && upvoteId == request.auth.uid + '_' + request.resource.data.voiceId;
+      allow update, delete: if false;
+    }
+
+    // Exit poll votes: keyed `{uid}_{electionKey}`. One per user per election.
+    //
+    // `get` uses the doc-id prefix so a user can read their own vote even when
+    // the doc doesn't yet exist (`getMyVote` and the transaction's first
+    // `tx.get(voteRef)` both hit this path before the user has voted).
+    match /exit_poll_votes/{voteId} {
+      allow get: if isSignedIn() && voteId.split('_')[0] == request.auth.uid;
+      allow list: if isSignedIn() && resource.data.uid == request.auth.uid;
+      allow create: if ownerMatches('uid')
+                    && voteId == request.auth.uid + '_' + request.resource.data.electionKey
+                    && request.resource.data.party is string
+                    && request.resource.data.party.size() > 0;
+      allow update, delete: if false;
+    }
+
+    // Exit poll tally aggregates. Public read so the live bar chart works for
+    // unauthenticated viewers; writes locked to authenticated +1 increments
+    // driven by the cast-vote transaction.
+    match /exit_poll_tallies/{electionKey} {
+      allow read: if true;
+      allow create: if isSignedIn()
+                    && request.resource.data.total == 1
+                    && request.resource.data.byParty.size() == 1;
+      // Each transaction adds 1 to total and to a single party's count.
+      allow update: if isSignedIn()
+                    && request.resource.data.total == resource.data.total + 1;
+      allow delete: if false;
+    }
+  }
+}

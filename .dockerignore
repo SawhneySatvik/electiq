@@ -1,0 +1,38 @@
+node_modules
+.next
+out
+build
+dist
+
+.env
+.env.local
+.env.*.local
+
+*.log
+.DS_Store
+.vscode
+.idea
+
+# Local-only / version-control / dev files we don't want in the container context.
+.git
+.gitignore
+.gitattributes
+.github
+
+# Tooling output not needed at build time.
+coverage
+.eslintcache
+.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Tests are run separately in CI; not required to run inside the container build.
+__tests__
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+vitest.config.ts
+
+# Plans / READMEs not needed at runtime.
+README.md
+firestore.rules

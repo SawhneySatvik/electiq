@@ -3,12 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell } from "recharts";
 import { useT } from "@/lib/translation-runtime";
+import { useAuth } from "@/lib/auth";
 import {
   castVote,
   electionKey,
-  getAllMyVotes,
   getMyVote,
-  getTally,
+  isFirebaseBacked,
+  subscribeTally,
   type ExitPollTally,
 } from "@/lib/exit-poll-store";
 import { getCredibleParties, getPartyColor, getUpcomingElections } from "@/lib/data-utils";
@@ -21,6 +22,7 @@ function statusKey(status: string): "exitPoll.statusCompleted" | "exitPoll.statu
 }
 
 export default function ExitPollPage() {
+  const auth = useAuth();
   const elections = useMemo(() => getUpcomingElections(), []);
   const [selectedKey, setSelectedKey] = useState<string>(() =>
     elections[0] ? electionKey(elections[0]) : "",
@@ -28,8 +30,10 @@ export default function ExitPollPage() {
   const [pickedParty, setPickedParty] = useState("");
   const [tally, setTally] = useState<ExitPollTally>({ total: 0, byParty: {} });
   const [myVote, setMyVote] = useState<string | null>(null);
-  const [allVotes, setAllVotes] = useState<Record<string, string>>({});
   const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+
+  const backed = isFirebaseBacked();
 
   const title = useT("exitPoll.title");
   const subtitle = useT("exitPoll.subtitle");
@@ -38,51 +42,63 @@ export default function ExitPollPage() {
   const pickPartyLabel = useT("exitPoll.pickParty");
   const submit = useT("exitPoll.submit");
   const alreadyVoted = useT("exitPoll.alreadyVoted");
+  const completedLabel = useT("exitPoll.statusCompleted");
+  const scheduledLabel = useT("exitPoll.statusScheduled");
+  const fbConnected = useT("exitPoll.banner.firebaseConnected");
+  const fbMissing = useT("exitPoll.banner.firebaseMissing");
+  const identitySwitchWarn = useT("exitPoll.identitySwitchWarn");
+  const yourUid = useT("exitPoll.yourUid");
   const expectedWindowTpl = useT("exitPoll.expectedWindow", {
     window: elections.find((e) => electionKey(e) === selectedKey)?.expected_window ?? "",
   });
-  const completedLabel = useT("exitPoll.statusCompleted");
-  const scheduledLabel = useT("exitPoll.statusScheduled");
-  const allTalliesTitle = useT("exitPoll.allTalliesTitle");
-  const noVotesAnywhere = useT("exitPoll.noVotesAnywhere");
 
   const selected: UpcomingElection | undefined = elections.find(
     (e) => electionKey(e) === selectedKey,
   );
 
   useEffect(() => {
-    setAllVotes(getAllMyVotes());
-  }, []);
+    if (!selectedKey) return;
+    const unsub = subscribeTally(selectedKey, setTally);
+    return () => unsub();
+  }, [selectedKey]);
 
   useEffect(() => {
     if (!selectedKey) return;
-    setMyVote(getMyVote(selectedKey));
-    setTally(getTally(selectedKey));
+    let cancelled = false;
+    getMyVote(selectedKey, auth.uid).then((v) => {
+      if (!cancelled) setMyVote(v);
+    });
     setPickedParty("");
     setError(null);
-  }, [selectedKey]);
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedKey, auth.uid]);
 
   const labelFor = (e: UpcomingElection) =>
     `${e.state} · ${e.type} · ${e.expected_year}`;
-
   const tallyTitle = useT("exitPoll.tallyTitle", {
     label: selected ? labelFor(selected) : "",
   });
   const totalVotes = useT("exitPoll.totalVotes", { count: tally.total });
   const empty = useT("exitPoll.empty");
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedKey || !pickedParty) return;
-    const result = castVote(selectedKey, pickedParty);
-    if (!result.ok) {
-      setError(result.error);
-      return;
-    }
+    if (!selectedKey || !pickedParty || submitting) return;
+    setSubmitting(true);
     setError(null);
-    setMyVote(result.party);
-    setTally(result.tally);
-    setAllVotes(getAllMyVotes());
+    try {
+      const result = await castVote(selectedKey, pickedParty, auth.uid);
+      if (!result.ok) {
+        setError(result.error);
+        return;
+      }
+      setMyVote(result.party);
+      setTally(result.tally);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const credibleParties = selected ? getCredibleParties(selected.state) : [];
@@ -98,9 +114,24 @@ export default function ExitPollPage() {
         <p className="text-muted">{subtitle}</p>
       </div>
 
-      <div className="rounded-xl border border-accent/40 bg-accent/10 px-4 py-3 text-xs text-text/85 mb-8">
+      <div
+        className={`rounded-xl border px-3 py-2 text-xs mb-6 ${
+          backed
+            ? "border-emerald-500/30 bg-emerald-500/5 text-emerald-300"
+            : "border-amber-500/30 bg-amber-500/5 text-amber-300"
+        }`}
+      >
+        {backed ? fbConnected : fbMissing}
+      </div>
+
+      <div className="rounded-xl border border-accent/40 bg-accent/10 px-4 py-3 text-xs text-text/85 mb-3">
         {warning}
       </div>
+      {backed && (
+        <div className="rounded-xl border border-border bg-bg/40 px-4 py-2 text-xs text-muted mb-8">
+          {identitySwitchWarn}
+        </div>
+      )}
 
       <form onSubmit={onSubmit} className="bg-surface border border-border rounded-xl p-5 mb-8 space-y-4">
         <div>
@@ -158,7 +189,7 @@ export default function ExitPollPage() {
             </div>
             <button
               type="submit"
-              disabled={!pickedParty || !selectedKey}
+              disabled={!pickedParty || !selectedKey || submitting || (backed && !auth.uid)}
               className="px-5 py-2 rounded-lg bg-accent text-bg text-sm font-semibold hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed transition-opacity"
             >
               {submit}
@@ -166,9 +197,15 @@ export default function ExitPollPage() {
             {error && <div className="text-xs text-red-400">{error}</div>}
           </>
         )}
+
+        {backed && auth.uid && (
+          <div className="text-[10px] text-muted font-mono pt-1 border-t border-border">
+            {yourUid}: {auth.uid}
+          </div>
+        )}
       </form>
 
-      <div className="bg-surface border border-border rounded-xl p-5 mb-8">
+      <div className="bg-surface border border-border rounded-xl p-5">
         <div className="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
           <h2 className="font-display text-lg font-bold">{tallyTitle}</h2>
           <span className="text-xs text-muted">{totalVotes}</span>
@@ -196,38 +233,6 @@ export default function ExitPollPage() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-        )}
-      </div>
-
-      <div className="bg-surface border border-border rounded-xl p-5">
-        <h2 className="font-display text-lg font-bold mb-3">{allTalliesTitle}</h2>
-        {Object.keys(allVotes).length === 0 ? (
-          <p className="text-sm text-muted">{noVotesAnywhere}</p>
-        ) : (
-          <ul className="divide-y divide-border">
-            {Object.entries(allVotes).map(([key, party]) => {
-              const e = elections.find((u) => electionKey(u) === key);
-              return (
-                <li key={key} className="py-2 flex items-baseline justify-between gap-3 text-sm">
-                  <button
-                    onClick={() => setSelectedKey(key)}
-                    className="text-left text-text/90 hover:text-accent transition-colors"
-                  >
-                    {e ? labelFor(e) : key}
-                  </button>
-                  <span
-                    className="font-mono text-xs px-1.5 py-0.5 rounded"
-                    style={{
-                      background: getPartyColor(party) + "22",
-                      color: getPartyColor(party),
-                    }}
-                  >
-                    {party}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
         )}
       </div>
     </div>
