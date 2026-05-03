@@ -4,8 +4,8 @@ import { useT } from "@/lib/translation-runtime";
 import type { UpcomingElection } from "@/lib/types";
 
 export function UpcomingStrip({ elections }: { elections: UpcomingElection[] }) {
-  if (elections.length === 0) return null;
   const eyebrow = useT("upcoming.eyebrow");
+  if (elections.length === 0) return null;
   return (
     <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {elections.map((e, i) => (

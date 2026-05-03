@@ -9,27 +9,41 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { getFirebase, isFirebaseConfigured } from "./firebase";
+import {
+  EXIT_POLL_EID_KEY as EID_KEY,
+  EXIT_POLL_TALLIES_KEY as TALLIES_KEY,
+  EXIT_POLL_VOTES_KEY as VOTES_KEY,
+} from "./storage-keys";
 import type { UpcomingElection } from "./types";
-
-const EID_KEY = "electoiq-eid";
-const VOTES_KEY = "electoiq-exit-poll-votes";
-const TALLIES_KEY = "electoiq-exit-poll-tallies";
 
 const VOTES_COLLECTION = "exit_poll_votes";
 const TALLIES_COLLECTION = "exit_poll_tallies";
 
+/** Aggregate exit-poll tally for a single election. */
 export interface ExitPollTally {
   total: number;
   byParty: Record<string, number>;
 }
 
+/** Map of election-key → tally. */
 export type TallyMap = Record<string, ExitPollTally>;
+
+/** Map of election-key → party the device voted for. */
 export type VoteMap = Record<string, string>;
 
+/**
+ * Stable key identifying an election: `${state}::${type}::${year}`. Used as
+ * the localStorage / Firestore doc id segment so the same election always maps
+ * to the same record.
+ */
 export function electionKey(e: Pick<UpcomingElection, "state" | "type" | "expected_year">): string {
   return `${e.state}::${e.type}::${e.expected_year}`;
 }
 
+/**
+ * Whether the live Firestore backend is wired up. When false, all read/write
+ * operations transparently fall back to per-device localStorage.
+ */
 export function isFirebaseBacked(): boolean {
   return isFirebaseConfigured();
 }
@@ -88,6 +102,10 @@ function lsWriteTallies(t: TallyMap): void {
 
 // ---------- Public API ----------
 
+/**
+ * Returns the party this user voted for in the given election, or null if no
+ * vote is on record on this device / under this Firebase UID.
+ */
 export async function getMyVote(key: string, uid: string | null): Promise<string | null> {
   const fb = getFirebase();
   if (!fb) {
@@ -100,6 +118,11 @@ export async function getMyVote(key: string, uid: string | null): Promise<string
   return snap.exists() ? String((snap.data() as { party?: string }).party ?? "") : null;
 }
 
+/**
+ * Subscribes to live tally updates for a single election. Returns an
+ * unsubscribe function. Under the localStorage fallback, emits the cached
+ * tally synchronously and the unsubscribe is a no-op.
+ */
 export function subscribeTally(
   key: string,
   onChange: (tally: ExitPollTally) => void,
@@ -137,6 +160,14 @@ export async function getAllMyVotes(uid: string | null): Promise<VoteMap> {
   return {};
 }
 
+/**
+ * Casts a vote for `party` in the election identified by `key`. Returns the
+ * updated tally on success, or an error string. Enforces one vote per
+ * (Firebase UID × election) — under the localStorage fallback, one vote per
+ * (browser × election).
+ *
+ * Concurrency-safe under Firestore via `runTransaction` + `FieldValue.increment`.
+ */
 export async function castVote(
   key: string,
   party: string,

@@ -16,43 +16,56 @@ import type {
   ConstituencyProfile,
 } from "./types";
 
+/** Every Lok Sabha constituency in the dataset (135 across 31 states/UTs × 4 cycles). */
 export function getLokSabhaData(): LSConstituency[] {
   return (lokSabhaJson as { constituencies: LSConstituency[] }).constituencies;
 }
 
+/** Every Vidhan Sabha state-election record in the dataset (135 records across 15 assemblies). */
 export function getStateElectionData(): StateElection[] {
   return (stateElectionsJson as { state_elections: StateElection[] }).state_elections;
 }
 
+/** Every candidate-affidavit record in the dataset (78 records). */
 export function getCandidatesData(): Candidate[] {
   return (candidatesJson as { candidates: Candidate[] }).candidates;
 }
 
+/** Rajya Sabha rosters keyed by state (28 states). */
 export function getRajyaSabhaData(): RajyaSabhaState[] {
   return (rajyaSabhaJson as { rajya_sabha: RajyaSabhaState[] }).rajya_sabha;
 }
 
+/** Curated profile for a specific LS seat, or `undefined` if not loaded. */
 export function getSeatProfile(id: string): ConstituencyProfile | undefined {
   const profiles = (seatProfilesJson as { profiles: Record<string, ConstituencyProfile> }).profiles;
   return profiles[id];
 }
 
+/** All seat ids that have a curated profile loaded. */
 export function getAllSeatProfileIds(): string[] {
   return Object.keys((seatProfilesJson as { profiles: Record<string, ConstituencyProfile> }).profiles);
 }
 
+/** Rajya Sabha roster for a single state, or `undefined` if not loaded. */
 export function getRajyaSabhaForState(state: string): RajyaSabhaState | undefined {
   return getRajyaSabhaData().find((r) => r.state === state);
 }
 
+/** Full schedule of upcoming and recently-completed elections. */
 export function getUpcomingElections(): UpcomingElection[] {
   return (upcomingElectionsJson as { elections: UpcomingElection[] }).elections;
 }
 
+/** ISO month string (`YYYY-MM`) reflecting when the schedule data was curated. */
 export function getUpcomingElectionsAsOf(): string {
   return (upcomingElectionsJson as { as_of?: string }).as_of ?? "";
 }
 
+/**
+ * Next `limit` not-yet-polled elections, sorted ascending by year. Used by the
+ * home page's upcoming-elections strip.
+ */
 export function getNextElections(limit = 3): UpcomingElection[] {
   return [...getUpcomingElections()]
     .filter((e) => e.status !== "polling completed")
@@ -82,6 +95,13 @@ const NATIONAL_PARTIES = [
   "AIMIM",
 ];
 
+/**
+ * Returns parties credibly associated with a state — derived from real LS / VS
+ * winners + runners-up + RS members for that state. For "All India", returns
+ * a curated national list.
+ *
+ * Used by the exit poll's party dropdown to keep choices realistic per state.
+ */
 export function getCredibleParties(state: string): string[] {
   if (state === "All India") return [...NATIONAL_PARTIES];
   const set = new Set<string>();
@@ -111,6 +131,10 @@ export function getCredibleParties(state: string): string[] {
   return Array.from(set).sort();
 }
 
+/**
+ * For each state with LS data, returns the party that won the most seats in
+ * the most-recent election year. Used to colour the choropleth map.
+ */
 export function getDominantPartyByState(): Record<string, string> {
   const out: Record<string, string> = {};
   for (const c of getLokSabhaData()) {
@@ -311,6 +335,15 @@ const STATE_ALIASES: Record<string, string> = {
   dl: "Delhi",
 };
 
+/**
+ * Keyword-scoring RAG retriever. Extracts state/party/year mentions from the
+ * user message, scores every LS / VS / candidate / RS / upcoming-election
+ * record against the question, and returns the top `maxRecords` matches.
+ *
+ * Used by `/api/chat` to ground Gemini responses in the dataset. Profile
+ * questions ("population", "violence", "demographics") merge the seat profile
+ * into the constituency record so the model has structured numbers to cite.
+ */
 export function retrieveRelevantContext(userMessage: string, maxRecords = 10): ChatContextRecord[] {
   const msg = userMessage.toLowerCase();
   const tokens = msg.split(/[^a-z0-9()]+/).filter((t) => t.length >= 2);
@@ -459,6 +492,7 @@ export function retrieveRelevantContext(userMessage: string, maxRecords = 10): C
   return scored.slice(0, maxRecords).map((s) => s.rec);
 }
 
+/** Format a Rupee amount given in lakhs. Returns "—" when the value is missing. */
 export function formatAssets(lakhs: number): string {
   if (!lakhs && lakhs !== 0) return "—";
   if (lakhs >= 100000) {
@@ -471,71 +505,13 @@ export function formatAssets(lakhs: number): string {
   return `₹${lakhs.toFixed(1)} L`;
 }
 
+/** Compact format for vote counts — uses L (lakhs) and K (thousand) suffixes. */
 export function formatVotes(votes: number): string {
   if (votes >= 100000) return `${(votes / 100000).toFixed(2)} L`;
   if (votes >= 1000) return `${(votes / 1000).toFixed(1)} K`;
   return String(votes);
 }
 
-const PARTY_COLORS: Record<string, string> = {
-  BJP: "#f97316",
-  INC: "#2563eb",
-  AAP: "#06b6d4",
-  TMC: "#10b981",
-  SP: "#e11d48",
-  DMK: "#7c3aed",
-  AIADMK: "#0ea5e9",
-  BSP: "#3b82f6",
-  NCP: "#8b5cf6",
-  SS: "#f59e0b",
-  TDP: "#facc15",
-  YSRCP: "#22d3ee",
-  BRS: "#84cc16",
-  "CPI(M)": "#dc2626",
-  CPI: "#ef4444",
-  "JD(U)": "#65a30d",
-  "JD(S)": "#a3e635",
-  RJD: "#16a34a",
-  RLD: "#fbbf24",
-  AIMIM: "#14b8a6",
-  SAD: "#0284c7",
-  LJP: "#fb7185",
-  "LJP(RV)": "#fb7185",
-  HAM: "#a855f7",
-  MDMK: "#ec4899",
-  PRP: "#94a3b8",
-  PPP: "#94a3b8",
-  VIP: "#6366f1",
-  BJD: "#0d9488",
-  JMM: "#15803d",
-  AGP: "#f43f5e",
-  INLD: "#0284c7",
-  JJP: "#fde047",
-  HJC: "#f97316",
-  NPP: "#a78bfa",
-  MGP: "#fbbf24",
-  IND: "#6b7280",
-  NC: "#0ea5e9",
-  PDP: "#14b8a6",
-  PC: "#ec4899",
-  MNF: "#16a34a",
-  ZPM: "#22c55e",
-  NPF: "#dc2626",
-  NDPP: "#a855f7",
-  VPP: "#7c3aed",
-  UDP: "#0891b2",
-  KHNAM: "#06b6d4",
-  TIPRA: "#ef4444",
-  INPT: "#7c3aed",
-};
-
-export function getPartyColor(party: string): string {
-  return PARTY_COLORS[party] || "#71717a";
-}
-
-export function getCharacterBadgeColor(character: string): string {
-  if (character === "stronghold") return "#10b981";
-  if (character === "swing") return "#f59e0b";
-  if (character === "volatile") return "#ef4444";
-  return "#71717a";
-}
+// Party / character colours live in lib/party-colors.ts. Re-exported here so
+// existing call sites (data-utils consumers) continue to work without churn.
+export { getPartyColor, getCharacterBadgeColor } from "./party-colors";

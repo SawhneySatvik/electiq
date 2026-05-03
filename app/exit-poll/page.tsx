@@ -135,13 +135,14 @@ export default function ExitPollPage() {
 
       <form onSubmit={onSubmit} className="bg-surface border border-border rounded-xl p-5 mb-8 space-y-4">
         <div>
-          <label className="text-xs uppercase tracking-widest text-muted block mb-1">
+          <label htmlFor="exit-poll-election" className="text-xs uppercase tracking-widest text-muted block mb-1">
             {pickElectionLabel}
           </label>
           <select
+            id="exit-poll-election"
             value={selectedKey}
             onChange={(e) => setSelectedKey(e.target.value)}
-            className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text focus:outline-none focus:border-accent transition-colors"
+            className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
           >
             {elections.map((e) => {
               const k = electionKey(e);
@@ -171,13 +172,14 @@ export default function ExitPollPage() {
         ) : (
           <>
             <div>
-              <label className="text-xs uppercase tracking-widest text-muted block mb-1">
+              <label htmlFor="exit-poll-party" className="text-xs uppercase tracking-widest text-muted block mb-1">
                 {pickPartyLabel}
               </label>
               <select
+                id="exit-poll-party"
                 value={pickedParty}
                 onChange={(e) => setPickedParty(e.target.value)}
-                className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text focus:outline-none focus:border-accent transition-colors"
+                className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
               >
                 <option value="">—</option>
                 {credibleParties.map((p) => (
@@ -205,7 +207,12 @@ export default function ExitPollPage() {
         )}
       </form>
 
-      <div className="bg-surface border border-border rounded-xl p-5">
+      <div
+        className="bg-surface border border-border rounded-xl p-5"
+        role="region"
+        aria-label={tallyTitle}
+        aria-live="polite"
+      >
         <div className="flex items-baseline justify-between mb-4 gap-3 flex-wrap">
           <h2 className="font-display text-lg font-bold">{tallyTitle}</h2>
           <span className="text-xs text-muted">{totalVotes}</span>

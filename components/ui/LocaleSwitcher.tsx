@@ -10,8 +10,8 @@ export function LocaleSwitcher() {
     <select
       value={locale}
       onChange={(e) => setLocale(e.target.value as Locale)}
-      aria-label="Language"
-      className="bg-surface border border-border rounded-md px-2 py-1.5 text-xs text-text/90 hover:border-accent/50 focus:outline-none focus:border-accent transition-colors"
+      aria-label="Select language"
+      className="bg-surface border border-border rounded-md px-2 py-1.5 text-xs text-text/90 hover:border-accent/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
     >
       {LOCALES.map((l) => (
         <option key={l} value={l}>

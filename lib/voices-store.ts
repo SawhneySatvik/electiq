@@ -12,12 +12,13 @@ import {
   query,
   runTransaction,
   serverTimestamp,
-  setDoc,
   Timestamp,
   where,
 } from "firebase/firestore";
 import { getFirebase, isFirebaseConfigured } from "./firebase";
+import { upvotedKey, VOICES_KEY, VOICES_LS_UID_KEY } from "./storage-keys";
 
+/** A single Voices post — text plus author and counter fields. */
 export interface Voice {
   id: string;
   text: string;
@@ -29,8 +30,6 @@ export interface Voice {
   upvotes: number;
 }
 
-const VOICES_KEY = "electoiq-voices";
-const UID_KEY = "electoiq-uid";
 const VOICES_COLLECTION = "voices";
 const UPVOTES_COLLECTION = "voice_upvotes";
 
@@ -42,11 +41,11 @@ export function isFirebaseBacked(): boolean {
 
 function lsEnsureUid(): string {
   if (typeof window === "undefined") return "anon";
-  let uid = window.localStorage.getItem(UID_KEY);
+  let uid = window.localStorage.getItem(VOICES_LS_UID_KEY);
   if (!uid) {
     uid = `u-${Math.random().toString(36).slice(2, 10)}`;
     try {
-      window.localStorage.setItem(UID_KEY, uid);
+      window.localStorage.setItem(VOICES_LS_UID_KEY, uid);
     } catch {}
   }
   return uid;
@@ -98,10 +97,10 @@ function lsAddVoice(input: {
 
 function lsUpvote(id: string, uid: string): Voice | undefined {
   const all = lsReadAll();
-  const upvotedKey = `electoiq-upvoted-${uid}`;
+  const key = upvotedKey(uid);
   let upvoted: Set<string>;
   try {
-    upvoted = new Set<string>(JSON.parse(window.localStorage.getItem(upvotedKey) ?? "[]"));
+    upvoted = new Set<string>(JSON.parse(window.localStorage.getItem(key) ?? "[]"));
   } catch {
     upvoted = new Set();
   }
@@ -110,7 +109,7 @@ function lsUpvote(id: string, uid: string): Voice | undefined {
   lsWriteAll(next);
   upvoted.add(id);
   try {
-    window.localStorage.setItem(upvotedKey, JSON.stringify(Array.from(upvoted)));
+    window.localStorage.setItem(key, JSON.stringify(Array.from(upvoted)));
   } catch {}
   return next.find((v) => v.id === id);
 }
@@ -118,7 +117,7 @@ function lsUpvote(id: string, uid: string): Voice | undefined {
 function lsHasUpvoted(id: string, uid: string): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const raw = window.localStorage.getItem(`electoiq-upvoted-${uid}`);
+    const raw = window.localStorage.getItem(upvotedKey(uid));
     if (!raw) return false;
     const arr = JSON.parse(raw);
     return Array.isArray(arr) && arr.includes(id);
@@ -246,7 +245,7 @@ export async function getMyUpvotes(uid: string | null): Promise<Set<string>> {
     if (typeof window === "undefined") return new Set();
     const effectiveUid = uid ?? lsEnsureUid();
     try {
-      const raw = window.localStorage.getItem(`electoiq-upvoted-${effectiveUid}`);
+      const raw = window.localStorage.getItem(upvotedKey(effectiveUid));
       if (!raw) return new Set();
       const arr = JSON.parse(raw);
       return new Set(Array.isArray(arr) ? arr : []);

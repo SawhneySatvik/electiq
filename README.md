@@ -26,7 +26,7 @@ Built for election literacy. Demo data only — modeled on patterns from [MyNeta
 | **Curated seat profiles** | 43 (population, electors, literacy, communities, key issues, notable history, poll-period notes) |
 | **Candidate affidavits** | 78 |
 | **UI languages** | 6 (en / hi static · ta / bn / mr / te runtime-translated via Gemini, cached in localStorage) |
-| **Unit tests** | 74 (Vitest + happy-dom, ~1.3 s) |
+| **Unit tests** | 101 across 9 files (Vitest + happy-dom, ~1.7 s) |
 
 ---
 
@@ -49,11 +49,16 @@ Eight Google services back ElectoIQ end to end. Each is documented with the file
 
 ## Codebase quality
 
-- **Strict TypeScript** across `app/`, `components/`, `lib/`, `hooks/`, `store/`. `tsc --noEmit` is green; CI gate.
+- **Strict TypeScript** across `app/`, `components/`, `lib/`, `hooks/`, `store/`. `tsc --noEmit` is green; enforced in CI.
+- **ESLint + Prettier + EditorConfig + `.nvmrc`** — `next/core-web-vitals` config with stricter rules (`eqeqeq`, `prefer-const`, `no-console`); `npm run lint` reports zero warnings.
+- **GitHub Actions CI** (`.github/workflows/ci.yml`) — runs typecheck → lint → test → build on every push and PR. Concurrency-cancelled per branch; 10-min timeout.
+- **Dependabot** weekly npm updates + monthly Action updates with grouped types/vitest PRs.
 - **Layered structure** — pure logic in `lib/`, presentation in `components/` (grouped by feature: `ui`, `explore`, `candidates`, `chat`), routing in `app/` (App Router), persistent state in `store/`, side-effecting hooks in `hooks/`.
-- **Single source of truth per concern.** Gemini calls go through `lib/gemini.ts` only. RAG retrieval lives in one function (`retrieveRelevantContext`). Theme tokens are CSS variables, never hex hardcodes.
+- **Single source of truth per concern.** Gemini calls through `lib/gemini.ts` only. RAG retrieval in one function (`retrieveRelevantContext`). Brand colours in `lib/party-colors.ts`. localStorage keys in `lib/storage-keys.ts`. API errors via `lib/api-error.ts` (consistent `{ error, code? }` envelope). Theme tokens are CSS variables — no hex hardcodes in components.
 - **Hybrid-store pattern.** `lib/voices-store.ts` and `lib/exit-poll-store.ts` expose one public API; internally they dispatch to Firestore when configured, localStorage otherwise. Components never branch on backend mode.
-- **Phased delivery discipline.** Each feature shipped with `npm run typecheck` + `npm run build` + `npm test` all green at the boundary. No half-finished states checked in.
+- **JSDoc on every public `lib/` export** so the next reader's hover-IntelliSense answers what they need.
+- **Phased delivery discipline.** Each feature shipped with `npm run typecheck` + `npm run lint` + `npm run build` + `npm test` all green at the boundary.
+- **MIT `LICENSE`, `CONTRIBUTING.md`, `CHANGELOG.md`** following Keep a Changelog and SemVer.
 
 ```
 app/                Next.js App Router pages + API routes
@@ -72,8 +77,13 @@ cloudbuild.yaml     Build → push → deploy pipeline
 
 ## Accessibility
 
-- **Semantic landmarks** — `<header>`, `<main>`, `<footer>`, `<nav>` with implicit roles.
-- **ARIA where it counts** — `aria-label`, `aria-haspopup`, `aria-expanded`, `role="menu"` on the auth dropdown; `role="img"` + `aria-label` on the SVG India map.
+- **Skip-to-main-content link** as the first focusable element in the DOM (`SkipLink`); lands on the `#main` landmark.
+- **`<html lang>` follows the active locale** via a `HtmlLangSync` client component — screen readers pronounce content correctly when the user switches between en/hi/ta/bn/mr/te.
+- **Semantic landmarks** — `<header>`, `<main>` (with `id="main"` and `tabIndex={-1}` for skip-link target), `<footer>`, `<nav aria-label="Primary">`.
+- **ARIA where it counts** — `aria-current="page"` on the active nav link; `aria-label`, `aria-haspopup`, `aria-expanded`, `role="menu"` on the auth dropdown; `role="img"` + `aria-label` on the SVG India map; `role="status"` + `aria-live="polite"` on streaming chat assistant messages and the exit-poll tally.
+- **Form labels properly associated** — every `<input>`/`<select>`/`<textarea>` has an `htmlFor`-bound `<label>` (visible or `sr-only`).
+- **Visible focus rings** — custom `focus-visible:ring-2 focus-visible:ring-accent` on interactive controls; never relies on the default browser outline alone.
+- **Icon-only controls labelled** — `ThemeToggle` has `aria-label` + `title`; loading dots in chat are `aria-hidden="true"` with a parent `aria-label="Assistant is typing"`.
 - **Keyboard-only flows** for sign-in, locale switch, theme toggle, exit-poll voting, voices composer.
 - **Six locales** — en/hi/ta/bn/mr/te. Static dicts for en + hi; ta/bn/mr/te dispatched to `/api/translate` and cached forever in `electoiq-tx-{locale}` localStorage. UI strings via `useT(key)`; dynamic body text via `useTranslated(rawText)`.
 - **Light + dark theme** — CSS variables on `[data-theme]`. `prefers-color-scheme` honoured at first paint via an inline boot script — no flash of unstyled content.
@@ -116,12 +126,12 @@ Defence in depth across four trust boundaries.
 ## Test coverage
 
 ```bash
-npm test            # 74 tests in ~1.3 s
+npm test            # 101 tests across 9 files in ~1.7 s
 npm run test:watch
 npm run test:coverage
 ```
 
-Vitest + happy-dom; `vitest.config.ts` resolves the `@/` alias and mounts a localStorage polyfill (`__tests__/setup.ts`) because happy-dom 15 ships an incomplete `Storage` shim.
+Vitest + happy-dom; `vitest.config.ts` resolves the `@/` alias and mounts a localStorage polyfill (`__tests__/setup.ts`) because happy-dom 15 ships an incomplete `Storage` shim. Same suite runs on every push and PR via the GitHub Actions CI gate.
 
 | File | Tests | Focus |
 |---|---|---|
@@ -129,6 +139,11 @@ Vitest + happy-dom; `vitest.config.ts` resolves the `@/` alias and mounts a loca
 | `__tests__/i18n.test.ts` | 13 | `interpolate` (vars, missing vars, multi-occurrence, numeric coercion); `lookupStatic` (en hit, hi hit, fallback flag, missing key, en-never-fallback); dict-shape invariants (locale completeness, en/hi key alignment, ta/bn/mr/te empty by design). |
 | `__tests__/exit-poll-store.test.ts` | 12 | `electionKey` formatting; validation rejections (empty key, empty party); first-vote success; **double-vote rejection contract**; `getMyVote` reflection; multi-election allowance from same browser; `getAllMyVotes`; `subscribeTally` synchronous emission and persisted-tally emission. |
 | `__tests__/voices-store.test.ts` | 5 | `addVoice` create + persist + whitespace trim; newest-first ordering; **transactional upvote dedup**; `getMyUpvotes` set semantics. |
+| `__tests__/party-colors.test.ts` | 11 | National + regional brand colours; J&K / Northeast / island coverage; hex format invariants; semantic character-badge palette. |
+| `__tests__/storage-keys.test.ts` | 3 | `electoiq-` namespace consistency; suffix-based key builders; mutual distinctness. |
+| `__tests__/api-error.test.ts` | 7 | `toErrorMessage` for `Error`/string/opaque; `errorResponse` status + envelope; `unexpectedError` 500 + `UNEXPECTED` code. |
+| `__tests__/api-translate.test.ts` | 4 | API route input validation — empty array, non-array, unknown locale, en short-circuit (returns inputs verbatim without a Gemini call). |
+| `__tests__/api-analyse-constituency.test.ts` | 2 | API route input validation — missing constituency, empty results array. |
 
 The suite caught a real bug mid-build (`getMyUpvotes` didn't fall back to `lsEnsureUid()` when called with a null uid) — fixed inline. Tests are not theatre.
 

@@ -5,6 +5,9 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
+        role={isUser ? undefined : "status"}
+        aria-live={isUser ? undefined : "polite"}
+        aria-label={isUser ? `You said: ${message.content}` : undefined}
         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${
           isUser
             ? "bg-accent text-bg font-medium"
@@ -12,10 +15,10 @@ export function MessageBubble({ message }: { message: ChatMessage }) {
         }`}
       >
         {message.content || (
-          <span className="inline-flex items-center gap-1.5 text-muted">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" />
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" style={{ animationDelay: "0.2s" }} />
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" style={{ animationDelay: "0.4s" }} />
+          <span className="inline-flex items-center gap-1.5 text-muted" aria-label="Assistant is typing">
+            <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" />
+            <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" style={{ animationDelay: "0.2s" }} />
+            <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-soft" style={{ animationDelay: "0.4s" }} />
           </span>
         )}
       </div>

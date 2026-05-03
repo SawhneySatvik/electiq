@@ -115,13 +115,17 @@ export default function VoicesPage() {
         onSubmit={onSubmit}
         className="bg-surface border border-border rounded-xl p-5 mb-8 space-y-3"
       >
+        <label htmlFor="voices-composer" className="sr-only">
+          {placeholder}
+        </label>
         <textarea
+          id="voices-composer"
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={placeholder}
           rows={3}
           maxLength={1200}
-          className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text placeholder:text-muted focus:outline-none focus:border-accent transition-colors"
+          className="w-full bg-bg border border-border rounded-lg px-3 py-2 text-sm text-text placeholder:text-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
         />
         <div className="flex flex-wrap items-center justify-between gap-3">
           {isSignedIn ? (

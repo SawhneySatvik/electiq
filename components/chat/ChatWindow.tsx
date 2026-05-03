@@ -68,19 +68,24 @@ export function ChatWindow() {
       <form
         onSubmit={handleSubmit}
         className="border-t border-border p-4 flex gap-2"
+        aria-label="Chat composer"
       >
+        <label htmlFor="chat-input" className="sr-only">
+          {placeholder}
+        </label>
         <input
+          id="chat-input"
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={loading ? thinking : placeholder}
           disabled={loading}
-          className="flex-1 bg-bg border border-border rounded-lg px-4 py-3 text-sm text-text placeholder:text-muted focus:outline-none focus:border-accent transition-colors disabled:opacity-60"
+          className="flex-1 bg-bg border border-border rounded-lg px-4 py-3 text-sm text-text placeholder:text-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors disabled:opacity-60"
         />
         <button
           type="submit"
           disabled={loading || !input.trim()}
-          className="px-5 py-3 rounded-lg bg-accent text-bg text-sm font-semibold hover:bg-orange-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="px-5 py-3 rounded-lg bg-accent text-bg text-sm font-semibold hover:bg-orange-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           {sendLabel}
         </button>

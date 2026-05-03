@@ -4,6 +4,8 @@ import { Navbar } from "@/components/ui/Navbar";
 import { LocaleProvider } from "@/lib/translation-runtime";
 import { AuthProvider } from "@/lib/auth";
 import { Footer } from "@/components/ui/Footer";
+import { SkipLink } from "@/components/ui/SkipLink";
+import { HtmlLangSync } from "@/components/ui/HtmlLangSync";
 
 export const metadata: Metadata = {
   title: "ElectoIQ — India's Election Intelligence Platform",
@@ -34,9 +36,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-bg text-text font-body">
         <LocaleProvider>
+          <HtmlLangSync />
+          <SkipLink />
           <AuthProvider>
             <Navbar />
-            <main className="pt-16">{children}</main>
+            <main id="main" className="pt-16" tabIndex={-1}>
+              {children}
+            </main>
             <Footer />
           </AuthProvider>
         </LocaleProvider>

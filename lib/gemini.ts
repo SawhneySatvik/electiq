@@ -17,6 +17,10 @@ function getClient(): GoogleGenAI {
   return _client;
 }
 
+/**
+ * One-shot JSON generation. Calls Gemini in JSON-mode and runs the response
+ * through `safeParseJSON` to strip any fenced markdown the model wraps it in.
+ */
 export async function generateJSON<T = unknown>(prompt: string): Promise<T> {
   const client = getClient();
   const response = await client.models.generateContent({
@@ -31,6 +35,7 @@ export async function generateJSON<T = unknown>(prompt: string): Promise<T> {
   return safeParseJSON<T>(text);
 }
 
+/** One-shot text generation with a system instruction. */
 export async function generateText(systemInstruction: string, userPrompt: string): Promise<string> {
   const client = getClient();
   const response = await client.models.generateContent({
@@ -44,6 +49,10 @@ export async function generateText(systemInstruction: string, userPrompt: string
   return response.text ?? "";
 }
 
+/**
+ * Streaming text generation. Yields one text chunk at a time; chunks without a
+ * `text` field are skipped so consumers can `for-await` without guarding.
+ */
 export async function* streamText(
   systemInstruction: string,
   userPrompt: string,
