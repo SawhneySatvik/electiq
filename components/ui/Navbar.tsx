@@ -2,15 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const links = [
-  { href: "/explore", label: "Explore" },
-  { href: "/candidates", label: "Candidates" },
-  { href: "/chat", label: "Chat" },
-];
+import { useT } from "@/lib/translation-runtime";
+import { LocaleSwitcher } from "./LocaleSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const pathname = usePathname();
+  const links = [
+    { href: "/explore", label: useT("nav.explore") },
+    { href: "/candidates", label: useT("nav.candidates") },
+    { href: "/chat", label: useT("nav.chat") },
+    { href: "/voices", label: useT("nav.voices") },
+    { href: "/exit-poll", label: useT("nav.exitPoll") },
+  ];
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border bg-bg/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
@@ -39,6 +43,10 @@ export function Navbar() {
               </Link>
             );
           })}
+          <div className="ml-2 flex items-center gap-2">
+            <LocaleSwitcher />
+            <ThemeToggle />
+          </div>
         </nav>
       </div>
     </header>

@@ -1,0 +1,141 @@
+{
+  "as_of": "2026-05",
+  "elections": [
+    {
+      "state": "Tamil Nadu",
+      "type": "VS",
+      "expected_year": 2026,
+      "expected_window": "April – May 2026",
+      "status": "polling completed",
+      "note": "Counting concluded; demo placeholder reflecting the indicative ECI calendar."
+    },
+    {
+      "state": "Kerala",
+      "type": "VS",
+      "expected_year": 2026,
+      "expected_window": "April – May 2026",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "West Bengal",
+      "type": "VS",
+      "expected_year": 2026,
+      "expected_window": "March – May 2026",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Puducherry",
+      "type": "VS",
+      "expected_year": 2026,
+      "expected_window": "April 2026",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Assam",
+      "type": "VS",
+      "expected_year": 2026,
+      "expected_window": "April 2026",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Uttar Pradesh",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February – March 2027",
+      "status": "scheduled",
+      "note": "Term ends 2027; schedule per ECI cycle."
+    },
+    {
+      "state": "Punjab",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February – March 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Uttarakhand",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February – March 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Goa",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Manipur",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "February 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Gujarat",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "November – December 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Himachal Pradesh",
+      "type": "VS",
+      "expected_year": 2027,
+      "expected_window": "November 2027",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Tripura",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "February 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Karnataka",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "April – May 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Madhya Pradesh",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "November 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Rajasthan",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "November – December 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "All India",
+      "type": "LS",
+      "expected_year": 2029,
+      "expected_window": "April – May 2029",
+      "status": "scheduled",
+      "note": "Next general election to the 18th Lok Sabha; demo placeholder."
+    }
+  ]
+}

@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import { ElectionHistoryTable } from "@/components/explore/ElectionHistoryTable";
 import { MarginTrendChart } from "@/components/explore/MarginTrendChart";
 import { GeminiAnalysisCard } from "@/components/explore/GeminiAnalysisCard";
-import { getConstituencyById, getCandidatesByConstituency } from "@/lib/data-utils";
+import { RajyaSabhaCard } from "@/components/explore/RajyaSabhaCard";
+import {
+  getConstituencyById,
+  getCandidatesByConstituency,
+  getRajyaSabhaForState,
+} from "@/lib/data-utils";
 
 interface Props {
   params: { id: string };
@@ -17,6 +22,7 @@ export default function ConstituencyPage({ params }: Props) {
 
   if (result.type === "LS") {
     const c = result.data;
+    const rs = getRajyaSabhaForState(c.state);
     return (
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/explore" className="text-xs text-muted hover:text-accent transition-colors">
@@ -65,6 +71,7 @@ export default function ConstituencyPage({ params }: Props) {
                 Affidavit-declared assets, criminal cases, education
               </div>
             </Link>
+            <RajyaSabhaCard data={rs} />
           </div>
         </div>
       </div>

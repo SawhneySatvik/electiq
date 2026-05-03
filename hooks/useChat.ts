@@ -3,6 +3,7 @@
 import { useCallback } from "react";
 import { useElectionStore } from "@/store/useElectionStore";
 import type { ChatMessage } from "@/lib/types";
+import { useLocale } from "@/lib/translation-runtime";
 
 export function useChat() {
   const messages = useElectionStore((s) => s.messages);
@@ -12,6 +13,7 @@ export function useChat() {
   const appendChunk = useElectionStore((s) => s.appendToLastAssistantMessage);
   const setChatContext = useElectionStore((s) => s.setChatContext);
   const setChatLoading = useElectionStore((s) => s.setChatLoading);
+  const locale = useLocale();
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -37,7 +39,7 @@ export function useChat() {
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: trimmed }),
+          body: JSON.stringify({ message: trimmed, locale }),
         });
 
         if (!res.ok || !res.body) {
@@ -89,7 +91,7 @@ export function useChat() {
         setChatLoading(false);
       }
     },
-    [loading, pushMessage, appendChunk, setChatContext, setChatLoading],
+    [loading, locale, pushMessage, appendChunk, setChatContext, setChatLoading],
   );
 
   return { messages, chatContext, loading, sendMessage };

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useElectionStore } from "@/store/useElectionStore";
 import type { ConstituencyAnalysis, LSConstituency } from "@/lib/types";
+import { useLocale } from "@/lib/translation-runtime";
 
 export function useConstituencyAnalysis(constituency: LSConstituency | null) {
   const setAnalysis = useElectionStore((s) => s.setAnalysis);
@@ -11,6 +12,7 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
   const analysis = useElectionStore((s) => s.constituencyAnalysis);
   const loading = useElectionStore((s) => s.analysisLoading);
   const error = useElectionStore((s) => s.analysisError);
+  const locale = useLocale();
 
   const inflightId = useRef<string | null>(null);
 
@@ -20,8 +22,9 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
       setAnalysisError(null);
       return;
     }
-    if (inflightId.current === constituency.id) return;
-    inflightId.current = constituency.id;
+    const key = `${constituency.id}:${locale}`;
+    if (inflightId.current === key) return;
+    inflightId.current = key;
 
     let cancelled = false;
     setAnalysisLoading(true);
@@ -31,7 +34,7 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
     fetch("/api/analyse-constituency", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ constituency }),
+      body: JSON.stringify({ constituency, locale }),
     })
       .then(async (r) => {
         if (!r.ok) {
@@ -55,7 +58,7 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
     return () => {
       cancelled = true;
     };
-  }, [constituency, setAnalysis, setAnalysisLoading, setAnalysisError]);
+  }, [constituency, locale, setAnalysis, setAnalysisLoading, setAnalysisError]);
 
   return { analysis, loading, error };
 }

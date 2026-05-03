@@ -5,10 +5,22 @@ import { useMemo } from "react";
 import { useElectionStore } from "@/store/useElectionStore";
 import { getConstituenciesForState, getPartyColor } from "@/lib/data-utils";
 import { formatVotes } from "@/lib/data-utils";
+import { useT } from "@/lib/translation-runtime";
 
 export function ConstituencyGrid() {
   const state = useElectionStore((s) => s.selectedState);
   const electionType = useElectionStore((s) => s.selectedElectionType);
+  const lsLabel = useT("explore.ls");
+  const vsLabel = useT("explore.vs");
+  const seatsSuffix = useT("explore.seatsSuffix");
+  const sortedByName = useT("explore.sortedByName");
+  const pickState = useT("explore.pickState");
+  const noData = useT("explore.noData", {
+    state: state ?? "",
+    type: electionType === "LS" ? lsLabel : vsLabel,
+  });
+  const unopposed = useT("explore.unopposed");
+  const marginSuffix = useT("explore.marginSuffix");
 
   const constituencies = useMemo(() => {
     if (!state) return [];
@@ -19,7 +31,7 @@ export function ConstituencyGrid() {
     return (
       <div className="border border-dashed border-border rounded-xl p-12 text-center">
         <div className="text-2xl mb-2">←</div>
-        <div className="text-muted">Pick a state to begin</div>
+        <div className="text-muted">{pickState}</div>
       </div>
     );
   }
@@ -27,9 +39,7 @@ export function ConstituencyGrid() {
   if (constituencies.length === 0) {
     return (
       <div className="border border-dashed border-border rounded-xl p-12 text-center">
-        <div className="text-muted">
-          No {electionType === "LS" ? "Lok Sabha" : "Vidhan Sabha"} data loaded for {state} in this demo.
-        </div>
+        <div className="text-muted">{noData}</div>
       </div>
     );
   }
@@ -38,9 +48,12 @@ export function ConstituencyGrid() {
     <div>
       <div className="flex items-baseline justify-between mb-4">
         <h2 className="font-display text-2xl font-bold">
-          {state} <span className="text-muted font-body font-normal text-base">— {constituencies.length} {electionType === "LS" ? "LS" : "VS"} seats</span>
+          {state}{" "}
+          <span className="text-muted font-body font-normal text-base">
+            — {constituencies.length} {electionType === "LS" ? lsLabel : vsLabel} {seatsSuffix}
+          </span>
         </h2>
-        <span className="text-xs text-muted">Sorted by name</span>
+        <span className="text-xs text-muted">{sortedByName}</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {constituencies
@@ -77,8 +90,8 @@ export function ConstituencyGrid() {
                       </span>
                       <span className="text-muted">
                         {c.lastResult.margin > 0
-                          ? `+${formatVotes(c.lastResult.margin)} margin`
-                          : "Unopposed"}
+                          ? `+${formatVotes(c.lastResult.margin)} ${marginSuffix}`
+                          : unopposed}
                       </span>
                     </div>
                   </>

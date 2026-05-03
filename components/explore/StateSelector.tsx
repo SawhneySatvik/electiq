@@ -1,6 +1,7 @@
 "use client";
 
 import { useElectionStore } from "@/store/useElectionStore";
+import { useT } from "@/lib/translation-runtime";
 
 interface StateSelectorProps {
   states: string[];
@@ -12,7 +13,7 @@ export function StateSelector({ states }: StateSelectorProps) {
 
   return (
     <div>
-      <div className="text-xs font-medium uppercase tracking-widest text-muted mb-3">State</div>
+      <div className="text-xs font-medium uppercase tracking-widest text-muted mb-3">{useT("explore.state")}</div>
       <div className="flex flex-wrap gap-2">
         {states.map((state) => {
           const active = selected === state;
@@ -41,7 +42,7 @@ export function ElectionTypeToggle() {
   return (
     <div>
       <div className="text-xs font-medium uppercase tracking-widest text-muted mb-3">
-        Election type
+        {useT("explore.electionType")}
       </div>
       <div className="inline-flex bg-surface border border-border rounded-lg p-1">
         <button
@@ -50,7 +51,7 @@ export function ElectionTypeToggle() {
             t === "LS" ? "bg-surface2 text-text" : "text-muted hover:text-text"
           }`}
         >
-          Lok Sabha
+          {useT("explore.ls")}
         </button>
         <button
           onClick={() => setT("VS")}
@@ -58,7 +59,7 @@ export function ElectionTypeToggle() {
             t === "VS" ? "bg-surface2 text-text" : "text-muted hover:text-text"
           }`}
         >
-          Vidhan Sabha
+          {useT("explore.vs")}
         </button>
       </div>
     </div>

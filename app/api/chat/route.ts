@@ -1,6 +1,7 @@
 import { streamText } from "@/lib/gemini";
 import { retrieveRelevantContext } from "@/lib/data-utils";
 import type { ChatMessage } from "@/lib/types";
+import { LOCALE_FOR_AI, LOCALES, type Locale } from "@/lib/i18n";
 
 const SYSTEM_PROMPT = `You are ElectoIQ, an AI assistant for Indian election data analysis.
 You have access to structured election data provided in the context below.
@@ -17,13 +18,23 @@ Rules:
 
 export const runtime = "nodejs";
 
+function pickLocale(value: unknown): Locale {
+  if (typeof value === "string" && (LOCALES as string[]).includes(value)) return value as Locale;
+  return "en";
+}
+
 export async function POST(req: Request) {
   try {
-    const body = (await req.json()) as { message: string; history?: ChatMessage[] };
+    const body = (await req.json()) as { message: string; history?: ChatMessage[]; locale?: unknown };
     const { message } = body;
     if (!message || !message.trim()) {
       return new Response(JSON.stringify({ error: "message required" }), { status: 400 });
     }
+    const locale = pickLocale(body.locale);
+    const languageDirective =
+      locale === "en"
+        ? ""
+        : `\n\nRespond in ${LOCALE_FOR_AI[locale]}. Preserve party acronyms (BJP, INC, AAP, …), numbers, and currency tokens (₹, Cr, L) verbatim.`;
 
     const context = retrieveRelevantContext(message, 10);
     const contextText =
@@ -36,6 +47,7 @@ export async function POST(req: Request) {
         : "Context data: (no matching records found in the dataset)";
 
     const userPrompt = `${contextText}\n\nUser question: ${message}`;
+    const systemPrompt = `${SYSTEM_PROMPT}${languageDirective}`;
 
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
@@ -48,7 +60,7 @@ export async function POST(req: Request) {
           ),
         );
         try {
-          for await (const chunk of streamText(SYSTEM_PROMPT, userPrompt)) {
+          for await (const chunk of streamText(systemPrompt, userPrompt)) {
             controller.enqueue(encoder.encode(chunk));
           }
         } catch (err) {

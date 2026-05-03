@@ -1,6 +1,8 @@
 import lokSabhaJson from "@/data/lok_sabha.json";
 import stateElectionsJson from "@/data/state_elections.json";
 import candidatesJson from "@/data/candidates.json";
+import rajyaSabhaJson from "@/data/rajya_sabha.json";
+import upcomingElectionsJson from "@/data/upcoming_elections.json";
 import type {
   LSConstituency,
   StateElection,
@@ -8,6 +10,8 @@ import type {
   CandidateFilters,
   ChatContextRecord,
   VSResult,
+  RajyaSabhaState,
+  UpcomingElection,
 } from "./types";
 
 export function getLokSabhaData(): LSConstituency[] {
@@ -20,6 +24,29 @@ export function getStateElectionData(): StateElection[] {
 
 export function getCandidatesData(): Candidate[] {
   return (candidatesJson as { candidates: Candidate[] }).candidates;
+}
+
+export function getRajyaSabhaData(): RajyaSabhaState[] {
+  return (rajyaSabhaJson as { rajya_sabha: RajyaSabhaState[] }).rajya_sabha;
+}
+
+export function getRajyaSabhaForState(state: string): RajyaSabhaState | undefined {
+  return getRajyaSabhaData().find((r) => r.state === state);
+}
+
+export function getUpcomingElections(): UpcomingElection[] {
+  return (upcomingElectionsJson as { elections: UpcomingElection[] }).elections;
+}
+
+export function getUpcomingElectionsAsOf(): string {
+  return (upcomingElectionsJson as { as_of?: string }).as_of ?? "";
+}
+
+export function getNextElections(limit = 3): UpcomingElection[] {
+  return [...getUpcomingElections()]
+    .filter((e) => e.status !== "polling completed")
+    .sort((a, b) => a.expected_year - b.expected_year)
+    .slice(0, limit);
 }
 
 export function getAllStates(): string[] {
@@ -277,6 +304,50 @@ export function retrieveRelevantContext(userMessage: string, maxRecords = 10): C
     if (score > 0) {
       scored.push({
         rec: { type: "candidate", id: cand.id, label: `${cand.name} (${cand.party}, ${cand.year})`, data: cand },
+        score,
+      });
+    }
+  }
+
+  const rsKeywords = ["rajya sabha", "upper house", "council of states", "rs mp", "rs member"];
+  const wantsRS = rsKeywords.some((k) => msg.includes(k));
+  for (const rs of getRajyaSabhaData()) {
+    let score = 0;
+    if (targetStates.has(rs.state)) score += 4;
+    if (wantsRS) score += 5;
+    for (const m of rs.members) {
+      if (msg.includes(m.name.toLowerCase())) score += 8;
+      if (targetParties.has(m.party)) score += 1;
+    }
+    if (score > 0) {
+      scored.push({
+        rec: {
+          type: "rajya_sabha",
+          id: `rs-${rs.state.toLowerCase().replace(/\s+/g, "-")}`,
+          label: `Rajya Sabha — ${rs.state}`,
+          data: rs,
+        },
+        score,
+      });
+    }
+  }
+
+  const scheduleKeywords = ["upcoming", "next election", "schedule", "when is", "when will", "term ends"];
+  const wantsSchedule = scheduleKeywords.some((k) => msg.includes(k));
+  for (const ue of getUpcomingElections()) {
+    let score = 0;
+    if (wantsSchedule) score += 3;
+    if (targetStates.has(ue.state)) score += 4;
+    if (yearMatches.includes(ue.expected_year)) score += 2;
+    if (msg.includes(ue.state.toLowerCase())) score += 3;
+    if (score > 0) {
+      scored.push({
+        rec: {
+          type: "upcoming",
+          id: `ue-${ue.state.toLowerCase().replace(/\s+/g, "-")}-${ue.expected_year}-${ue.type}`,
+          label: `${ue.state} ${ue.type} ${ue.expected_year}`,
+          data: ue,
+        },
         score,
       });
     }

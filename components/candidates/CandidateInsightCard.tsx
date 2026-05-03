@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react";
 import { SkeletonLine } from "@/components/ui/LoadingSpinner";
 import type { Candidate, CandidateInsight } from "@/lib/types";
+import { useLocale } from "@/lib/translation-runtime";
 
 export function CandidateInsightCard({ candidate }: { candidate: Candidate }) {
   const [insight, setInsight] = useState<CandidateInsight | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const locale = useLocale();
 
   useEffect(() => {
     let cancelled = false;
@@ -17,7 +19,7 @@ export function CandidateInsightCard({ candidate }: { candidate: Candidate }) {
     fetch("/api/analyse-candidate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ candidate }),
+      body: JSON.stringify({ candidate, locale }),
     })
       .then(async (r) => {
         if (!r.ok) {
@@ -38,7 +40,7 @@ export function CandidateInsightCard({ candidate }: { candidate: Candidate }) {
     return () => {
       cancelled = true;
     };
-  }, [candidate]);
+  }, [candidate, locale]);
 
   return (
     <div className="bg-surface border border-border rounded-xl p-5">

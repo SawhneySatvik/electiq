@@ -7,6 +7,7 @@ import { CandidateCard } from "@/components/candidates/CandidateCard";
 import { useCandidateSearch } from "@/hooks/useCandidateSearch";
 import { useElectionStore } from "@/store/useElectionStore";
 import { getCandidatesByConstituency, getConstituencyById } from "@/lib/data-utils";
+import { useT } from "@/lib/translation-runtime";
 
 interface Props {
   states: string[];
@@ -34,13 +35,18 @@ export function CandidatesClient({ states, parties, years }: Props) {
     ? getCandidatesByConstituency(constituencyId)
     : allResults;
 
+  const title = useT("candidates.title");
+  const subtitle = useT("candidates.subtitle");
+  const resultLabel = useT("candidates.result");
+  const resultsLabel = useT("candidates.results");
+  const clearLabel = useT("candidates.clearConstituency");
+  const noMatch = useT("candidates.noMatch");
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <div className="mb-8">
-        <h1 className="font-display text-4xl font-bold tracking-tight mb-2">Candidates</h1>
-        <p className="text-muted">
-          Affidavit-declared assets, criminal cases, education. Search any candidate.
-        </p>
+        <h1 className="font-display text-4xl font-bold tracking-tight mb-2">{title}</h1>
+        <p className="text-muted">{subtitle}</p>
       </div>
 
       {!constituencyId && (
@@ -51,18 +57,18 @@ export function CandidatesClient({ states, parties, years }: Props) {
 
       <div className="mb-4 flex items-baseline justify-between">
         <h2 className="font-display text-xl font-bold">
-          {results.length} result{results.length === 1 ? "" : "s"}
+          {results.length} {results.length === 1 ? resultLabel : resultsLabel}
         </h2>
         {constituencyId && (
           <a href="/candidates" className="text-xs text-muted hover:text-accent transition-colors">
-            Clear constituency filter
+            {clearLabel}
           </a>
         )}
       </div>
 
       {results.length === 0 ? (
         <div className="border border-dashed border-border rounded-xl p-12 text-center text-muted">
-          No candidates match these filters. Try resetting.
+          {noMatch}
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

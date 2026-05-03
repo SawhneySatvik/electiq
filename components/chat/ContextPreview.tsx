@@ -7,12 +7,16 @@ const TYPE_LABEL: Record<ChatContextRecord["type"], string> = {
   constituency: "LS seat",
   vs_constituency: "VS seat",
   candidate: "Candidate",
+  rajya_sabha: "Rajya Sabha",
+  upcoming: "Upcoming",
 };
 
 const TYPE_COLOR: Record<ChatContextRecord["type"], string> = {
   constituency: "#f97316",
   vs_constituency: "#06b6d4",
   candidate: "#10b981",
+  rajya_sabha: "#a855f7",
+  upcoming: "#facc15",
 };
 
 export function ContextPreview({ records }: { records: ChatContextRecord[] }) {
@@ -36,27 +40,34 @@ export function ContextPreview({ records }: { records: ChatContextRecord[] }) {
         <ul className="space-y-2">
           {records.map((r) => {
             const color = TYPE_COLOR[r.type];
-            const href =
-              r.type === "candidate"
-                ? `/candidates/${r.id}`
-                : `/explore/${r.id}`;
+            const isLink = r.type === "candidate" || r.type === "constituency" || r.type === "vs_constituency";
+            const href = r.type === "candidate" ? `/candidates/${r.id}` : `/explore/${r.id}`;
+            const inner = (
+              <>
+                <div className="flex items-center gap-2 mb-1">
+                  <span
+                    className="px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider"
+                    style={{ background: color + "22", color }}
+                  >
+                    {TYPE_LABEL[r.type]}
+                  </span>
+                  <span className="text-[10px] text-muted font-mono">{r.id}</span>
+                </div>
+                <div className="text-sm text-text/90 leading-tight">{r.label}</div>
+              </>
+            );
             return (
               <li key={`${r.type}-${r.id}`}>
-                <Link
-                  href={href}
-                  className="block bg-surface2/40 hover:bg-surface2 border border-border rounded-lg p-3 transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className="px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider"
-                      style={{ background: color + "22", color }}
-                    >
-                      {TYPE_LABEL[r.type]}
-                    </span>
-                    <span className="text-[10px] text-muted font-mono">{r.id}</span>
-                  </div>
-                  <div className="text-sm text-text/90 leading-tight">{r.label}</div>
-                </Link>
+                {isLink ? (
+                  <Link
+                    href={href}
+                    className="block bg-surface2/40 hover:bg-surface2 border border-border rounded-lg p-3 transition-colors"
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <div className="block bg-surface2/40 border border-border rounded-lg p-3">{inner}</div>
+                )}
               </li>
             );
           })}

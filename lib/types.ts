@@ -84,7 +84,7 @@ export interface ChatMessage {
 }
 
 export interface ChatContextRecord {
-  type: "constituency" | "vs_constituency" | "candidate";
+  type: "constituency" | "vs_constituency" | "candidate" | "rajya_sabha" | "upcoming";
   id: string;
   label: string;
   data: unknown;
@@ -105,4 +105,26 @@ export interface CandidateInsight {
   liability_note: string;
   criminal_context: string;
   overall_profile: string;
+}
+
+export interface RajyaSabhaMember {
+  name: string;
+  party: string;
+  term_start: number;
+  term_end: number;
+}
+
+export interface RajyaSabhaState {
+  state: string;
+  seats: number;
+  members: RajyaSabhaMember[];
+}
+
+export interface UpcomingElection {
+  state: string;
+  type: ElectionType;
+  expected_year: number;
+  expected_window: string;
+  status: string;
+  note?: string;
 }
