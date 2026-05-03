@@ -97,6 +97,29 @@ export interface ConstituencyAnalysis {
   key_shift: string;
   competitiveness: string;
   watch_factors: string[];
+  demographics_summary?: string;
+  key_issues_synthesis?: string;
+  notable_history_summary?: string;
+  electoral_safety?: string;
+  sociopolitical_context?: string;
+}
+
+export interface PollViolenceNote {
+  year: number;
+  note: string;
+}
+
+export interface ConstituencyProfile {
+  population_2011: number;
+  population_estimate_recent?: number;
+  electors_recent: number;
+  literacy_rate_pct: number;
+  urban_rural_split: string;
+  major_communities: string[];
+  key_issues: string[];
+  notable_history: string[];
+  poll_violence_notes?: PollViolenceNote[];
+  data_quality_note?: string;
 }
 
 export interface CandidateInsight {

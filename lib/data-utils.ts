@@ -3,6 +3,7 @@ import stateElectionsJson from "@/data/state_elections.json";
 import candidatesJson from "@/data/candidates.json";
 import rajyaSabhaJson from "@/data/rajya_sabha.json";
 import upcomingElectionsJson from "@/data/upcoming_elections.json";
+import seatProfilesJson from "@/data/seat_profiles.json";
 import type {
   LSConstituency,
   StateElection,
@@ -12,6 +13,7 @@ import type {
   VSResult,
   RajyaSabhaState,
   UpcomingElection,
+  ConstituencyProfile,
 } from "./types";
 
 export function getLokSabhaData(): LSConstituency[] {
@@ -28,6 +30,15 @@ export function getCandidatesData(): Candidate[] {
 
 export function getRajyaSabhaData(): RajyaSabhaState[] {
   return (rajyaSabhaJson as { rajya_sabha: RajyaSabhaState[] }).rajya_sabha;
+}
+
+export function getSeatProfile(id: string): ConstituencyProfile | undefined {
+  const profiles = (seatProfilesJson as { profiles: Record<string, ConstituencyProfile> }).profiles;
+  return profiles[id];
+}
+
+export function getAllSeatProfileIds(): string[] {
+  return Object.keys((seatProfilesJson as { profiles: Record<string, ConstituencyProfile> }).profiles);
 }
 
 export function getRajyaSabhaForState(state: string): RajyaSabhaState | undefined {
@@ -47,6 +58,87 @@ export function getNextElections(limit = 3): UpcomingElection[] {
     .filter((e) => e.status !== "polling completed")
     .sort((a, b) => a.expected_year - b.expected_year)
     .slice(0, limit);
+}
+
+const NATIONAL_PARTIES = [
+  "BJP",
+  "INC",
+  "AAP",
+  "TMC",
+  "SP",
+  "BSP",
+  "DMK",
+  "AIADMK",
+  "NCP",
+  "SS",
+  "BRS",
+  "YSRCP",
+  "TDP",
+  "JD(U)",
+  "RJD",
+  "BJD",
+  "CPI(M)",
+  "CPI",
+  "AIMIM",
+];
+
+export function getCredibleParties(state: string): string[] {
+  if (state === "All India") return [...NATIONAL_PARTIES];
+  const set = new Set<string>();
+  for (const c of getLokSabhaData()) {
+    if (c.state !== state) continue;
+    for (const r of c.results) {
+      if (r.party) set.add(r.party);
+      if (r.runner_up_party) set.add(r.runner_up_party);
+    }
+  }
+  for (const se of getStateElectionData()) {
+    if (se.state !== state) continue;
+    for (const e of se.elections) {
+      for (const c of e.constituencies) {
+        if (c.party) set.add(c.party);
+        if (c.runner_up_party) set.add(c.runner_up_party);
+      }
+    }
+  }
+  for (const r of getRajyaSabhaData()) {
+    if (r.state !== state) continue;
+    for (const m of r.members) {
+      if (m.party) set.add(m.party);
+    }
+  }
+  set.delete("—");
+  return Array.from(set).sort();
+}
+
+export function getDominantPartyByState(): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const c of getLokSabhaData()) {
+    const last = [...c.results].sort((a, b) => b.year - a.year)[0];
+    if (!last) continue;
+    out[c.state] = out[c.state] ?? "";
+  }
+  for (const state of Object.keys(out)) {
+    const seats = getLokSabhaData().filter((c) => c.state === state);
+    const latestYear = Math.max(
+      ...seats.flatMap((s) => s.results.map((r) => r.year)),
+    );
+    const counts: Record<string, number> = {};
+    for (const s of seats) {
+      const r = s.results.find((rr) => rr.year === latestYear);
+      if (r) counts[r.party] = (counts[r.party] ?? 0) + 1;
+    }
+    let best = "";
+    let bestCount = -1;
+    for (const [party, n] of Object.entries(counts)) {
+      if (n > bestCount) {
+        best = party;
+        bestCount = n;
+      }
+    }
+    out[state] = best;
+  }
+  return out;
 }
 
 export function getAllStates(): string[] {
@@ -246,6 +338,9 @@ export function retrieveRelevantContext(userMessage: string, maxRecords = 10): C
 
   const scored: { rec: ChatContextRecord; score: number }[] = [];
 
+  const profileIntent = ["population", "demograph", "communit", "literac", "violen", "riot", "issue", "history", "histor"];
+  const wantsProfile = profileIntent.some((k) => msg.includes(k));
+
   for (const c of getLokSabhaData()) {
     let score = 0;
     if (msg.includes(c.name.toLowerCase())) score += 10;
@@ -259,9 +354,16 @@ export function retrieveRelevantContext(userMessage: string, maxRecords = 10): C
     for (const t of tokens) {
       if (c.name.toLowerCase().split(/\s+/).includes(t)) score += 2;
     }
+    const profile = getSeatProfile(c.id);
+    if (profile && wantsProfile) score += 4;
     if (score > 0) {
       scored.push({
-        rec: { type: "constituency", id: c.id, label: `${c.name} (${c.state})`, data: c },
+        rec: {
+          type: "constituency",
+          id: c.id,
+          label: `${c.name} (${c.state})`,
+          data: profile ? { ...c, profile } : c,
+        },
         score,
       });
     }
@@ -404,6 +506,15 @@ const PARTY_COLORS: Record<string, string> = {
   PRP: "#94a3b8",
   PPP: "#94a3b8",
   VIP: "#6366f1",
+  BJD: "#0d9488",
+  JMM: "#15803d",
+  AGP: "#f43f5e",
+  INLD: "#0284c7",
+  JJP: "#fde047",
+  HJC: "#f97316",
+  NPP: "#a78bfa",
+  MGP: "#fbbf24",
+  IND: "#6b7280",
 };
 
 export function getPartyColor(party: string): string {

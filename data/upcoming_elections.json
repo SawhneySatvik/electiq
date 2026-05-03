@@ -136,6 +136,94 @@
       "expected_window": "April – May 2029",
       "status": "scheduled",
       "note": "Next general election to the 18th Lok Sabha; demo placeholder."
+    },
+    {
+      "state": "Bihar",
+      "type": "VS",
+      "expected_year": 2025,
+      "expected_window": "October – November 2025",
+      "status": "polling completed",
+      "note": "Demo placeholder reflecting the indicative ECI calendar."
+    },
+    {
+      "state": "Jharkhand",
+      "type": "VS",
+      "expected_year": 2024,
+      "expected_window": "November 2024",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Delhi",
+      "type": "VS",
+      "expected_year": 2025,
+      "expected_window": "February 2025",
+      "status": "polling completed",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Maharashtra",
+      "type": "VS",
+      "expected_year": 2029,
+      "expected_window": "October – November 2029",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Odisha",
+      "type": "VS",
+      "expected_year": 2029,
+      "expected_window": "April – May 2029",
+      "status": "scheduled",
+      "note": "Demo placeholder, concurrent with LS."
+    },
+    {
+      "state": "Telangana",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "November – December 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Andhra Pradesh",
+      "type": "VS",
+      "expected_year": 2029,
+      "expected_window": "April – May 2029",
+      "status": "scheduled",
+      "note": "Demo placeholder, concurrent with LS."
+    },
+    {
+      "state": "Chhattisgarh",
+      "type": "VS",
+      "expected_year": 2028,
+      "expected_window": "November 2028",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Tamil Nadu",
+      "type": "VS",
+      "expected_year": 2031,
+      "expected_window": "April – May 2031",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "Kerala",
+      "type": "VS",
+      "expected_year": 2031,
+      "expected_window": "April – May 2031",
+      "status": "scheduled",
+      "note": "Demo placeholder."
+    },
+    {
+      "state": "West Bengal",
+      "type": "VS",
+      "expected_year": 2031,
+      "expected_window": "March – April 2031",
+      "status": "scheduled",
+      "note": "Demo placeholder."
     }
   ]
 }

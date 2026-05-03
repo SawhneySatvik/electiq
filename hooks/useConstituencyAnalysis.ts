@@ -2,10 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import { useElectionStore } from "@/store/useElectionStore";
-import type { ConstituencyAnalysis, LSConstituency } from "@/lib/types";
+import type { ConstituencyAnalysis, ConstituencyProfile, LSConstituency } from "@/lib/types";
 import { useLocale } from "@/lib/translation-runtime";
 
-export function useConstituencyAnalysis(constituency: LSConstituency | null) {
+export function useConstituencyAnalysis(
+  constituency: LSConstituency | null,
+  profile?: ConstituencyProfile | null,
+) {
   const setAnalysis = useElectionStore((s) => s.setAnalysis);
   const setAnalysisLoading = useElectionStore((s) => s.setAnalysisLoading);
   const setAnalysisError = useElectionStore((s) => s.setAnalysisError);
@@ -34,7 +37,7 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
     fetch("/api/analyse-constituency", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ constituency, locale }),
+      body: JSON.stringify({ constituency, profile: profile ?? null, locale }),
     })
       .then(async (r) => {
         if (!r.ok) {
@@ -58,7 +61,7 @@ export function useConstituencyAnalysis(constituency: LSConstituency | null) {
     return () => {
       cancelled = true;
     };
-  }, [constituency, locale, setAnalysis, setAnalysisLoading, setAnalysisError]);
+  }, [constituency, profile, locale, setAnalysis, setAnalysisLoading, setAnalysisError]);
 
   return { analysis, loading, error };
 }

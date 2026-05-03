@@ -4,10 +4,12 @@ import { ElectionHistoryTable } from "@/components/explore/ElectionHistoryTable"
 import { MarginTrendChart } from "@/components/explore/MarginTrendChart";
 import { GeminiAnalysisCard } from "@/components/explore/GeminiAnalysisCard";
 import { RajyaSabhaCard } from "@/components/explore/RajyaSabhaCard";
+import { SeatProfileCard } from "@/components/explore/SeatProfileCard";
 import {
   getConstituencyById,
   getCandidatesByConstituency,
   getRajyaSabhaForState,
+  getSeatProfile,
 } from "@/lib/data-utils";
 
 interface Props {
@@ -23,6 +25,7 @@ export default function ConstituencyPage({ params }: Props) {
   if (result.type === "LS") {
     const c = result.data;
     const rs = getRajyaSabhaForState(c.state);
+    const profile = getSeatProfile(c.id);
     return (
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/explore" className="text-xs text-muted hover:text-accent transition-colors">
@@ -44,6 +47,7 @@ export default function ConstituencyPage({ params }: Props) {
           <div className="space-y-6 min-w-0">
             <ElectionHistoryTable rows={c.results} />
             <MarginTrendChart rows={c.results} />
+            <SeatProfileCard profile={profile} />
           </div>
           <div className="space-y-4">
             <GeminiAnalysisCard
@@ -54,6 +58,7 @@ export default function ConstituencyPage({ params }: Props) {
                 reserved: c.reserved,
                 results: c.results,
               }}
+              profile={profile}
             />
             <Link
               href={`/candidates?constituency=${encodeURIComponent(c.id)}`}

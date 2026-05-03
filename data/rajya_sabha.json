@@ -4,119 +4,672 @@
       "state": "Maharashtra",
       "seats": 19,
       "members": [
-        { "name": "Sharad Pawar", "party": "NCP", "term_start": 2020, "term_end": 2026 },
-        { "name": "Piyush Goyal", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Praful Patel", "party": "NCP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Anil Desai", "party": "SS", "term_start": 2020, "term_end": 2026 },
-        { "name": "Vandana Chavan", "party": "NCP", "term_start": 2020, "term_end": 2026 },
-        { "name": "Bhagwat Karad", "party": "BJP", "term_start": 2020, "term_end": 2026 }
+        {
+          "name": "Sharad Pawar",
+          "party": "NCP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Piyush Goyal",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Praful Patel",
+          "party": "NCP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Anil Desai",
+          "party": "SS",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Vandana Chavan",
+          "party": "NCP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Bhagwat Karad",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
       ]
     },
     {
       "state": "Tamil Nadu",
       "seats": 18,
       "members": [
-        { "name": "Tiruchi Siva", "party": "DMK", "term_start": 2019, "term_end": 2025 },
-        { "name": "Kanimozhi NVN Somu", "party": "DMK", "term_start": 2022, "term_end": 2028 },
-        { "name": "M Mohamed Abdulla", "party": "DMK", "term_start": 2022, "term_end": 2028 },
-        { "name": "Vaiko", "party": "MDMK", "term_start": 2019, "term_end": 2025 },
-        { "name": "M Thambidurai", "party": "AIADMK", "term_start": 2019, "term_end": 2025 },
-        { "name": "S R Balasubramoniyan", "party": "AIADMK", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "Tiruchi Siva",
+          "party": "DMK",
+          "term_start": 2019,
+          "term_end": 2025
+        },
+        {
+          "name": "Kanimozhi NVN Somu",
+          "party": "DMK",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "M Mohamed Abdulla",
+          "party": "DMK",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Vaiko",
+          "party": "MDMK",
+          "term_start": 2019,
+          "term_end": 2025
+        },
+        {
+          "name": "M Thambidurai",
+          "party": "AIADMK",
+          "term_start": 2019,
+          "term_end": 2025
+        },
+        {
+          "name": "S R Balasubramoniyan",
+          "party": "AIADMK",
+          "term_start": 2022,
+          "term_end": 2028
+        }
       ]
     },
     {
       "state": "Uttar Pradesh",
       "seats": 31,
       "members": [
-        { "name": "Sanjay Seth", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Laxmikant Bajpai", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Sangeeta Yadav", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Jaya Bachchan", "party": "SP", "term_start": 2018, "term_end": 2024 },
-        { "name": "Ramji Lal Suman", "party": "SP", "term_start": 2024, "term_end": 2030 },
-        { "name": "Sudhanshu Trivedi", "party": "BJP", "term_start": 2020, "term_end": 2026 }
+        {
+          "name": "Sanjay Seth",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Laxmikant Bajpai",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Sangeeta Yadav",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Jaya Bachchan",
+          "party": "SP",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Ramji Lal Suman",
+          "party": "SP",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Sudhanshu Trivedi",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
       ]
     },
     {
       "state": "West Bengal",
       "seats": 16,
       "members": [
-        { "name": "Derek O'Brien", "party": "TMC", "term_start": 2023, "term_end": 2029 },
-        { "name": "Sukhendu Sekhar Ray", "party": "TMC", "term_start": 2017, "term_end": 2023 },
-        { "name": "Dola Sen", "party": "TMC", "term_start": 2020, "term_end": 2026 },
-        { "name": "Mausam Noor", "party": "TMC", "term_start": 2020, "term_end": 2026 },
-        { "name": "Ananta Maharaj", "party": "BJP", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "Derek O'Brien",
+          "party": "TMC",
+          "term_start": 2023,
+          "term_end": 2029
+        },
+        {
+          "name": "Sukhendu Sekhar Ray",
+          "party": "TMC",
+          "term_start": 2017,
+          "term_end": 2023
+        },
+        {
+          "name": "Dola Sen",
+          "party": "TMC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Mausam Noor",
+          "party": "TMC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Ananta Maharaj",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        }
       ]
     },
     {
       "state": "Karnataka",
       "seats": 12,
       "members": [
-        { "name": "Nirmala Sitharaman", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Jaggesh", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Lehar Singh Siroya", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Mallikarjun Kharge", "party": "INC", "term_start": 2020, "term_end": 2026 },
-        { "name": "L Hanumanthaiah", "party": "INC", "term_start": 2018, "term_end": 2024 }
+        {
+          "name": "Nirmala Sitharaman",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Jaggesh",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Lehar Singh Siroya",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Mallikarjun Kharge",
+          "party": "INC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "L Hanumanthaiah",
+          "party": "INC",
+          "term_start": 2018,
+          "term_end": 2024
+        }
       ]
     },
     {
       "state": "Andhra Pradesh",
       "seats": 11,
       "members": [
-        { "name": "V Vijayasai Reddy", "party": "YSRCP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Pilli Subhash Chandra Bose", "party": "YSRCP", "term_start": 2018, "term_end": 2024 },
-        { "name": "Mopidevi Venkata Ramana", "party": "YSRCP", "term_start": 2020, "term_end": 2026 },
-        { "name": "Beeda Mastan Rao", "party": "YSRCP", "term_start": 2020, "term_end": 2026 }
+        {
+          "name": "V Vijayasai Reddy",
+          "party": "YSRCP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Pilli Subhash Chandra Bose",
+          "party": "YSRCP",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Mopidevi Venkata Ramana",
+          "party": "YSRCP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Beeda Mastan Rao",
+          "party": "YSRCP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
       ]
     },
     {
       "state": "Gujarat",
       "seats": 11,
       "members": [
-        { "name": "S Jaishankar", "party": "BJP", "term_start": 2019, "term_end": 2025 },
-        { "name": "Parshottam Rupala", "party": "BJP", "term_start": 2020, "term_end": 2026 },
-        { "name": "Ramila Bara", "party": "BJP", "term_start": 2024, "term_end": 2030 },
-        { "name": "Govindbhai Dholakia", "party": "BJP", "term_start": 2024, "term_end": 2030 }
+        {
+          "name": "S Jaishankar",
+          "party": "BJP",
+          "term_start": 2019,
+          "term_end": 2025
+        },
+        {
+          "name": "Parshottam Rupala",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Ramila Bara",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Govindbhai Dholakia",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        }
       ]
     },
     {
       "state": "Bihar",
       "seats": 16,
       "members": [
-        { "name": "Sushil Modi", "party": "BJP", "term_start": 2020, "term_end": 2026 },
-        { "name": "Ram Nath Thakur", "party": "JD(U)", "term_start": 2020, "term_end": 2026 },
-        { "name": "Misa Bharti", "party": "RJD", "term_start": 2022, "term_end": 2028 },
-        { "name": "Manoj Jha", "party": "RJD", "term_start": 2018, "term_end": 2024 },
-        { "name": "Khiru Mahto", "party": "JD(U)", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "Sushil Modi",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Ram Nath Thakur",
+          "party": "JD(U)",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Misa Bharti",
+          "party": "RJD",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Manoj Jha",
+          "party": "RJD",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Khiru Mahto",
+          "party": "JD(U)",
+          "term_start": 2022,
+          "term_end": 2028
+        }
       ]
     },
     {
       "state": "Kerala",
       "seats": 9,
       "members": [
-        { "name": "John Brittas", "party": "CPI(M)", "term_start": 2021, "term_end": 2027 },
-        { "name": "Elamaram Kareem", "party": "CPI(M)", "term_start": 2018, "term_end": 2024 },
-        { "name": "Jose K Mani", "party": "INC", "term_start": 2021, "term_end": 2027 },
-        { "name": "AA Rahim", "party": "CPI(M)", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "John Brittas",
+          "party": "CPI(M)",
+          "term_start": 2021,
+          "term_end": 2027
+        },
+        {
+          "name": "Elamaram Kareem",
+          "party": "CPI(M)",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Jose K Mani",
+          "party": "INC",
+          "term_start": 2021,
+          "term_end": 2027
+        },
+        {
+          "name": "AA Rahim",
+          "party": "CPI(M)",
+          "term_start": 2022,
+          "term_end": 2028
+        }
       ]
     },
     {
       "state": "Punjab",
       "seats": 7,
       "members": [
-        { "name": "Raghav Chadha", "party": "AAP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Sandeep Pathak", "party": "AAP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Harbhajan Singh", "party": "AAP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Ashok Mittal", "party": "AAP", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "Raghav Chadha",
+          "party": "AAP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Sandeep Pathak",
+          "party": "AAP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Harbhajan Singh",
+          "party": "AAP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Ashok Mittal",
+          "party": "AAP",
+          "term_start": 2022,
+          "term_end": 2028
+        }
       ]
     },
     {
       "state": "Rajasthan",
       "seats": 10,
       "members": [
-        { "name": "Ghanshyam Tiwari", "party": "BJP", "term_start": 2022, "term_end": 2028 },
-        { "name": "Mukul Wasnik", "party": "INC", "term_start": 2022, "term_end": 2028 },
-        { "name": "Pramod Tiwari", "party": "INC", "term_start": 2022, "term_end": 2028 },
-        { "name": "Randeep Surjewala", "party": "INC", "term_start": 2022, "term_end": 2028 }
+        {
+          "name": "Ghanshyam Tiwari",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Mukul Wasnik",
+          "party": "INC",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Pramod Tiwari",
+          "party": "INC",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Randeep Surjewala",
+          "party": "INC",
+          "term_start": 2022,
+          "term_end": 2028
+        }
+      ]
+    },
+    {
+      "state": "Madhya Pradesh",
+      "seats": 11,
+      "members": [
+        {
+          "name": "Jyotiraditya Scindia",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Digvijaya Singh",
+          "party": "INC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Sumer Singh Solanki",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Maya Naroliya",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Bansilal Gurjar",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        }
+      ]
+    },
+    {
+      "state": "Odisha",
+      "seats": 10,
+      "members": [
+        {
+          "name": "Sasmit Patra",
+          "party": "BJD",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Debashish Samantaray",
+          "party": "BJD",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Subhasish Khuntia",
+          "party": "BJD",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Ashwini Vaishnaw",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Sulata Deo",
+          "party": "BJD",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Telangana",
+      "seats": 7,
+      "members": [
+        {
+          "name": "K. Keshava Rao",
+          "party": "BRS",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Banda Prakash",
+          "party": "BRS",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Joginipally Santosh Kumar",
+          "party": "BRS",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Anil Kumar Yadav",
+          "party": "INC",
+          "term_start": 2024,
+          "term_end": 2030
+        }
+      ]
+    },
+    {
+      "state": "Assam",
+      "seats": 7,
+      "members": [
+        {
+          "name": "Sarbananda Sonowal",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Pabitra Margherita",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Mission Ranjan Das",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Birendra Prasad Baishya",
+          "party": "AGP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Kamakhya Prasad Tasa",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Jharkhand",
+      "seats": 6,
+      "members": [
+        {
+          "name": "Mahua Maji",
+          "party": "JMM",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Aditya Sahu",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Deepak Prakash",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Shibu Soren",
+          "party": "JMM",
+          "term_start": 2020,
+          "term_end": 2026
+        }
+      ]
+    },
+    {
+      "state": "Chhattisgarh",
+      "seats": 5,
+      "members": [
+        {
+          "name": "K. T. S. Tulsi",
+          "party": "INC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Phulo Devi Netam",
+          "party": "INC",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Saroj Pandey",
+          "party": "BJP",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Raja Devendra Pratap Singh",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        }
+      ]
+    },
+    {
+      "state": "Haryana",
+      "seats": 5,
+      "members": [
+        {
+          "name": "Krishan Lal Panwar",
+          "party": "BJP",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Ram Chander Jangra",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Subhash Barala",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Kiran Choudhry",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        }
+      ]
+    },
+    {
+      "state": "Himachal Pradesh",
+      "seats": 3,
+      "members": [
+        {
+          "name": "Indu Bala Goswami",
+          "party": "BJP",
+          "term_start": 2018,
+          "term_end": 2024
+        },
+        {
+          "name": "Sikander Kumar",
+          "party": "BJP",
+          "term_start": 2022,
+          "term_end": 2028
+        },
+        {
+          "name": "Harsh Mahajan",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        }
+      ]
+    },
+    {
+      "state": "Uttarakhand",
+      "seats": 3,
+      "members": [
+        {
+          "name": "Naresh Bansal",
+          "party": "BJP",
+          "term_start": 2020,
+          "term_end": 2026
+        },
+        {
+          "name": "Mahendra Bhatt",
+          "party": "BJP",
+          "term_start": 2024,
+          "term_end": 2030
+        },
+        {
+          "name": "Anil Baluni",
+          "party": "BJP",
+          "term_start": 2018,
+          "term_end": 2024
+        }
+      ]
+    },
+    {
+      "state": "Goa",
+      "seats": 1,
+      "members": [
+        {
+          "name": "Sadanand Shet Tanavade",
+          "party": "BJP",
+          "term_start": 2023,
+          "term_end": 2029
+        }
       ]
     }
   ]

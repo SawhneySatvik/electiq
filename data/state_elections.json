@@ -7,21 +7,171 @@
           "year": 2021,
           "total_seats": 234,
           "constituencies": [
-            { "id": "tn-vs-chennai-thousand-lights", "name": "Thousand Lights", "winner": "N. Ezhilan", "party": "DMK", "votes": 71456, "margin": 18621, "turnout": 62.7, "runner_up": "K. Ramesh", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-thousand-lights", "name": "Royapuram", "winner": "Idream Murthy", "party": "DMK", "votes": 68203, "margin": 22416, "turnout": 64.1, "runner_up": "D. Jayakumar", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-saidapet", "name": "Saidapet", "winner": "M. Subramanian", "party": "DMK", "votes": 79045, "margin": 28710, "turnout": 65.5, "runner_up": "K. Veeramani", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-anna-nagar", "name": "Anna Nagar", "winner": "M. K. Mohan", "party": "DMK", "votes": 84112, "margin": 24890, "turnout": 65.0, "runner_up": "C. Saraswathi", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-velachery", "name": "Velachery", "winner": "J. M. H. Aassan Maulaana", "party": "DMK", "votes": 90341, "margin": 19562, "turnout": 65.4, "runner_up": "S. Vagheesan", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-mylapore", "name": "Mylapore", "winner": "R. Nataraj", "party": "AIADMK", "votes": 73214, "margin": 4516, "turnout": 64.9, "runner_up": "Dayanidhi Maran", "runner_up_party": "DMK" },
-            { "id": "tn-vs-kolathur", "name": "Kolathur", "winner": "M. K. Stalin", "party": "DMK", "votes": 119708, "margin": 56991, "turnout": 67.3, "runner_up": "Adhi Rajaram", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-egmore", "name": "Egmore", "winner": "I. Paranthamen", "party": "DMK", "votes": 56281, "margin": 13902, "turnout": 60.7, "runner_up": "M. Nallathambi", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-coimbatore-south", "name": "Coimbatore South", "winner": "Vanathi Srinivasan", "party": "BJP", "votes": 60618, "margin": 1567, "turnout": 67.9, "runner_up": "Mayura Jayakumar", "runner_up_party": "DMK" },
-            { "id": "tn-vs-coimbatore-north", "name": "Coimbatore North", "winner": "A. Ammapettai Murugan", "party": "DMK", "votes": 71432, "margin": 14206, "turnout": 67.0, "runner_up": "T. M. Selvaganapathi", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-madurai-east", "name": "Madurai East", "winner": "P. Moorthy", "party": "AIADMK", "votes": 75912, "margin": 5321, "turnout": 69.9, "runner_up": "P. Saravanan", "runner_up_party": "DMK" },
-            { "id": "tn-vs-madurai-central", "name": "Madurai Central", "winner": "P. T. R. Palanivel Thiagarajan", "party": "DMK", "votes": 86421, "margin": 32218, "turnout": 70.6, "runner_up": "K. Selvaraj", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-trichy-east", "name": "Tiruchirappalli East", "winner": "Inigo S. Iruthayaraj", "party": "DMK", "votes": 67914, "margin": 14726, "turnout": 70.7, "runner_up": "M. Paranjothi", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-thanjavur", "name": "Thanjavur", "winner": "T. K. G. Neelamegam", "party": "DMK", "votes": 73210, "margin": 17215, "turnout": 71.2, "runner_up": "M. Rangasamy", "runner_up_party": "AIADMK" },
-            { "id": "tn-vs-kanyakumari", "name": "Kanyakumari", "winner": "Thalavai Sundaram", "party": "DMK", "votes": 71803, "margin": 7905, "turnout": 75.3, "runner_up": "Pon Jayaseelan", "runner_up_party": "BJP" }
+            {
+              "id": "tn-vs-chennai-thousand-lights",
+              "name": "Thousand Lights",
+              "winner": "N. Ezhilan",
+              "party": "DMK",
+              "votes": 71456,
+              "margin": 18621,
+              "turnout": 62.7,
+              "runner_up": "K. Ramesh",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-thousand-lights",
+              "name": "Royapuram",
+              "winner": "Idream Murthy",
+              "party": "DMK",
+              "votes": 68203,
+              "margin": 22416,
+              "turnout": 64.1,
+              "runner_up": "D. Jayakumar",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-saidapet",
+              "name": "Saidapet",
+              "winner": "M. Subramanian",
+              "party": "DMK",
+              "votes": 79045,
+              "margin": 28710,
+              "turnout": 65.5,
+              "runner_up": "K. Veeramani",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-anna-nagar",
+              "name": "Anna Nagar",
+              "winner": "M. K. Mohan",
+              "party": "DMK",
+              "votes": 84112,
+              "margin": 24890,
+              "turnout": 65,
+              "runner_up": "C. Saraswathi",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-velachery",
+              "name": "Velachery",
+              "winner": "J. M. H. Aassan Maulaana",
+              "party": "DMK",
+              "votes": 90341,
+              "margin": 19562,
+              "turnout": 65.4,
+              "runner_up": "S. Vagheesan",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-mylapore",
+              "name": "Mylapore",
+              "winner": "R. Nataraj",
+              "party": "AIADMK",
+              "votes": 73214,
+              "margin": 4516,
+              "turnout": 64.9,
+              "runner_up": "Dayanidhi Maran",
+              "runner_up_party": "DMK"
+            },
+            {
+              "id": "tn-vs-kolathur",
+              "name": "Kolathur",
+              "winner": "M. K. Stalin",
+              "party": "DMK",
+              "votes": 119708,
+              "margin": 56991,
+              "turnout": 67.3,
+              "runner_up": "Adhi Rajaram",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-egmore",
+              "name": "Egmore",
+              "winner": "I. Paranthamen",
+              "party": "DMK",
+              "votes": 56281,
+              "margin": 13902,
+              "turnout": 60.7,
+              "runner_up": "M. Nallathambi",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-coimbatore-south",
+              "name": "Coimbatore South",
+              "winner": "Vanathi Srinivasan",
+              "party": "BJP",
+              "votes": 60618,
+              "margin": 1567,
+              "turnout": 67.9,
+              "runner_up": "Mayura Jayakumar",
+              "runner_up_party": "DMK"
+            },
+            {
+              "id": "tn-vs-coimbatore-north",
+              "name": "Coimbatore North",
+              "winner": "A. Ammapettai Murugan",
+              "party": "DMK",
+              "votes": 71432,
+              "margin": 14206,
+              "turnout": 67,
+              "runner_up": "T. M. Selvaganapathi",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-madurai-east",
+              "name": "Madurai East",
+              "winner": "P. Moorthy",
+              "party": "AIADMK",
+              "votes": 75912,
+              "margin": 5321,
+              "turnout": 69.9,
+              "runner_up": "P. Saravanan",
+              "runner_up_party": "DMK"
+            },
+            {
+              "id": "tn-vs-madurai-central",
+              "name": "Madurai Central",
+              "winner": "P. T. R. Palanivel Thiagarajan",
+              "party": "DMK",
+              "votes": 86421,
+              "margin": 32218,
+              "turnout": 70.6,
+              "runner_up": "K. Selvaraj",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-trichy-east",
+              "name": "Tiruchirappalli East",
+              "winner": "Inigo S. Iruthayaraj",
+              "party": "DMK",
+              "votes": 67914,
+              "margin": 14726,
+              "turnout": 70.7,
+              "runner_up": "M. Paranjothi",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-thanjavur",
+              "name": "Thanjavur",
+              "winner": "T. K. G. Neelamegam",
+              "party": "DMK",
+              "votes": 73210,
+              "margin": 17215,
+              "turnout": 71.2,
+              "runner_up": "M. Rangasamy",
+              "runner_up_party": "AIADMK"
+            },
+            {
+              "id": "tn-vs-kanyakumari",
+              "name": "Kanyakumari",
+              "winner": "Thalavai Sundaram",
+              "party": "DMK",
+              "votes": 71803,
+              "margin": 7905,
+              "turnout": 75.3,
+              "runner_up": "Pon Jayaseelan",
+              "runner_up_party": "BJP"
+            }
           ]
         }
       ]
@@ -33,21 +183,171 @@
           "year": 2024,
           "total_seats": 288,
           "constituencies": [
-            { "id": "mh-vs-worli", "name": "Worli", "winner": "Aaditya Thackeray", "party": "SS", "votes": 63324, "margin": 8801, "turnout": 50.6, "runner_up": "Milind Deora", "runner_up_party": "SS" },
-            { "id": "mh-vs-bandra-east", "name": "Bandra East", "winner": "Varun Sardesai", "party": "SS", "votes": 49215, "margin": 8511, "turnout": 53.1, "runner_up": "Zeeshan Siddique", "runner_up_party": "NCP" },
-            { "id": "mh-vs-mahim", "name": "Mahim", "winner": "Mahesh Sawant", "party": "SS", "votes": 52214, "margin": 1342, "turnout": 51.4, "runner_up": "Sada Sarvankar", "runner_up_party": "SS" },
-            { "id": "mh-vs-versova", "name": "Versova", "winner": "Haroon Khan", "party": "SS", "votes": 64018, "margin": 1602, "turnout": 53.7, "runner_up": "Bharati Lavekar", "runner_up_party": "BJP" },
-            { "id": "mh-vs-andheri-east", "name": "Andheri East", "winner": "Murji Patel", "party": "BJP", "votes": 73914, "margin": 12015, "turnout": 51.7, "runner_up": "Rutuja Latke", "runner_up_party": "SS" },
-            { "id": "mh-vs-borivali", "name": "Borivali", "winner": "Sanjay Upadhyay", "party": "BJP", "votes": 117210, "margin": 39115, "turnout": 56.2, "runner_up": "Sanjay Bhau Patil", "runner_up_party": "INC" },
-            { "id": "mh-vs-malabar-hill", "name": "Malabar Hill", "winner": "Mangal Prabhat Lodha", "party": "BJP", "votes": 87214, "margin": 36015, "turnout": 50.0, "runner_up": "Bharati Kamdar", "runner_up_party": "INC" },
-            { "id": "mh-vs-ghatkopar-east", "name": "Ghatkopar East", "winner": "Parag Shah", "party": "BJP", "votes": 124201, "margin": 51009, "turnout": 53.2, "runner_up": "Suresh Patil", "runner_up_party": "NCP" },
-            { "id": "mh-vs-pune-cantonment", "name": "Pune Cantonment", "winner": "Sunil Kamble", "party": "BJP", "votes": 82014, "margin": 22115, "turnout": 51.1, "runner_up": "Ramesh Bagwe", "runner_up_party": "INC" },
-            { "id": "mh-vs-shivajinagar", "name": "Shivajinagar", "winner": "Siddharth Shirole", "party": "BJP", "votes": 78215, "margin": 21009, "turnout": 53.3, "runner_up": "Datta Bahirat", "runner_up_party": "INC" },
-            { "id": "mh-vs-nagpur-south-west", "name": "Nagpur South West", "winner": "Devendra Fadnavis", "party": "BJP", "votes": 110134, "margin": 35009, "turnout": 56.4, "runner_up": "Praful Gudadhe", "runner_up_party": "INC" },
-            { "id": "mh-vs-nagpur-east", "name": "Nagpur East", "winner": "Krishna Khopde", "party": "BJP", "votes": 105214, "margin": 26013, "turnout": 55.0, "runner_up": "Abhijit Wanjari", "runner_up_party": "INC" },
-            { "id": "mh-vs-aurangabad-central", "name": "Aurangabad Central", "winner": "Pradeep Jaiswal", "party": "SS", "votes": 88712, "margin": 12011, "turnout": 60.7, "runner_up": "Imtiaz Jaleel", "runner_up_party": "AIMIM" },
-            { "id": "mh-vs-baramati", "name": "Baramati", "winner": "Ajit Pawar", "party": "NCP", "votes": 180123, "margin": 99345, "turnout": 71.4, "runner_up": "Yugendra Pawar", "runner_up_party": "NCP" },
-            { "id": "mh-vs-thane-city", "name": "Thane", "winner": "Sanjay Kelkar", "party": "BJP", "votes": 112401, "margin": 41001, "turnout": 50.8, "runner_up": "Rajan Vichare", "runner_up_party": "SS" }
+            {
+              "id": "mh-vs-worli",
+              "name": "Worli",
+              "winner": "Aaditya Thackeray",
+              "party": "SS",
+              "votes": 63324,
+              "margin": 8801,
+              "turnout": 50.6,
+              "runner_up": "Milind Deora",
+              "runner_up_party": "SS"
+            },
+            {
+              "id": "mh-vs-bandra-east",
+              "name": "Bandra East",
+              "winner": "Varun Sardesai",
+              "party": "SS",
+              "votes": 49215,
+              "margin": 8511,
+              "turnout": 53.1,
+              "runner_up": "Zeeshan Siddique",
+              "runner_up_party": "NCP"
+            },
+            {
+              "id": "mh-vs-mahim",
+              "name": "Mahim",
+              "winner": "Mahesh Sawant",
+              "party": "SS",
+              "votes": 52214,
+              "margin": 1342,
+              "turnout": 51.4,
+              "runner_up": "Sada Sarvankar",
+              "runner_up_party": "SS"
+            },
+            {
+              "id": "mh-vs-versova",
+              "name": "Versova",
+              "winner": "Haroon Khan",
+              "party": "SS",
+              "votes": 64018,
+              "margin": 1602,
+              "turnout": 53.7,
+              "runner_up": "Bharati Lavekar",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "mh-vs-andheri-east",
+              "name": "Andheri East",
+              "winner": "Murji Patel",
+              "party": "BJP",
+              "votes": 73914,
+              "margin": 12015,
+              "turnout": 51.7,
+              "runner_up": "Rutuja Latke",
+              "runner_up_party": "SS"
+            },
+            {
+              "id": "mh-vs-borivali",
+              "name": "Borivali",
+              "winner": "Sanjay Upadhyay",
+              "party": "BJP",
+              "votes": 117210,
+              "margin": 39115,
+              "turnout": 56.2,
+              "runner_up": "Sanjay Bhau Patil",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-malabar-hill",
+              "name": "Malabar Hill",
+              "winner": "Mangal Prabhat Lodha",
+              "party": "BJP",
+              "votes": 87214,
+              "margin": 36015,
+              "turnout": 50,
+              "runner_up": "Bharati Kamdar",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-ghatkopar-east",
+              "name": "Ghatkopar East",
+              "winner": "Parag Shah",
+              "party": "BJP",
+              "votes": 124201,
+              "margin": 51009,
+              "turnout": 53.2,
+              "runner_up": "Suresh Patil",
+              "runner_up_party": "NCP"
+            },
+            {
+              "id": "mh-vs-pune-cantonment",
+              "name": "Pune Cantonment",
+              "winner": "Sunil Kamble",
+              "party": "BJP",
+              "votes": 82014,
+              "margin": 22115,
+              "turnout": 51.1,
+              "runner_up": "Ramesh Bagwe",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-shivajinagar",
+              "name": "Shivajinagar",
+              "winner": "Siddharth Shirole",
+              "party": "BJP",
+              "votes": 78215,
+              "margin": 21009,
+              "turnout": 53.3,
+              "runner_up": "Datta Bahirat",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-nagpur-south-west",
+              "name": "Nagpur South West",
+              "winner": "Devendra Fadnavis",
+              "party": "BJP",
+              "votes": 110134,
+              "margin": 35009,
+              "turnout": 56.4,
+              "runner_up": "Praful Gudadhe",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-nagpur-east",
+              "name": "Nagpur East",
+              "winner": "Krishna Khopde",
+              "party": "BJP",
+              "votes": 105214,
+              "margin": 26013,
+              "turnout": 55,
+              "runner_up": "Abhijit Wanjari",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mh-vs-aurangabad-central",
+              "name": "Aurangabad Central",
+              "winner": "Pradeep Jaiswal",
+              "party": "SS",
+              "votes": 88712,
+              "margin": 12011,
+              "turnout": 60.7,
+              "runner_up": "Imtiaz Jaleel",
+              "runner_up_party": "AIMIM"
+            },
+            {
+              "id": "mh-vs-baramati",
+              "name": "Baramati",
+              "winner": "Ajit Pawar",
+              "party": "NCP",
+              "votes": 180123,
+              "margin": 99345,
+              "turnout": 71.4,
+              "runner_up": "Yugendra Pawar",
+              "runner_up_party": "NCP"
+            },
+            {
+              "id": "mh-vs-thane-city",
+              "name": "Thane",
+              "winner": "Sanjay Kelkar",
+              "party": "BJP",
+              "votes": 112401,
+              "margin": 41001,
+              "turnout": 50.8,
+              "runner_up": "Rajan Vichare",
+              "runner_up_party": "SS"
+            }
           ]
         }
       ]
@@ -59,21 +359,171 @@
           "year": 2022,
           "total_seats": 403,
           "constituencies": [
-            { "id": "up-vs-lucknow-cantt", "name": "Lucknow Cantt", "winner": "Brajesh Pathak", "party": "BJP", "votes": 116458, "margin": 39512, "turnout": 56.4, "runner_up": "Surendra Singh Gandhi", "runner_up_party": "SP" },
-            { "id": "up-vs-lucknow-east", "name": "Lucknow East", "winner": "Ashutosh Tandon", "party": "BJP", "votes": 122618, "margin": 41216, "turnout": 56.0, "runner_up": "Anurag Singh", "runner_up_party": "SP" },
-            { "id": "up-vs-noida", "name": "Noida", "winner": "Pankaj Singh", "party": "BJP", "votes": 184398, "margin": 181513, "turnout": 53.9, "runner_up": "Sunil Choudhary", "runner_up_party": "SP" },
-            { "id": "up-vs-ghaziabad", "name": "Ghaziabad", "winner": "Atul Garg", "party": "BJP", "votes": 154732, "margin": 116217, "turnout": 53.7, "runner_up": "Vishal Verma", "runner_up_party": "SP" },
-            { "id": "up-vs-meerut", "name": "Meerut", "winner": "Rafiq Ansari", "party": "SP", "votes": 117216, "margin": 1206, "turnout": 65.5, "runner_up": "Kamal Dutt Sharma", "runner_up_party": "BJP" },
-            { "id": "up-vs-allahabad-west", "name": "Allahabad West", "winner": "Siddharth Nath Singh", "party": "BJP", "votes": 95711, "margin": 18215, "turnout": 51.7, "runner_up": "Richa Singh", "runner_up_party": "SP" },
-            { "id": "up-vs-varanasi-south", "name": "Varanasi South", "winner": "Neelkanth Tiwari", "party": "BJP", "votes": 91312, "margin": 26214, "turnout": 56.4, "runner_up": "Kishan Dixit", "runner_up_party": "SP" },
-            { "id": "up-vs-gorakhpur-urban", "name": "Gorakhpur Urban", "winner": "Yogi Adityanath", "party": "BJP", "votes": 165220, "margin": 103380, "turnout": 54.7, "runner_up": "Subhawati Shukla", "runner_up_party": "SP" },
-            { "id": "up-vs-mainpuri", "name": "Karhal", "winner": "Akhilesh Yadav", "party": "SP", "votes": 147218, "margin": 67504, "turnout": 67.7, "runner_up": "S. P. Singh Baghel", "runner_up_party": "BJP" },
-            { "id": "up-vs-jaswantnagar", "name": "Jaswantnagar", "winner": "Shivpal Singh Yadav", "party": "SP", "votes": 152918, "margin": 90979, "turnout": 65.3, "runner_up": "Vivek Shakya", "runner_up_party": "BJP" },
-            { "id": "up-vs-ayodhya", "name": "Ayodhya", "winner": "Ved Prakash Gupta", "party": "BJP", "votes": 99721, "margin": 6500, "turnout": 60.4, "runner_up": "Pawan Pandey", "runner_up_party": "SP" },
-            { "id": "up-vs-mathura-rural", "name": "Mathura", "winner": "Shrikant Sharma", "party": "BJP", "votes": 137215, "margin": 109317, "turnout": 60.4, "runner_up": "Devendra Agarwal", "runner_up_party": "RLD" },
-            { "id": "up-vs-saharanpur", "name": "Saharanpur", "winner": "Rajeev Gumber", "party": "BJP", "votes": 102113, "margin": 5219, "turnout": 67.7, "runner_up": "Sanjay Garg", "runner_up_party": "SP" },
-            { "id": "up-vs-kannauj", "name": "Kannauj", "winner": "Asim Arun", "party": "BJP", "votes": 105823, "margin": 6312, "turnout": 64.8, "runner_up": "Anil Kumar Dohre", "runner_up_party": "SP" },
-            { "id": "up-vs-tundla", "name": "Tundla", "winner": "Prempal Singh Dhangar", "party": "BJP", "votes": 119814, "margin": 27006, "turnout": 64.9, "runner_up": "Maharaj Singh Dhangar", "runner_up_party": "SP" }
+            {
+              "id": "up-vs-lucknow-cantt",
+              "name": "Lucknow Cantt",
+              "winner": "Brajesh Pathak",
+              "party": "BJP",
+              "votes": 116458,
+              "margin": 39512,
+              "turnout": 56.4,
+              "runner_up": "Surendra Singh Gandhi",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-lucknow-east",
+              "name": "Lucknow East",
+              "winner": "Ashutosh Tandon",
+              "party": "BJP",
+              "votes": 122618,
+              "margin": 41216,
+              "turnout": 56,
+              "runner_up": "Anurag Singh",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-noida",
+              "name": "Noida",
+              "winner": "Pankaj Singh",
+              "party": "BJP",
+              "votes": 184398,
+              "margin": 181513,
+              "turnout": 53.9,
+              "runner_up": "Sunil Choudhary",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-ghaziabad",
+              "name": "Ghaziabad",
+              "winner": "Atul Garg",
+              "party": "BJP",
+              "votes": 154732,
+              "margin": 116217,
+              "turnout": 53.7,
+              "runner_up": "Vishal Verma",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-meerut",
+              "name": "Meerut",
+              "winner": "Rafiq Ansari",
+              "party": "SP",
+              "votes": 117216,
+              "margin": 1206,
+              "turnout": 65.5,
+              "runner_up": "Kamal Dutt Sharma",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "up-vs-allahabad-west",
+              "name": "Allahabad West",
+              "winner": "Siddharth Nath Singh",
+              "party": "BJP",
+              "votes": 95711,
+              "margin": 18215,
+              "turnout": 51.7,
+              "runner_up": "Richa Singh",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-varanasi-south",
+              "name": "Varanasi South",
+              "winner": "Neelkanth Tiwari",
+              "party": "BJP",
+              "votes": 91312,
+              "margin": 26214,
+              "turnout": 56.4,
+              "runner_up": "Kishan Dixit",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-gorakhpur-urban",
+              "name": "Gorakhpur Urban",
+              "winner": "Yogi Adityanath",
+              "party": "BJP",
+              "votes": 165220,
+              "margin": 103380,
+              "turnout": 54.7,
+              "runner_up": "Subhawati Shukla",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-mainpuri",
+              "name": "Karhal",
+              "winner": "Akhilesh Yadav",
+              "party": "SP",
+              "votes": 147218,
+              "margin": 67504,
+              "turnout": 67.7,
+              "runner_up": "S. P. Singh Baghel",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "up-vs-jaswantnagar",
+              "name": "Jaswantnagar",
+              "winner": "Shivpal Singh Yadav",
+              "party": "SP",
+              "votes": 152918,
+              "margin": 90979,
+              "turnout": 65.3,
+              "runner_up": "Vivek Shakya",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "up-vs-ayodhya",
+              "name": "Ayodhya",
+              "winner": "Ved Prakash Gupta",
+              "party": "BJP",
+              "votes": 99721,
+              "margin": 6500,
+              "turnout": 60.4,
+              "runner_up": "Pawan Pandey",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-mathura-rural",
+              "name": "Mathura",
+              "winner": "Shrikant Sharma",
+              "party": "BJP",
+              "votes": 137215,
+              "margin": 109317,
+              "turnout": 60.4,
+              "runner_up": "Devendra Agarwal",
+              "runner_up_party": "RLD"
+            },
+            {
+              "id": "up-vs-saharanpur",
+              "name": "Saharanpur",
+              "winner": "Rajeev Gumber",
+              "party": "BJP",
+              "votes": 102113,
+              "margin": 5219,
+              "turnout": 67.7,
+              "runner_up": "Sanjay Garg",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-kannauj",
+              "name": "Kannauj",
+              "winner": "Asim Arun",
+              "party": "BJP",
+              "votes": 105823,
+              "margin": 6312,
+              "turnout": 64.8,
+              "runner_up": "Anil Kumar Dohre",
+              "runner_up_party": "SP"
+            },
+            {
+              "id": "up-vs-tundla",
+              "name": "Tundla",
+              "winner": "Prempal Singh Dhangar",
+              "party": "BJP",
+              "votes": 119814,
+              "margin": 27006,
+              "turnout": 64.9,
+              "runner_up": "Maharaj Singh Dhangar",
+              "runner_up_party": "SP"
+            }
           ]
         }
       ]
@@ -85,21 +535,171 @@
           "year": 2020,
           "total_seats": 70,
           "constituencies": [
-            { "id": "dl-vs-new-delhi", "name": "New Delhi", "winner": "Arvind Kejriwal", "party": "AAP", "votes": 46758, "margin": 21687, "turnout": 56.5, "runner_up": "Sunil Kumar Yadav", "runner_up_party": "BJP" },
-            { "id": "dl-vs-patparganj", "name": "Patparganj", "winner": "Manish Sisodia", "party": "AAP", "votes": 70163, "margin": 3207, "turnout": 60.6, "runner_up": "Ravinder Singh Negi", "runner_up_party": "BJP" },
-            { "id": "dl-vs-greater-kailash", "name": "Greater Kailash", "winner": "Saurabh Bharadwaj", "party": "AAP", "votes": 56828, "margin": 16809, "turnout": 56.8, "runner_up": "Shikha Roy", "runner_up_party": "BJP" },
-            { "id": "dl-vs-kalkaji", "name": "Kalkaji", "winner": "Atishi", "party": "AAP", "votes": 55897, "margin": 11393, "turnout": 56.8, "runner_up": "Dharambir Singh", "runner_up_party": "BJP" },
-            { "id": "dl-vs-rohini", "name": "Rohini", "winner": "Vijender Gupta", "party": "BJP", "votes": 62174, "margin": 12648, "turnout": 56.0, "runner_up": "Rajesh Bansiwala", "runner_up_party": "AAP" },
-            { "id": "dl-vs-laxmi-nagar", "name": "Laxmi Nagar", "winner": "Abhay Verma", "party": "BJP", "votes": 65735, "margin": 880, "turnout": 60.7, "runner_up": "Nitin Tyagi", "runner_up_party": "AAP" },
-            { "id": "dl-vs-vishwas-nagar", "name": "Vishwas Nagar", "winner": "Om Prakash Sharma", "party": "BJP", "votes": 76366, "margin": 16457, "turnout": 60.7, "runner_up": "Deepak Singla", "runner_up_party": "AAP" },
-            { "id": "dl-vs-okhla", "name": "Okhla", "winner": "Amanatullah Khan", "party": "AAP", "votes": 130367, "margin": 71827, "turnout": 58.4, "runner_up": "Braham Singh", "runner_up_party": "BJP" },
-            { "id": "dl-vs-jangpura", "name": "Jangpura", "winner": "Praveen Kumar", "party": "AAP", "votes": 45133, "margin": 16063, "turnout": 56.8, "runner_up": "Impreet Singh Bakshi", "runner_up_party": "BJP" },
-            { "id": "dl-vs-tilak-nagar", "name": "Tilak Nagar", "winner": "Jarnail Singh", "party": "AAP", "votes": 64457, "margin": 16959, "turnout": 60.4, "runner_up": "Rajeev Babbar", "runner_up_party": "BJP" },
-            { "id": "dl-vs-rajinder-nagar", "name": "Rajinder Nagar", "winner": "Raghav Chadha", "party": "AAP", "votes": 59247, "margin": 20058, "turnout": 56.4, "runner_up": "R. P. Singh", "runner_up_party": "BJP" },
-            { "id": "dl-vs-shahdara", "name": "Shahdara", "winner": "Ram Niwas Goel", "party": "AAP", "votes": 64579, "margin": 5294, "turnout": 60.7, "runner_up": "Sanjay Goel", "runner_up_party": "BJP" },
-            { "id": "dl-vs-malviya-nagar", "name": "Malviya Nagar", "winner": "Somnath Bharti", "party": "AAP", "votes": 50729, "margin": 18144, "turnout": 56.8, "runner_up": "Shailendra Singh Monty", "runner_up_party": "BJP" },
-            { "id": "dl-vs-najafgarh", "name": "Najafgarh", "winner": "Kailash Gahlot", "party": "AAP", "votes": 79264, "margin": 6231, "turnout": 60.4, "runner_up": "Ajit Singh Kharkhari", "runner_up_party": "BJP" },
-            { "id": "dl-vs-burari", "name": "Burari", "winner": "Sanjeev Jha", "party": "AAP", "votes": 139598, "margin": 88158, "turnout": 60.0, "runner_up": "Shailendra Kumar", "runner_up_party": "JD(U)" }
+            {
+              "id": "dl-vs-new-delhi",
+              "name": "New Delhi",
+              "winner": "Arvind Kejriwal",
+              "party": "AAP",
+              "votes": 46758,
+              "margin": 21687,
+              "turnout": 56.5,
+              "runner_up": "Sunil Kumar Yadav",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-patparganj",
+              "name": "Patparganj",
+              "winner": "Manish Sisodia",
+              "party": "AAP",
+              "votes": 70163,
+              "margin": 3207,
+              "turnout": 60.6,
+              "runner_up": "Ravinder Singh Negi",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-greater-kailash",
+              "name": "Greater Kailash",
+              "winner": "Saurabh Bharadwaj",
+              "party": "AAP",
+              "votes": 56828,
+              "margin": 16809,
+              "turnout": 56.8,
+              "runner_up": "Shikha Roy",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-kalkaji",
+              "name": "Kalkaji",
+              "winner": "Atishi",
+              "party": "AAP",
+              "votes": 55897,
+              "margin": 11393,
+              "turnout": 56.8,
+              "runner_up": "Dharambir Singh",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-rohini",
+              "name": "Rohini",
+              "winner": "Vijender Gupta",
+              "party": "BJP",
+              "votes": 62174,
+              "margin": 12648,
+              "turnout": 56,
+              "runner_up": "Rajesh Bansiwala",
+              "runner_up_party": "AAP"
+            },
+            {
+              "id": "dl-vs-laxmi-nagar",
+              "name": "Laxmi Nagar",
+              "winner": "Abhay Verma",
+              "party": "BJP",
+              "votes": 65735,
+              "margin": 880,
+              "turnout": 60.7,
+              "runner_up": "Nitin Tyagi",
+              "runner_up_party": "AAP"
+            },
+            {
+              "id": "dl-vs-vishwas-nagar",
+              "name": "Vishwas Nagar",
+              "winner": "Om Prakash Sharma",
+              "party": "BJP",
+              "votes": 76366,
+              "margin": 16457,
+              "turnout": 60.7,
+              "runner_up": "Deepak Singla",
+              "runner_up_party": "AAP"
+            },
+            {
+              "id": "dl-vs-okhla",
+              "name": "Okhla",
+              "winner": "Amanatullah Khan",
+              "party": "AAP",
+              "votes": 130367,
+              "margin": 71827,
+              "turnout": 58.4,
+              "runner_up": "Braham Singh",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-jangpura",
+              "name": "Jangpura",
+              "winner": "Praveen Kumar",
+              "party": "AAP",
+              "votes": 45133,
+              "margin": 16063,
+              "turnout": 56.8,
+              "runner_up": "Impreet Singh Bakshi",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-tilak-nagar",
+              "name": "Tilak Nagar",
+              "winner": "Jarnail Singh",
+              "party": "AAP",
+              "votes": 64457,
+              "margin": 16959,
+              "turnout": 60.4,
+              "runner_up": "Rajeev Babbar",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-rajinder-nagar",
+              "name": "Rajinder Nagar",
+              "winner": "Raghav Chadha",
+              "party": "AAP",
+              "votes": 59247,
+              "margin": 20058,
+              "turnout": 56.4,
+              "runner_up": "R. P. Singh",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-shahdara",
+              "name": "Shahdara",
+              "winner": "Ram Niwas Goel",
+              "party": "AAP",
+              "votes": 64579,
+              "margin": 5294,
+              "turnout": 60.7,
+              "runner_up": "Sanjay Goel",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-malviya-nagar",
+              "name": "Malviya Nagar",
+              "winner": "Somnath Bharti",
+              "party": "AAP",
+              "votes": 50729,
+              "margin": 18144,
+              "turnout": 56.8,
+              "runner_up": "Shailendra Singh Monty",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-najafgarh",
+              "name": "Najafgarh",
+              "winner": "Kailash Gahlot",
+              "party": "AAP",
+              "votes": 79264,
+              "margin": 6231,
+              "turnout": 60.4,
+              "runner_up": "Ajit Singh Kharkhari",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "dl-vs-burari",
+              "name": "Burari",
+              "winner": "Sanjeev Jha",
+              "party": "AAP",
+              "votes": 139598,
+              "margin": 88158,
+              "turnout": 60,
+              "runner_up": "Shailendra Kumar",
+              "runner_up_party": "JD(U)"
+            }
           ]
         }
       ]
@@ -111,21 +711,556 @@
           "year": 2023,
           "total_seats": 224,
           "constituencies": [
-            { "id": "ka-vs-varuna", "name": "Varuna", "winner": "Siddaramaiah", "party": "INC", "votes": 122225, "margin": 46147, "turnout": 75.6, "runner_up": "V. Somanna", "runner_up_party": "BJP" },
-            { "id": "ka-vs-kanakapura", "name": "Kanakapura", "winner": "D. K. Shivakumar", "party": "INC", "votes": 143023, "margin": 122392, "turnout": 84.5, "runner_up": "R. Ashoka", "runner_up_party": "BJP" },
-            { "id": "ka-vs-shiggaon", "name": "Shiggaon", "winner": "Basavaraj Bommai", "party": "BJP", "votes": 89121, "margin": 35417, "turnout": 78.4, "runner_up": "Yasir Ahmed Khan", "runner_up_party": "INC" },
-            { "id": "ka-vs-ramanagara", "name": "Ramanagara", "winner": "Iqbal Hussain", "party": "INC", "votes": 75614, "margin": 10872, "turnout": 81.7, "runner_up": "Nikhil Kumaraswamy", "runner_up_party": "JD(S)" },
-            { "id": "ka-vs-shikaripura", "name": "Shikaripura", "winner": "B. Y. Vijayendra", "party": "BJP", "votes": 96101, "margin": 11250, "turnout": 81.8, "runner_up": "Goni Malatesha", "runner_up_party": "INC" },
-            { "id": "ka-vs-malleshwaram", "name": "Malleshwaram", "winner": "C. N. Ashwath Narayan", "party": "BJP", "votes": 73215, "margin": 13209, "turnout": 50.0, "runner_up": "Anoop Iyengar", "runner_up_party": "INC" },
-            { "id": "ka-vs-bangalore-hebbal", "name": "Hebbal", "winner": "Byrathi Suresh", "party": "INC", "votes": 91202, "margin": 16418, "turnout": 53.4, "runner_up": "Y. A. Narayanaswamy", "runner_up_party": "BJP" },
-            { "id": "ka-vs-jayanagar", "name": "Jayanagar", "winner": "C. K. Ramamurthy", "party": "BJP", "votes": 56321, "margin": 16, "turnout": 51.0, "runner_up": "Sowmya Reddy", "runner_up_party": "INC" },
-            { "id": "ka-vs-bommanahalli", "name": "Bommanahalli", "winner": "Satish Reddy", "party": "BJP", "votes": 95214, "margin": 16312, "turnout": 51.5, "runner_up": "K. K. Ramesh Babu", "runner_up_party": "INC" },
-            { "id": "ka-vs-mysore-narasimharaja", "name": "Narasimharaja", "winner": "Tanveer Sait", "party": "INC", "votes": 71245, "margin": 32102, "turnout": 70.8, "runner_up": "S. Sathish", "runner_up_party": "BJP" },
-            { "id": "ka-vs-mangalore-city-north", "name": "Mangalore City North", "winner": "Bharath Y. Shetty", "party": "BJP", "votes": 73218, "margin": 8714, "turnout": 75.4, "runner_up": "Inayath Ali", "runner_up_party": "INC" },
-            { "id": "ka-vs-mangalore-city-south", "name": "Mangalore City South", "winner": "D. Vedavyas Kamath", "party": "BJP", "votes": 76012, "margin": 22014, "turnout": 67.7, "runner_up": "J. R. Lobo", "runner_up_party": "INC" },
-            { "id": "ka-vs-tumkur-city", "name": "Tumkur City", "winner": "G. B. Jyothi Ganesh", "party": "BJP", "votes": 84221, "margin": 8312, "turnout": 73.6, "runner_up": "Rafiq Ahmed", "runner_up_party": "INC" },
-            { "id": "ka-vs-belgaum-rural", "name": "Belgaum Rural", "winner": "Lakshmi Hebbalkar", "party": "INC", "votes": 117401, "margin": 47312, "turnout": 79.4, "runner_up": "Nagesh Mannolkar", "runner_up_party": "BJP" },
-            { "id": "ka-vs-hubli-dharwad-central", "name": "Hubli-Dharwad Central", "winner": "Mahesh Tenginkai", "party": "BJP", "votes": 87123, "margin": 32011, "turnout": 60.5, "runner_up": "Mohammed Ismail Tamtagar", "runner_up_party": "INC" }
+            {
+              "id": "ka-vs-varuna",
+              "name": "Varuna",
+              "winner": "Siddaramaiah",
+              "party": "INC",
+              "votes": 122225,
+              "margin": 46147,
+              "turnout": 75.6,
+              "runner_up": "V. Somanna",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "ka-vs-kanakapura",
+              "name": "Kanakapura",
+              "winner": "D. K. Shivakumar",
+              "party": "INC",
+              "votes": 143023,
+              "margin": 122392,
+              "turnout": 84.5,
+              "runner_up": "R. Ashoka",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "ka-vs-shiggaon",
+              "name": "Shiggaon",
+              "winner": "Basavaraj Bommai",
+              "party": "BJP",
+              "votes": 89121,
+              "margin": 35417,
+              "turnout": 78.4,
+              "runner_up": "Yasir Ahmed Khan",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-ramanagara",
+              "name": "Ramanagara",
+              "winner": "Iqbal Hussain",
+              "party": "INC",
+              "votes": 75614,
+              "margin": 10872,
+              "turnout": 81.7,
+              "runner_up": "Nikhil Kumaraswamy",
+              "runner_up_party": "JD(S)"
+            },
+            {
+              "id": "ka-vs-shikaripura",
+              "name": "Shikaripura",
+              "winner": "B. Y. Vijayendra",
+              "party": "BJP",
+              "votes": 96101,
+              "margin": 11250,
+              "turnout": 81.8,
+              "runner_up": "Goni Malatesha",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-malleshwaram",
+              "name": "Malleshwaram",
+              "winner": "C. N. Ashwath Narayan",
+              "party": "BJP",
+              "votes": 73215,
+              "margin": 13209,
+              "turnout": 50,
+              "runner_up": "Anoop Iyengar",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-bangalore-hebbal",
+              "name": "Hebbal",
+              "winner": "Byrathi Suresh",
+              "party": "INC",
+              "votes": 91202,
+              "margin": 16418,
+              "turnout": 53.4,
+              "runner_up": "Y. A. Narayanaswamy",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "ka-vs-jayanagar",
+              "name": "Jayanagar",
+              "winner": "C. K. Ramamurthy",
+              "party": "BJP",
+              "votes": 56321,
+              "margin": 16,
+              "turnout": 51,
+              "runner_up": "Sowmya Reddy",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-bommanahalli",
+              "name": "Bommanahalli",
+              "winner": "Satish Reddy",
+              "party": "BJP",
+              "votes": 95214,
+              "margin": 16312,
+              "turnout": 51.5,
+              "runner_up": "K. K. Ramesh Babu",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-mysore-narasimharaja",
+              "name": "Narasimharaja",
+              "winner": "Tanveer Sait",
+              "party": "INC",
+              "votes": 71245,
+              "margin": 32102,
+              "turnout": 70.8,
+              "runner_up": "S. Sathish",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "ka-vs-mangalore-city-north",
+              "name": "Mangalore City North",
+              "winner": "Bharath Y. Shetty",
+              "party": "BJP",
+              "votes": 73218,
+              "margin": 8714,
+              "turnout": 75.4,
+              "runner_up": "Inayath Ali",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-mangalore-city-south",
+              "name": "Mangalore City South",
+              "winner": "D. Vedavyas Kamath",
+              "party": "BJP",
+              "votes": 76012,
+              "margin": 22014,
+              "turnout": 67.7,
+              "runner_up": "J. R. Lobo",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-tumkur-city",
+              "name": "Tumkur City",
+              "winner": "G. B. Jyothi Ganesh",
+              "party": "BJP",
+              "votes": 84221,
+              "margin": 8312,
+              "turnout": 73.6,
+              "runner_up": "Rafiq Ahmed",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "ka-vs-belgaum-rural",
+              "name": "Belgaum Rural",
+              "winner": "Lakshmi Hebbalkar",
+              "party": "INC",
+              "votes": 117401,
+              "margin": 47312,
+              "turnout": 79.4,
+              "runner_up": "Nagesh Mannolkar",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "ka-vs-hubli-dharwad-central",
+              "name": "Hubli-Dharwad Central",
+              "winner": "Mahesh Tenginkai",
+              "party": "BJP",
+              "votes": 87123,
+              "margin": 32011,
+              "turnout": 60.5,
+              "runner_up": "Mohammed Ismail Tamtagar",
+              "runner_up_party": "INC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Madhya Pradesh",
+      "elections": [
+        {
+          "year": 2023,
+          "total_seats": 230,
+          "constituencies": [
+            {
+              "id": "mp-vs-bhopal-south",
+              "name": "Bhopal South-West",
+              "winner": "Bhagwan Das Sabnani",
+              "party": "BJP",
+              "votes": 81570,
+              "margin": 26618,
+              "turnout": 67.4,
+              "runner_up": "Sanjeev Saxena",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mp-vs-indore-1",
+              "name": "Indore-1",
+              "winner": "Kailash Vijayvargiya",
+              "party": "BJP",
+              "votes": 137130,
+              "margin": 57939,
+              "turnout": 73.6,
+              "runner_up": "Sanjay Shukla",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mp-vs-jabalpur-cantt",
+              "name": "Jabalpur Cantt",
+              "winner": "Ashok Rohani",
+              "party": "BJP",
+              "votes": 83547,
+              "margin": 30056,
+              "turnout": 63.7,
+              "runner_up": "Abhishek Chaurasia",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mp-vs-gwalior",
+              "name": "Gwalior",
+              "winner": "Pradyuman Singh Tomar",
+              "party": "BJP",
+              "votes": 90842,
+              "margin": 26765,
+              "turnout": 65.8,
+              "runner_up": "Sunil Sharma",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mp-vs-budhni",
+              "name": "Budhni",
+              "winner": "Shivraj Singh Chouhan",
+              "party": "BJP",
+              "votes": 164951,
+              "margin": 104974,
+              "turnout": 79.6,
+              "runner_up": "Vikram Mastal",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "mp-vs-chhindwara",
+              "name": "Chhindwara",
+              "winner": "Kamal Nath",
+              "party": "INC",
+              "votes": 113903,
+              "margin": 36594,
+              "turnout": 80.7,
+              "runner_up": "Vivek Bunty Sahu",
+              "runner_up_party": "BJP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Telangana",
+      "elections": [
+        {
+          "year": 2023,
+          "total_seats": 119,
+          "constituencies": [
+            {
+              "id": "tg-vs-kodangal",
+              "name": "Kodangal",
+              "winner": "Anumula Revanth Reddy",
+              "party": "INC",
+              "votes": 117880,
+              "margin": 32532,
+              "turnout": 75.5,
+              "runner_up": "Patnam Narender Reddy",
+              "runner_up_party": "BRS"
+            },
+            {
+              "id": "tg-vs-gajwel",
+              "name": "Gajwel",
+              "winner": "Eatala Rajender",
+              "party": "BJP",
+              "votes": 102156,
+              "margin": 1843,
+              "turnout": 78.4,
+              "runner_up": "K. Chandrashekar Rao",
+              "runner_up_party": "BRS"
+            },
+            {
+              "id": "tg-vs-siddipet",
+              "name": "Siddipet",
+              "winner": "T. Harish Rao",
+              "party": "BRS",
+              "votes": 142208,
+              "margin": 80201,
+              "turnout": 84,
+              "runner_up": "Shyam Naik",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "tg-vs-jubilee-hills",
+              "name": "Jubilee Hills",
+              "winner": "Magantii Gopinath",
+              "party": "BRS",
+              "votes": 82238,
+              "margin": 16297,
+              "turnout": 49.7,
+              "runner_up": "V. V. Reddy",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "tg-vs-charminar",
+              "name": "Charminar",
+              "winner": "Mumtaz Ahmed Khan",
+              "party": "AIMIM",
+              "votes": 65091,
+              "margin": 23823,
+              "turnout": 41.6,
+              "runner_up": "Mir Inayath Ali Baqri",
+              "runner_up_party": "BRS"
+            },
+            {
+              "id": "tg-vs-khairatabad",
+              "name": "Khairatabad",
+              "winner": "Danam Nagender",
+              "party": "BRS",
+              "votes": 84550,
+              "margin": 16586,
+              "turnout": 47.8,
+              "runner_up": "Chintala Ramachandra Reddy",
+              "runner_up_party": "BJP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Bihar",
+      "elections": [
+        {
+          "year": 2020,
+          "total_seats": 243,
+          "constituencies": [
+            {
+              "id": "br-vs-raghopur",
+              "name": "Raghopur",
+              "winner": "Tejashwi Yadav",
+              "party": "RJD",
+              "votes": 97404,
+              "margin": 38174,
+              "turnout": 56.5,
+              "runner_up": "Satish Kumar",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "br-vs-harnaut",
+              "name": "Harnaut",
+              "winner": "Hari Narayan Singh",
+              "party": "JD(U)",
+              "votes": 65541,
+              "margin": 17517,
+              "turnout": 60.1,
+              "runner_up": "Anant Kumar",
+              "runner_up_party": "LJP"
+            },
+            {
+              "id": "br-vs-patna-sahib",
+              "name": "Patna Sahib",
+              "winner": "Nand Kishore Yadav",
+              "party": "BJP",
+              "votes": 76026,
+              "margin": 18141,
+              "turnout": 51,
+              "runner_up": "Pravin Singh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "br-vs-bankipur",
+              "name": "Bankipur",
+              "winner": "Nitin Nabin",
+              "party": "BJP",
+              "votes": 83068,
+              "margin": 39689,
+              "turnout": 39.4,
+              "runner_up": "Luv Sinha",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "br-vs-darbhanga-rural",
+              "name": "Darbhanga Rural",
+              "winner": "Lalit Kumar Yadav",
+              "party": "RJD",
+              "votes": 70322,
+              "margin": 4084,
+              "turnout": 56.4,
+              "runner_up": "Sunil Choudhary",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "br-vs-imamganj",
+              "name": "Imamganj",
+              "winner": "Jitan Ram Manjhi",
+              "party": "HAM",
+              "votes": 79708,
+              "margin": 16936,
+              "turnout": 60.5,
+              "runner_up": "Uday Narayan Choudhary",
+              "runner_up_party": "RJD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Odisha",
+      "elections": [
+        {
+          "year": 2024,
+          "total_seats": 147,
+          "constituencies": [
+            {
+              "id": "od-vs-hinjili",
+              "name": "Hinjili",
+              "winner": "Naveen Patnaik",
+              "party": "BJD",
+              "votes": 96991,
+              "margin": 4636,
+              "turnout": 76.7,
+              "runner_up": "Sisir Kumar Mishra",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "od-vs-kantabanji",
+              "name": "Kantabanji",
+              "winner": "Laxman Bag",
+              "party": "BJP",
+              "votes": 89015,
+              "margin": 16344,
+              "turnout": 79.7,
+              "runner_up": "Naveen Patnaik",
+              "runner_up_party": "BJD"
+            },
+            {
+              "id": "od-vs-bhubaneswar-central",
+              "name": "Bhubaneswar Central",
+              "winner": "Babu Singh",
+              "party": "BJP",
+              "votes": 65192,
+              "margin": 5380,
+              "turnout": 55.5,
+              "runner_up": "Ananta Narayan Jena",
+              "runner_up_party": "BJD"
+            },
+            {
+              "id": "od-vs-cuttack-sadar",
+              "name": "Cuttack Sadar",
+              "winner": "Prakash Behera",
+              "party": "BJP",
+              "votes": 79832,
+              "margin": 13428,
+              "turnout": 67.4,
+              "runner_up": "Pravat Kumar Tripathy",
+              "runner_up_party": "BJD"
+            },
+            {
+              "id": "od-vs-puri",
+              "name": "Puri",
+              "winner": "Sunil Kumar Mohanty",
+              "party": "BJP",
+              "votes": 88732,
+              "margin": 8536,
+              "turnout": 71.2,
+              "runner_up": "Jayanta Kumar Sarangi",
+              "runner_up_party": "BJD"
+            },
+            {
+              "id": "od-vs-sambalpur",
+              "name": "Sambalpur",
+              "winner": "Jayanarayan Mishra",
+              "party": "BJP",
+              "votes": 85470,
+              "margin": 16744,
+              "turnout": 71.7,
+              "runner_up": "Roshan Mihir",
+              "runner_up_party": "INC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "Haryana",
+      "elections": [
+        {
+          "year": 2024,
+          "total_seats": 90,
+          "constituencies": [
+            {
+              "id": "hr-vs-gurgaon",
+              "name": "Gurgaon",
+              "winner": "Mukesh Sharma",
+              "party": "BJP",
+              "votes": 121540,
+              "margin": 68092,
+              "turnout": 56.6,
+              "runner_up": "Mohit Grover",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "hr-vs-rohtak",
+              "name": "Rohtak",
+              "winner": "Bharat Bhushan Batra",
+              "party": "INC",
+              "votes": 87246,
+              "margin": 1341,
+              "turnout": 71.6,
+              "runner_up": "Manish Kumar Grover",
+              "runner_up_party": "BJP"
+            },
+            {
+              "id": "hr-vs-karnal",
+              "name": "Karnal",
+              "winner": "Jagmohan Anand",
+              "party": "BJP",
+              "votes": 88611,
+              "margin": 30792,
+              "turnout": 65.5,
+              "runner_up": "Sumita Singh",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "hr-vs-hisar",
+              "name": "Hisar",
+              "winner": "Savitri Jindal",
+              "party": "IND",
+              "votes": 49231,
+              "margin": 18951,
+              "turnout": 70.4,
+              "runner_up": "Ram Niwas Rara",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "hr-vs-faridabad",
+              "name": "Faridabad NIT",
+              "winner": "Satish Kumar Phagna",
+              "party": "BJP",
+              "votes": 79476,
+              "margin": 33100,
+              "turnout": 56.3,
+              "runner_up": "Neeraj Sharma",
+              "runner_up_party": "INC"
+            },
+            {
+              "id": "hr-vs-julana",
+              "name": "Julana",
+              "winner": "Vinesh Phogat",
+              "party": "INC",
+              "votes": 65080,
+              "margin": 6015,
+              "turnout": 76.1,
+              "runner_up": "Yogesh Kumar Bairagi",
+              "runner_up_party": "BJP"
+            }
           ]
         }
       ]

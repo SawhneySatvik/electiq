@@ -73,7 +73,9 @@ const en: Dict = {
     "Keyword-based RAG over the dataset. The chatbot only states facts present in the retrieved records, and shows you which records they were.",
 
   "explore.title": "Explore",
-  "explore.subtitle": "Click a state on the map, toggle election type, drill into a constituency.",
+  "explore.subtitle": "Click a state on the map to zoom in. States are coloured by the dominant party in the latest LS election.",
+  "explore.map.reset": "Reset zoom",
+  "explore.map.legend": "Dominant party",
   "explore.state": "State",
   "explore.electionType": "Election type",
   "explore.ls": "Lok Sabha",
@@ -121,6 +123,33 @@ const en: Dict = {
   "rajyaSabha.term": "Term",
   "rajyaSabha.empty": "No Rajya Sabha roster loaded for this state.",
 
+  "seat.profile.title": "Seat profile",
+  "seat.profile.empty": "No structured profile loaded for this seat in the demo dataset. The AI analysis below will rely on election results only.",
+  "seat.profile.population": "Population (2011 → recent)",
+  "seat.profile.electors": "Electors (recent)",
+  "seat.profile.literacy": "Literacy",
+  "seat.profile.split": "Urban / rural",
+  "seat.profile.communities": "Major communities",
+  "seat.profile.issues": "Key issues",
+  "seat.profile.history": "Notable history",
+  "seat.profile.violence": "Poll-period notes",
+  "seat.profile.dq": "Note",
+
+  "analysis.eyebrow": "AI analysis",
+  "analysis.title": "Holistic seat read",
+  "analysis.analysing": "Analysing…",
+  "analysis.dominant": "Dominant",
+  "analysis.trend": "Trend",
+  "analysis.keyShift": "Key shift",
+  "analysis.competitiveness": "Competitiveness",
+  "analysis.watch": "Watch factors",
+  "analysis.demographics": "Demographics",
+  "analysis.issues": "Issues × outcomes",
+  "analysis.history": "Notable history",
+  "analysis.safety": "Electoral safety",
+  "analysis.context": "Holistic context",
+  "analysis.unavailable": "Analysis unavailable.",
+
   "nav.voices": "Voices",
   "nav.exitPoll": "Exit poll",
 
@@ -137,15 +166,21 @@ const en: Dict = {
 
   "exitPoll.title": "Exit poll",
   "exitPoll.subtitle":
-    "Cast a single device-level vote. The tally below reflects votes recorded in this browser only.",
+    "Cast a single device-level vote in any upcoming election. Tallies below reflect votes recorded in this browser only.",
   "exitPoll.warning":
     "UI demo only. A real exit poll requires E2E encryption and time-locked decryption — not implemented here.",
+  "exitPoll.pickElection": "Pick an upcoming election",
   "exitPoll.pickParty": "Pick a party",
   "exitPoll.submit": "Cast vote",
-  "exitPoll.alreadyVoted": "You've already voted on this device.",
-  "exitPoll.tallyTitle": "Tally on this device",
+  "exitPoll.alreadyVoted": "You've already voted in this election on this device.",
+  "exitPoll.tallyTitle": "Tally for {label}",
   "exitPoll.totalVotes": "{count} vote(s) cast",
-  "exitPoll.empty": "No votes yet on this device.",
+  "exitPoll.empty": "No votes yet for this election on this device.",
+  "exitPoll.expectedWindow": "Expected: {window}",
+  "exitPoll.statusCompleted": "polling completed",
+  "exitPoll.statusScheduled": "scheduled",
+  "exitPoll.allTalliesTitle": "All elections you've voted in",
+  "exitPoll.noVotesAnywhere": "You haven't voted in any election yet on this device.",
 };
 
 const hi: Dict = {
@@ -199,7 +234,9 @@ const hi: Dict = {
     "डेटासेट पर कीवर्ड-आधारित RAG। चैटबॉट केवल वही तथ्य बताता है जो रिकॉर्ड में हैं और दिखाता है कि कौन से।",
 
   "explore.title": "खोजें",
-  "explore.subtitle": "मानचित्र पर राज्य चुनें, चुनाव प्रकार बदलें, सीट में जाएँ।",
+  "explore.subtitle": "ज़ूम करने के लिए मानचित्र पर राज्य चुनें। राज्य पिछले लोकसभा चुनाव की प्रमुख पार्टी के रंग में दिखाए गए हैं।",
+  "explore.map.reset": "ज़ूम रीसेट",
+  "explore.map.legend": "प्रमुख पार्टी",
   "explore.state": "राज्य",
   "explore.electionType": "चुनाव प्रकार",
   "explore.ls": "लोकसभा",
@@ -247,6 +284,33 @@ const hi: Dict = {
   "rajyaSabha.term": "कार्यकाल",
   "rajyaSabha.empty": "इस राज्य के लिए राज्यसभा सूची उपलब्ध नहीं है।",
 
+  "seat.profile.title": "सीट प्रोफ़ाइल",
+  "seat.profile.empty": "इस सीट के लिए विस्तृत प्रोफ़ाइल डेमो डेटासेट में नहीं है। AI विश्लेषण केवल चुनाव परिणामों पर आधारित होगा।",
+  "seat.profile.population": "जनसंख्या (2011 → हाल)",
+  "seat.profile.electors": "मतदाता (हाल)",
+  "seat.profile.literacy": "साक्षरता",
+  "seat.profile.split": "शहरी / ग्रामीण",
+  "seat.profile.communities": "प्रमुख समुदाय",
+  "seat.profile.issues": "मुख्य मुद्दे",
+  "seat.profile.history": "उल्लेखनीय इतिहास",
+  "seat.profile.violence": "मतदान-समय टिप्पणियाँ",
+  "seat.profile.dq": "नोट",
+
+  "analysis.eyebrow": "AI विश्लेषण",
+  "analysis.title": "समग्र सीट विश्लेषण",
+  "analysis.analysing": "विश्लेषण हो रहा है…",
+  "analysis.dominant": "प्रमुख",
+  "analysis.trend": "रुझान",
+  "analysis.keyShift": "मुख्य बदलाव",
+  "analysis.competitiveness": "प्रतिस्पर्धा",
+  "analysis.watch": "ध्यान देने योग्य कारक",
+  "analysis.demographics": "जनांकिकी",
+  "analysis.issues": "मुद्दे × परिणाम",
+  "analysis.history": "उल्लेखनीय इतिहास",
+  "analysis.safety": "चुनावी सुरक्षा",
+  "analysis.context": "समग्र संदर्भ",
+  "analysis.unavailable": "विश्लेषण उपलब्ध नहीं।",
+
   "nav.voices": "नागरिक आवाज़ें",
   "nav.exitPoll": "एग्ज़िट पोल",
 
@@ -263,15 +327,21 @@ const hi: Dict = {
 
   "exitPoll.title": "एग्ज़िट पोल",
   "exitPoll.subtitle":
-    "एक डिवाइस-स्तर वोट डालें। नीचे की गिनती केवल इस ब्राउज़र के वोट दिखाती है।",
+    "किसी भी आगामी चुनाव में डिवाइस-स्तर वोट डालें। नीचे की गिनती केवल इस ब्राउज़र के वोट दिखाती है।",
   "exitPoll.warning":
     "केवल UI डेमो। असली एग्ज़िट पोल को E2E एन्क्रिप्शन और टाइम-लॉक डिक्रिप्शन की ज़रूरत है — यहाँ लागू नहीं।",
+  "exitPoll.pickElection": "आगामी चुनाव चुनें",
   "exitPoll.pickParty": "पार्टी चुनें",
   "exitPoll.submit": "वोट डालें",
-  "exitPoll.alreadyVoted": "आप इस डिवाइस पर पहले ही वोट डाल चुके हैं।",
-  "exitPoll.tallyTitle": "इस डिवाइस पर गिनती",
+  "exitPoll.alreadyVoted": "आप इस चुनाव में इस डिवाइस पर पहले ही वोट डाल चुके हैं।",
+  "exitPoll.tallyTitle": "{label} की गिनती",
   "exitPoll.totalVotes": "{count} वोट डले",
-  "exitPoll.empty": "अभी इस डिवाइस पर कोई वोट नहीं।",
+  "exitPoll.empty": "इस डिवाइस पर इस चुनाव के लिए अभी कोई वोट नहीं।",
+  "exitPoll.expectedWindow": "अपेक्षित: {window}",
+  "exitPoll.statusCompleted": "मतदान पूरा",
+  "exitPoll.statusScheduled": "तय",
+  "exitPoll.allTalliesTitle": "आपने वोट किए चुनाव",
+  "exitPoll.noVotesAnywhere": "इस डिवाइस पर आपने अभी किसी चुनाव में वोट नहीं डाला।",
 };
 
 export const dict: Record<Locale, Dict> = {

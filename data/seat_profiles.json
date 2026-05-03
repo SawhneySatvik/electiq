@@ -1,0 +1,800 @@
+{
+  "profiles": {
+    "mh-mumbai-north": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 1620000,
+      "literacy_rate_pct": 92,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Marathi-speaking majority",
+        "Gujarati-Marathi mix",
+        "North-Indian migrant population"
+      ],
+      "key_issues": [
+        "housing affordability",
+        "slum redevelopment",
+        "infrastructure pressure",
+        "migrant identity politics"
+      ],
+      "notable_history": [
+        "Long INC seat (Ram Naik, Sanjay Nirupam) until 2014 BJP wave",
+        "Gopal Shetty held seat 2014 and 2019 with very large margins",
+        "2024: Piyush Goyal contested and won as Union minister"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mh-mumbai-south": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2100000,
+      "electors_recent": 1560000,
+      "literacy_rate_pct": 91,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Marathi-speaking",
+        "Parsi & Gujarati in old city wards",
+        "Muslim pockets"
+      ],
+      "key_issues": [
+        "redevelopment of cessed buildings",
+        "port and dockyard land use",
+        "small-business pressure"
+      ],
+      "notable_history": [
+        "Considered Shiv Sena's traditional bastion in south Mumbai",
+        "Milind Deora (INC) won 2009; Arvind Sawant (SS) held 2014, 2019, 2024",
+        "2024 saw a SS vs SS contest after the party split"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mh-pune": {
+      "population_2011": 2300000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 2050000,
+      "literacy_rate_pct": 89,
+      "urban_rural_split": "Mostly urban with peri-urban tehsils",
+      "major_communities": [
+        "Marathi-speaking majority",
+        "large student & IT-worker population"
+      ],
+      "key_issues": [
+        "water sharing",
+        "IT/manufacturing growth",
+        "civic infrastructure backlog"
+      ],
+      "notable_history": [
+        "INC held the seat for decades; BJP wave starting 2014 (Anil Shirole)",
+        "Murlidhar Mohol won 2024 against AAP-INC's Ravindra Dhangekar"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mh-nagpur": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2600000,
+      "electors_recent": 2110000,
+      "literacy_rate_pct": 88,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Hindi-Marathi mix",
+        "Buddhist (neo-Buddhist Dalit) presence",
+        "tribal populations in periphery"
+      ],
+      "key_issues": [
+        "zero-mile cargo hub",
+        "Dalit civil-society strength",
+        "mining and forest land issues"
+      ],
+      "notable_history": [
+        "RSS headquarters located in the city",
+        "Nitin Gadkari (BJP) has held the seat since 2014 with comfortable margins"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mh-aurangabad": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1840000,
+      "literacy_rate_pct": 80,
+      "urban_rural_split": "Urban + rural mix",
+      "major_communities": [
+        "Marathi",
+        "significant Muslim population (~30%)"
+      ],
+      "key_issues": [
+        "water scarcity (Marathwada drought)",
+        "city renaming (Sambhajinagar)",
+        "communal tensions"
+      ],
+      "notable_history": [
+        "Shiv Sena's Chandrakant Khaire held the seat for two decades",
+        "AIMIM's Imtiaz Jaleel won a narrow upset in 2019",
+        "SS regained the seat in 2024 (post-split)"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2024,
+          "note": "Demo: minor pre-poll skirmishes between rival factions reported in city media (illustrative for this profile, not a verified incident database)."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "tn-chennai-central": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1430000,
+      "literacy_rate_pct": 90,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Tamil-speaking majority",
+        "Telugu-speaking pockets",
+        "Muslim & Christian populations"
+      ],
+      "key_issues": [
+        "urban transit (Metro)",
+        "low-income housing",
+        "gig-worker rights"
+      ],
+      "notable_history": [
+        "Held by DMK's Dayanidhi Maran across most cycles since 2009",
+        "Treated as a DMK stronghold in Tamil Nadu's political map"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "tn-chennai-south": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1700000,
+      "literacy_rate_pct": 91,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Tamil-speaking majority",
+        "IT-corridor migrant workforce"
+      ],
+      "key_issues": [
+        "IT-corridor flooding",
+        "tech-sector water/power",
+        "coastal regulation"
+      ],
+      "notable_history": [
+        "Swung between DMK and AIADMK historically; BJP saw 2024 entry via Tamilisai Soundararajan as runner-up",
+        "Sumathy Thamizhachi (DMK) currently holds the seat"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "tn-madurai": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1530000,
+      "literacy_rate_pct": 81,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Tamil-speaking majority",
+        "Muslim and Christian minorities",
+        "agricultural castes important politically"
+      ],
+      "key_issues": [
+        "temple economy",
+        "TASMAC and prohibition",
+        "agricultural distress"
+      ],
+      "notable_history": [
+        "Long DMK strength; held by CPI(M) ally Su. Venkatesan in 2019 within INDIA alliance arrangement",
+        "Cultural and linguistic identity politics central to contests here"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "up-varanasi": {
+      "population_2011": 1700000,
+      "population_estimate_recent": 2000000,
+      "electors_recent": 1990000,
+      "literacy_rate_pct": 77,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Hindu majority",
+        "Muslim weavers community sizeable",
+        "scheduled caste population"
+      ],
+      "key_issues": [
+        "temple-corridor redevelopment",
+        "Ganga riverfront",
+        "sari-weaving industry"
+      ],
+      "notable_history": [
+        "Prime Minister Narendra Modi has won this seat in 2014, 2019, and 2024",
+        "Symbolic seat for BJP — heavy national attention each cycle"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "up-lucknow": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2300000,
+      "electors_recent": 2160000,
+      "literacy_rate_pct": 78,
+      "urban_rural_split": "Mostly urban with rural belts",
+      "major_communities": [
+        "Hindu majority",
+        "Significant Muslim population (~20%)",
+        "mixed migrant and government-employee demographic"
+      ],
+      "key_issues": [
+        "state-capital infrastructure",
+        "industrial development corridors",
+        "education and healthcare access"
+      ],
+      "notable_history": [
+        "Vajpayee held the seat for years before BJP era continued under Lalji Tandon and Rajnath Singh",
+        "Rajnath Singh has been the BJP MP since 2014"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "up-amethi": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1720000,
+      "literacy_rate_pct": 71,
+      "urban_rural_split": "Mostly rural",
+      "major_communities": [
+        "Hindu majority",
+        "Muslim and Dalit pockets"
+      ],
+      "key_issues": [
+        "agricultural distress",
+        "rural employment",
+        "Gandhi-family legacy politics"
+      ],
+      "notable_history": [
+        "Long held by Gandhi family (Sanjay, Rajiv, Sonia, Rahul)",
+        "Smriti Irani (BJP) defeated Rahul Gandhi here in 2019",
+        "INC's Kishori Lal Sharma defeated Smriti Irani in 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "up-rae-bareli": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1780000,
+      "literacy_rate_pct": 67,
+      "urban_rural_split": "Mostly rural",
+      "major_communities": [
+        "Hindu majority",
+        "significant Muslim, Dalit and OBC populations"
+      ],
+      "key_issues": [
+        "agriculture",
+        "PSU rail-coach factory employment",
+        "Gandhi-family constituency legacy"
+      ],
+      "notable_history": [
+        "Held by Sonia Gandhi for decades",
+        "Rahul Gandhi (INC) won the seat in 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "up-allahabad": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2200000,
+      "electors_recent": 1780000,
+      "literacy_rate_pct": 73,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Hindu majority",
+        "Muslim and SC populations significant"
+      ],
+      "key_issues": [
+        "Kumbh Mela and infrastructure",
+        "education hub (Allahabad University)",
+        "agricultural belt"
+      ],
+      "notable_history": [
+        "Renamed to Prayagraj at the city level in 2018",
+        "BJP has won the seat in 2014, 2019, 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "wb-kolkata-north": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2300000,
+      "electors_recent": 1450000,
+      "literacy_rate_pct": 85,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Bengali-speaking majority",
+        "Marwari and Gujarati business communities",
+        "Muslim and Anglo-Indian historic communities"
+      ],
+      "key_issues": [
+        "heritage-building decay",
+        "Hooghly riverfront",
+        "small-trade economy"
+      ],
+      "notable_history": [
+        "Held by Sudip Bandyopadhyay (TMC) for multiple cycles since 2009",
+        "TMC stronghold within Kolkata"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "wb-diamond-harbour": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 1810000,
+      "literacy_rate_pct": 81,
+      "urban_rural_split": "Rural with growing urban pockets",
+      "major_communities": [
+        "Bengali-speaking",
+        "Significant Muslim population",
+        "coastal fishing communities"
+      ],
+      "key_issues": [
+        "coastal cyclone resilience",
+        "fisheries livelihoods",
+        "Sundarbans access"
+      ],
+      "notable_history": [
+        "Abhishek Banerjee (TMC), nephew of CM Mamata Banerjee, has held the seat with very large margins"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2021,
+          "note": "Demo: post-poll violence widely reported across West Bengal in 2021; Diamond Harbour district saw incidents per news coverage. Profile entry only — not a comprehensive incident log."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "wb-darjeeling": {
+      "population_2011": 1850000,
+      "population_estimate_recent": 2100000,
+      "electors_recent": 1670000,
+      "literacy_rate_pct": 79,
+      "urban_rural_split": "Mixed hill towns + tea plantations",
+      "major_communities": [
+        "Nepali-speaking Gorkha population",
+        "Bengali plains population",
+        "tribal communities"
+      ],
+      "key_issues": [
+        "Gorkhaland statehood demand",
+        "tea-garden labour conditions",
+        "tourism dependency"
+      ],
+      "notable_history": [
+        "Yashwant Sinha (BJP) won 2009 with Gorkha alliance support",
+        "BJP retained the seat in 2014, 2019, 2024 with regional alliances"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "ka-bangalore-south": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2900000,
+      "electors_recent": 2280000,
+      "literacy_rate_pct": 92,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Kannada-speaking",
+        "large IT-industry migrant population"
+      ],
+      "key_issues": [
+        "IT-corridor traffic",
+        "water scarcity",
+        "tech-vs-civic-services tension"
+      ],
+      "notable_history": [
+        "Long BJP stronghold under Ananth Kumar",
+        "Tejasvi Surya (BJP) holds the seat currently"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "ka-mysuru": {
+      "population_2011": 2200000,
+      "population_estimate_recent": 2400000,
+      "electors_recent": 1980000,
+      "literacy_rate_pct": 81,
+      "urban_rural_split": "Mixed urban-rural",
+      "major_communities": [
+        "Kannada majority",
+        "Kodava (Coorg) community in Kodagu portion",
+        "Muslim pockets"
+      ],
+      "key_issues": [
+        "Cauvery water-sharing",
+        "tourism",
+        "heritage conservation"
+      ],
+      "notable_history": [
+        "Pratap Simha (BJP) won 2014 and 2019",
+        "Yaduveer Wadiyar (BJP) won 2024 representing the royal Mysuru Wadiyar family"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "dl-new-delhi": {
+      "population_2011": 1750000,
+      "population_estimate_recent": 1900000,
+      "electors_recent": 1500000,
+      "literacy_rate_pct": 90,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Hindi-Punjabi-Bengali mix",
+        "central-government employee population",
+        "Lutyens establishment demographic"
+      ],
+      "key_issues": [
+        "central-government employee politics",
+        "civic services in NDMC area",
+        "redevelopment of central vista"
+      ],
+      "notable_history": [
+        "Meenakshi Lekhi (BJP) held the seat 2014-2024",
+        "Bansuri Swaraj (BJP) won the seat in 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "dl-north-east-delhi": {
+      "population_2011": 2200000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 2210000,
+      "literacy_rate_pct": 79,
+      "urban_rural_split": "Mostly urban",
+      "major_communities": [
+        "Hindu and Muslim populations both substantial",
+        "Purvanchali (eastern UP/Bihar migrant) demographic"
+      ],
+      "key_issues": [
+        "communal harmony post-2020 riots",
+        "infrastructure gaps",
+        "labour markets"
+      ],
+      "notable_history": [
+        "Manoj Tiwari (BJP) has held the seat since 2014",
+        "Constituency was site of February 2020 communal violence in north-east Delhi"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2020,
+          "note": "February 2020 communal violence in the north-east Delhi area — widely documented in mainstream press and official inquiries. Listed here as relevant context, not as an electoral-period incident specifically."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "rj-jaipur": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2800000,
+      "electors_recent": 2180000,
+      "literacy_rate_pct": 76,
+      "urban_rural_split": "Mostly urban with rural belts",
+      "major_communities": [
+        "Hindu majority",
+        "Marwari trading community",
+        "Muslim population in walled city"
+      ],
+      "key_issues": [
+        "water scarcity",
+        "tourism economy",
+        "real-estate growth"
+      ],
+      "notable_history": [
+        "BJP stronghold in recent cycles; Ramcharan Bohra and Manju Sharma (2024) for BJP"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "gj-gandhinagar": {
+      "population_2011": 1700000,
+      "population_estimate_recent": 2000000,
+      "electors_recent": 2070000,
+      "literacy_rate_pct": 84,
+      "urban_rural_split": "Mixed urban-rural with capital district",
+      "major_communities": [
+        "Gujarati-speaking majority",
+        "Patidar community politically influential"
+      ],
+      "key_issues": [
+        "urban planning of capital",
+        "Sabarmati riverfront",
+        "industrial corridor (DMIC) growth"
+      ],
+      "notable_history": [
+        "Vajpayee and L. K. Advani both contested from this seat historically",
+        "Amit Shah (BJP) has held the seat since 2019"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "gj-surat": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2400000,
+      "electors_recent": 1700000,
+      "literacy_rate_pct": 86,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Gujarati-speaking",
+        "large Marwari and Marathi migrant workforce",
+        "Muslim weaver/diamond-worker community"
+      ],
+      "key_issues": [
+        "diamond-trade dependency",
+        "textile-industry water effluent",
+        "migrant-worker housing"
+      ],
+      "notable_history": [
+        "BJP has held the seat continuously since 1989",
+        "2024 election saw the seat won unopposed by BJP after rival nominations were rejected — drew national debate on procedural fairness"
+      ],
+      "poll_violence_notes": [
+        {
+          "year": 2024,
+          "note": "2024: BJP candidate declared elected unopposed after the INC candidate's nomination was rejected and other candidates withdrew. Public debate around fairness — listed as electoral-process context, not violence."
+        }
+      ],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "br-patna-sahib": {
+      "population_2011": 2100000,
+      "population_estimate_recent": 2400000,
+      "electors_recent": 2040000,
+      "literacy_rate_pct": 82,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Hindi-speaking majority",
+        "Sikh community sizeable around Takht Sri Patna Sahib"
+      ],
+      "key_issues": [
+        "heritage tourism",
+        "urban infrastructure",
+        "old-city traffic"
+      ],
+      "notable_history": [
+        "Shatrughan Sinha (BJP, then INC) held the seat 2009 and 2014",
+        "Ravi Shankar Prasad (BJP) won 2019 and 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "br-begusarai": {
+      "population_2011": 3000000,
+      "population_estimate_recent": 3400000,
+      "electors_recent": 2090000,
+      "literacy_rate_pct": 67,
+      "urban_rural_split": "Mostly rural with industrial pockets",
+      "major_communities": [
+        "Hindu majority",
+        "significant Muslim and Dalit populations",
+        "Bhumihar caste politically influential"
+      ],
+      "key_issues": [
+        "industrial agriculture",
+        "Barauni refinery economy",
+        "leftist political legacy"
+      ],
+      "notable_history": [
+        "Historically a CPI stronghold ('Leningrad of Bihar')",
+        "Giriraj Singh (BJP) won decisive contests in 2019 against Kanhaiya Kumar (CPI), and again in 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "ap-tirupati": {
+      "population_2011": 1850000,
+      "population_estimate_recent": 2100000,
+      "electors_recent": 1680000,
+      "literacy_rate_pct": 75,
+      "urban_rural_split": "Mixed urban-rural with temple town",
+      "major_communities": [
+        "Telugu-speaking majority",
+        "Significant SC/ST reserved-category population (seat is SC-reserved)"
+      ],
+      "key_issues": [
+        "temple-trust economy (TTD)",
+        "tourism logistics",
+        "education hub (SV University)"
+      ],
+      "notable_history": [
+        "Reserved (SC) seat",
+        "YSRCP has held the seat in 2019 and 2024 (Maddila Gurumoorthy, then party-realignment context)"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "tg-hyderabad": {
+      "population_2011": 2400000,
+      "population_estimate_recent": 2900000,
+      "electors_recent": 2070000,
+      "literacy_rate_pct": 84,
+      "urban_rural_split": "100% urban",
+      "major_communities": [
+        "Telugu-speaking",
+        "very large Muslim population (~40%)",
+        "Urdu spoken widely",
+        "diverse migrant workforce"
+      ],
+      "key_issues": [
+        "communal politics",
+        "Old City heritage and infrastructure",
+        "IT-vs-Old City development gap"
+      ],
+      "notable_history": [
+        "Asaduddin Owaisi (AIMIM) has held the seat since 2004 (and his father Salahuddin Owaisi before that)",
+        "Cited as one of the most consistent communal-vote constituencies in modern Indian politics"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "kl-wayanad": {
+      "population_2011": 1700000,
+      "population_estimate_recent": 1900000,
+      "electors_recent": 1380000,
+      "literacy_rate_pct": 90,
+      "urban_rural_split": "Mostly rural hill region",
+      "major_communities": [
+        "Malayalam-speaking",
+        "Muslim and Christian populations both substantial",
+        "tribal (Adivasi) population in hill blocks"
+      ],
+      "key_issues": [
+        "wild-elephant conflict and forest rights",
+        "spice/tea plantation economy",
+        "tribal welfare"
+      ],
+      "notable_history": [
+        "Rahul Gandhi (INC) won the seat in 2019 and 2024",
+        "Priyanka Gandhi (INC) won the 2024 by-election after Rahul vacated for Rae Bareli"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "kl-thiruvananthapuram": {
+      "population_2011": 1900000,
+      "population_estimate_recent": 2100000,
+      "electors_recent": 1410000,
+      "literacy_rate_pct": 94,
+      "urban_rural_split": "Mostly urban with capital district",
+      "major_communities": [
+        "Malayalam-speaking",
+        "Christian and Muslim populations both substantial",
+        "high education-and-services workforce"
+      ],
+      "key_issues": [
+        "space and IT sector (Technopark, VSSC)",
+        "central-government employees",
+        "coastal regulation"
+      ],
+      "notable_history": [
+        "Shashi Tharoor (INC) has held the seat since 2009 across four cycles",
+        "BJP's Rajeev Chandrasekhar mounted the closest-ever challenge in 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "pb-amritsar": {
+      "population_2011": 2000000,
+      "population_estimate_recent": 2300000,
+      "electors_recent": 1670000,
+      "literacy_rate_pct": 76,
+      "urban_rural_split": "Mixed urban-rural with border districts",
+      "major_communities": [
+        "Sikh majority",
+        "Hindu and Christian populations",
+        "border-belt Hindu refugee history"
+      ],
+      "key_issues": [
+        "border-trade with Pakistan",
+        "Golden Temple tourism",
+        "drug-abuse crisis",
+        "agrarian distress"
+      ],
+      "notable_history": [
+        "Captain Amarinder Singh (INC) won the seat in 2014 and 2017 by-poll",
+        "Gurjeet Aujla (INC) has held the seat since 2017 and won 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mp-bhopal": {
+      "population_2011": 2300000,
+      "population_estimate_recent": 2600000,
+      "electors_recent": 2330000,
+      "literacy_rate_pct": 82,
+      "urban_rural_split": "Mostly urban with rural blocks",
+      "major_communities": [
+        "Hindi-speaking majority",
+        "significant Muslim population (~25%)",
+        "Sindhi and Punjabi refugee community"
+      ],
+      "key_issues": [
+        "1984 Bhopal gas tragedy legacy and survivor welfare",
+        "old-city redevelopment",
+        "infrastructure"
+      ],
+      "notable_history": [
+        "BJP stronghold since 1989",
+        "2019 saw Pragya Singh Thakur defeat Digvijaya Singh (INC) in a high-profile contest",
+        "Alok Sharma (BJP) won 2024"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "mp-indore": {
+      "population_2011": 2500000,
+      "population_estimate_recent": 2900000,
+      "electors_recent": 2530000,
+      "literacy_rate_pct": 87,
+      "urban_rural_split": "Mostly urban",
+      "major_communities": [
+        "Hindi-speaking majority",
+        "Marwari and Maharashtrian communities present",
+        "diverse trader demographics"
+      ],
+      "key_issues": [
+        "cleanliness rankings (#1 in Swachh Bharat)",
+        "trader-economy growth",
+        "civic services"
+      ],
+      "notable_history": [
+        "BJP's Sumitra Mahajan held the seat for eight consecutive terms (1989-2014)",
+        "Shankar Lalwani (BJP) won 2019 and 2024 with very large margins (over 11.7 lakh in 2024 — among India's biggest LS margins ever)"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "hr-gurgaon": {
+      "population_2011": 2200000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 2630000,
+      "literacy_rate_pct": 84,
+      "urban_rural_split": "Mixed urban-rural — boomtown + agrarian belts",
+      "major_communities": [
+        "Hindi-speaking",
+        "Ahir/Yadav community politically influential in Mewat-adjacent area",
+        "large IT/finance migrant workforce"
+      ],
+      "key_issues": [
+        "urban infrastructure (DLF/Cyber City)",
+        "Mewat communal harmony",
+        "metropolitan governance"
+      ],
+      "notable_history": [
+        "Rao Inderjit Singh has won the seat in 2014, 2019, and 2024 (BJP)",
+        "Includes politically diverse mix of Gurgaon urban + Mewat rural"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    },
+    "cg-raipur": {
+      "population_2011": 2300000,
+      "population_estimate_recent": 2700000,
+      "electors_recent": 2280000,
+      "literacy_rate_pct": 85,
+      "urban_rural_split": "Mostly urban with peri-urban farmland",
+      "major_communities": [
+        "Hindi/Chhattisgarhi-speaking",
+        "tribal and SC populations significant in surrounding belt"
+      ],
+      "key_issues": [
+        "state-capital infrastructure",
+        "rice-mill economy",
+        "tribal hinterland development"
+      ],
+      "notable_history": [
+        "BJP stronghold since 1996",
+        "Brijmohan Agrawal (BJP) won 2024 with the largest margin in Chhattisgarh's electoral history (~5.75 lakh)"
+      ],
+      "poll_violence_notes": [],
+      "data_quality_note": "Demo profile modeled on public reporting; not from a single authoritative source. Numbers approximate."
+    }
+  }
+}
